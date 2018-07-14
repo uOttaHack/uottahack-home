@@ -4,7 +4,7 @@ import "./Navbar.css";
 const navbar = () => {
   return (
     <div className="Navbar">
-      <p>Home of uOtthack</p>
+      <p>Home of uOttahack</p>
     </div>
   );
 };

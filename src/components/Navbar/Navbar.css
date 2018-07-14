@@ -1,9 +1,16 @@
 .Navbar {
   background-color: white;
-
   position: fixed;
-  left: 10%; /* HAS TO MATCH APP margin-left*/
-  right: 10%; /* HAS TO MATCH APP margin-right*/
+  z-index: 1;
+  left: 7%; /* HAS TO MATCH APP margin-left - 2*/
+  right: 7%; /* HAS TO MATCH APP margin-right - 2*/
   top: 0;
   border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width: 768px) {
+  .Navbar {
+    left: 0;
+    right: 0;
+  }
 }

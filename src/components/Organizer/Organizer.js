@@ -10,8 +10,8 @@ class Organizer extends Component {
           return (
             <div key={organizers.key} className="OrganizerItem">
               {/* <img src={organizers.imgsrc} alt=""></img> */}
-              <h3>{organizers.fullname}</h3>
-              <h4>{organizers.position}</h4>
+              <h4>{organizers.fullname}</h4>
+              <h5>{organizers.position}</h5>
             </div>
           );
         })}
