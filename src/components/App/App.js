@@ -25,7 +25,7 @@ class App extends Component {
         },
         {
           sectionName: "uOttahack's History",
-          subtitle: ""
+          subtitle: "uOttahack 2018 Team"
         }
       ]
     });
@@ -36,7 +36,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Front />
-        <Page page={this.state.sections} />
+        <Page section={this.state.sections} />
       </div>
     );
   }

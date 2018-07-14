@@ -4,7 +4,7 @@ import Section from "../Section/Section.js";
 
 class Page extends Component {
   render() {
-    const sectionItem = this.props.page.map(section => {
+    const sectionItem = this.props.section.map(section => {
       return <Section key={section.sectionName} section={section} />;
     });
     return <div className="Page">{sectionItem}</div>;

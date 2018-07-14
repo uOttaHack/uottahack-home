@@ -1,4 +1,9 @@
 .Navbar {
-  height: 5%;
-  border-bottom: 1px;
+  background-color: white;
+
+  position: fixed;
+  left: 10%; /* HAS TO MATCH APP margin-left*/
+  right: 10%; /* HAS TO MATCH APP margin-right*/
+  top: 0;
+  border-bottom: 1px solid black;
 }

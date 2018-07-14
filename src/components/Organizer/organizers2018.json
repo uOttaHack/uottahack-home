@@ -1,0 +1,128 @@
+[
+  {
+    "key": 0,
+    "imgsrc": "../../images/paul-lee.png",
+    "fullname": "Paul Lee",
+    "position": "Co-chair",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 1,
+    "imgsrc": "../../images/matt-langlois.png",
+    "fullname": "Matt Langlois",
+    "position": "Co-chair",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 2,
+    "imgsrc": "../../images/emily-pham.png",
+    "fullname": "Emily Pham",
+    "position": "Director of Sponsorship",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 3,
+    "imgsrc": "../../images/arsani-guirguis.png",
+    "fullname": "Arsani Guirguis",
+    "position": "Director of Marketing",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 0,
+    "imgsrc": "../../images/anita-popescu.png",
+    "fullname": "Anita Popescu",
+    "position": "Co-Director of Logistics",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 4,
+    "imgsrc": "../../images/amar-jasarbasic.png",
+    "fullname": "Amar Jasarbasic",
+    "position": "Sponsorship Team",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 5,
+    "imgsrc": "../../images/minhthao-dang.png",
+    "fullname": "MinhThao Dang",
+    "position": "Marketing Team",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 6,
+    "imgsrc": "../../images/abdulwahaab-ahmed.png",
+    "fullname": "Abdulwahaab Ahmed",
+    "position": "Co-Director of Logistics",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 7,
+    "imgsrc": "../../images/hamza-basrai.png",
+    "fullname": "Hamza Basrai",
+    "position": "Sponsorship Team",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 8,
+    "imgsrc": "../../images/natesh-kukreja.png",
+    "fullname": "Natesh Kukreja",
+    "position": "Logistics Team",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 9,
+    "imgsrc": "../../images/stephanie-giang.png",
+    "fullname": "Stephanie Giang",
+    "position": "Logistics Team",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 11,
+    "imgsrc": "../../images/ivor-Benderavage.png",
+    "fullname": "Ivor Benderavage",
+    "position": "Director of IT/AV",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 12,
+    "imgsrc": "../../images/sherry-wang.png",
+    "fullname": "Sherry Wang",
+    "position": "Director of Finance",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "key": 13,
+    "imgsrc": "../../images/robert-conrad.png",
+    "fullname": "Robert Conrad",
+    "position": "Logistics Team",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  }
+]
