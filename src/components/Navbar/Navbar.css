@@ -6,6 +6,18 @@
   right: 7%; /* HAS TO MATCH APP margin-right - 2*/
   top: 0;
   border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.PageTite {
+  align-self: flex-start;
+}
+
+.NavLinks {
+  display: flex;
+  flex-direction: row;
 }
 
 @media only screen and (max-width: 768px) {
