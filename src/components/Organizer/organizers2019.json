@@ -1,126 +1,192 @@
 [
   {
-    "key": 0,
-    "imgsrc": "../../images/paul-lee.png",
-    "fullname": "Paul Lee",
-    "position": "Co-chair",
-    "website": "",
-    "linkedin": "",
-    "github": ""
-  },
-  {
-    "key": 1,
-    "imgsrc": "../../images/matt-langlois.png",
-    "fullname": "Matt Langlois",
-    "position": "Co-chair",
-    "website": "",
-    "linkedin": "",
-    "github": ""
-  },
-  {
-    "key": 2,
-    "imgsrc": "../../images/emily-pham.png",
-    "fullname": "Emily Pham",
-    "position": "Director of Sponsorship",
-    "website": "",
-    "linkedin": "",
-    "github": ""
-  },
-  {
-    "key": 3,
-    "imgsrc": "../../images/arsani-guirguis.png",
-    "fullname": "Arsani Guirguis",
-    "position": "Director of Marketing",
-    "website": "",
-    "linkedin": "",
-    "github": ""
-  },
-  {
-    "key": 0,
-    "imgsrc": "../../images/anita-popescu.png",
-    "fullname": "Anita Popescu",
-    "position": "Co-Director of Logistics",
-    "website": "",
-    "linkedin": "",
-    "github": ""
-  },
-  {
-    "key": 4,
     "imgsrc": "../../images/amar-jasarbasic.png",
-    "fullname": "Amar Jasarbasic",
-    "position": "Sponsorship Team",
+    "header": "Amar Jasarbasic",
+    "meta": "Sponsorship Lead",
     "website": "",
     "linkedin": "",
     "github": ""
   },
   {
-    "key": 5,
+    "imgsrc": "../../images/calvin-smith.png",
+    "header": "Calvin Smith",
+    "meta": "Sponsorship Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/lori-antranikian.png",
+    "header": "Lori Antranikian",
+    "meta": "Sponsorship Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/naomi-halder.png",
+    "header": "Naomi Halder",
+    "meta": "Sponsorship Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/brennan-mcdonald.png",
+    "header": "Brennan McDonald",
+    "meta": "Community Evangelist Lead",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/melody-habbouche.png",
+    "header": "Melody Habbouche",
+    "meta": "Community Evangelist",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/maulik-shah.png",
+    "header": "Maulik Shah",
+    "meta": "Community Evangelist",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
     "imgsrc": "../../images/minhthao-dang.png",
-    "fullname": "MinhThao Dang",
-    "position": "Marketing Team",
+    "header": "MinhThao Dang",
+    "meta": "Marketing Lead",
     "website": "",
     "linkedin": "",
     "github": ""
   },
   {
-    "key": 6,
-    "imgsrc": "../../images/abdulwahaab-ahmed.png",
-    "fullname": "Abdulwahaab Ahmed",
-    "position": "Co-Director of Logistics",
+    "imgsrc": "../../images/ivor-benderavage.png",
+    "header": "Ivor Benderavage",
+    "meta": "Marketing Coordinator",
     "website": "",
     "linkedin": "",
     "github": ""
   },
   {
-    "key": 7,
-    "imgsrc": "../../images/hamza-basrai.png",
-    "fullname": "Hamza Basrai",
-    "position": "Sponsorship Team",
+    "imgsrc": "../../images/dharani-nachiappan.png",
+    "header": "Dharani Nachiappan",
+    "meta": "Marketing Coordinator",
     "website": "",
     "linkedin": "",
     "github": ""
   },
   {
-    "key": 8,
-    "imgsrc": "../../images/natesh-kukreja.png",
-    "fullname": "Natesh Kukreja",
-    "position": "Logistics Team",
-    "website": "",
-    "linkedin": "",
-    "github": ""
-  },
-  {
-    "key": 9,
-    "imgsrc": "../../images/stephanie-giang.png",
-    "fullname": "Stephanie Giang",
-    "position": "Logistics Team",
-    "website": "",
-    "linkedin": "",
-    "github": ""
-  },
-  {
-    "key": 11,
-    "imgsrc": "../../images/ivor-Benderavage.png",
-    "fullname": "Ivor Benderavage",
-    "position": "Director of IT/AV",
-    "website": "",
-    "linkedin": "",
-    "github": ""
-  },
-  {
-    "key": 12,
     "imgsrc": "../../images/sherry-wang.png",
-    "fullname": "Sherry Wang",
-    "position": "Director of Finance",
+    "header": "Sherry Wang",
+    "meta": "Finance Lead",
     "website": "",
     "linkedin": "",
     "github": ""
   },
   {
-    "key": 13,
+    "imgsrc": "../../images/yasmin-abdelazim.png",
+    "header": "Yasmin Abdelazim",
+    "meta": "Finance Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/arsani-guirguis.png",
+    "header": "Arsani Guirguis",
+    "meta": "Developer Team Lead",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/natesh-kukreja.png",
+    "header": "Natesh Kukreja",
+    "meta": "Developer",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/abdulwahaab-ahmed.png",
+    "header": "Abdulwahaab Ahmed",
+    "meta": "Developer",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/devansh-shah.png",
+    "header": "Devansh Shah",
+    "meta": "Designer",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/tolu-olubode.png",
+    "header": "Tolu Olubode",
+    "meta": "Designer",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/sam-garcia.png",
+    "header": "Sam Garcia",
+    "meta": "Graphic Designer",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/stephanie-giang.png",
+    "header": "Stephanie Giang",
+    "meta": "Logistics Lead",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/smit-patel.png",
+    "header": "Smit Patel",
+    "meta": "Logistics Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
     "imgsrc": "../../images/robert-conrad.png",
-    "fullname": "Robert Conrad",
-    "position": "Logistics Team",
+    "header": "Robert Conrad",
+    "meta": "Logistics Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/shriya-gundala.png",
+    "header": "Shriya Gundala",
+    "meta": "Logistics Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/vivian-diec.png",
+    "header": "Vivian Diec",
+    "meta": "Logistics Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/ellen-li.png",
+    "header": "Ellen Li",
+    "meta": "Logistics Coordinator",
     "website": "",
     "linkedin": "",
     "github": ""

@@ -1,8 +1,4 @@
 .Organizer {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  flex-wrap: wrap;
   align-content: space-between;
   justify-content: space-evenly;
 }

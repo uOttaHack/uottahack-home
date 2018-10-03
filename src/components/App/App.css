@@ -1,31 +1,46 @@
 @import url("https://fonts.googleapis.com/css?family=Muli");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 
 /*
-UOTTHACC LOGO HEX COLORS:
+UOTTHACC 2018 LOGO HEX COLORS:
 BLUE BORDER #3366cc
 BLUE TEXT #084259
 RED TEXT #8b181d
+
+uOttaHack 2019 Hex Colors:
+Teal #47B9A9
+Blue #086788
+Orange #FCA311
+
+
 */
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Muli", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.App {
-  margin-left: 10%;
-  margin-right: 10%;
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
 }
 
 h2 {
-  color: #3366cc;
+  color: #47b9a9;
+  font-size: 4em;
+  font-family: "Poppins", sans-serif;
 }
 
 h3 {
-  color: #8b181d;
+  color: #fca311;
+  font-size: 1.5em;
 }
 
 h5 {
   color: gray;
+}
+
+p {
+  font-size: 1.3em;
 }

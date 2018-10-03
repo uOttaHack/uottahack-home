@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./Section.css";
 import Event from "../Event/Event.js";
 import Organizer from "../Organizer/Organizer.js";
+import About from "../About/About.js";
+import Contact from "../Contact/Contact.js";
 
 class Section extends Component {
   render() {
@@ -9,10 +11,12 @@ class Section extends Component {
       <div className="Section">
         <h2>{this.props.section.sectionName}</h2>
         <h3>{this.props.section.subtitle}</h3>
-        {this.props.section.sectionName === "What are we up to?" && <Event />}
-        {this.props.section.sectionName === "uOttahack's History" && (
-          <Organizer />
+        {this.props.section.sectionName === "What is uOttaHack?" && <About />}
+        {this.props.section.sectionName === "Our Events & Initiatives" && (
+          <Event />
         )}
+        {this.props.section.sectionName === "Get in touch" && <Contact />}
+        {this.props.section.sectionName === "Our Team" && <Organizer />}
       </div>
     );
   }

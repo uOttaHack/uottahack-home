@@ -1,3 +1,9 @@
 .Section {
-  height: 400px;
+  justify-content: center;
+  max-width: 800px;
+  padding: 0 40px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  margin-bottom: 200px;
 }

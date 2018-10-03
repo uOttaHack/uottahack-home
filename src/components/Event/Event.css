@@ -1,9 +1,3 @@
-.Marquee {
-  overflow: hidden;
-}
-
-.EventItem {
-  width: 600px;
-  height: 250px;
-  border: 2px solid black;
+.Event {
+  padding-top: 50px;
 }

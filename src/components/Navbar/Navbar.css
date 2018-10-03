@@ -1,14 +1,22 @@
 .Navbar {
   background-color: white;
   position: fixed;
-  z-index: 1;
-  left: 7%; /* HAS TO MATCH APP margin-left - 2*/
-  right: 7%; /* HAS TO MATCH APP margin-right - 2*/
+  z-index: 10;
+  left: 0%; /* HAS TO MATCH APP margin-left - 2*/
+  right: 0%; /* HAS TO MATCH APP margin-right - 2*/
   top: 0;
   border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 75px;
+  box-shadow: 0 3px 14px 0 #676767;
+}
+
+.Navbar img {
+  margin-top: 10px;
+  height: auto;
+  width: 200px;
 }
 
 .PageTite {
@@ -18,6 +26,16 @@
 .NavLinks {
   display: flex;
   flex-direction: row;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.NavLinks a {
+  color: inherit;
+}
+
+.NavLinks i {
+  margin: 0 10px;
 }
 
 @media only screen and (max-width: 768px) {

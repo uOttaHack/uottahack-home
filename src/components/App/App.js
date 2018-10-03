@@ -16,16 +16,21 @@ class App extends Component {
     this.setState({
       sections: [
         {
-          sectionName: "What is uOttahack?",
-          subtitle: "Who are we?"
+          sectionName: "What is uOttaHack?",
+          subtitle: ""
+        },
+
+        {
+          sectionName: "Our Events & Initiatives",
+          subtitle: "Endeavours we're proud to lead"
         },
         {
-          sectionName: "What are we up to?",
-          subtitle: "Events, Endeavors, & Projects"
+          sectionName: "Get in touch",
+          subtitle: ""
         },
         {
-          sectionName: "uOttahack's History",
-          subtitle: "uOttahack 2018 Team"
+          sectionName: "Our Team",
+          subtitle: ""
         }
       ]
     });
