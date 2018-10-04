@@ -14,9 +14,10 @@
 }
 
 .Navbar img {
-  margin-top: 10px;
+  margin-top: 15px;
+  padding-left: 10px;
   height: auto;
-  width: 200px;
+  width: 150px;
 }
 
 .PageTite {
