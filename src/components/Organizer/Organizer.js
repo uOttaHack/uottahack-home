@@ -48,11 +48,11 @@ class Organizer extends Component {
       <div className="Organizer">
         <h3>2018-2019</h3>
         <Card.Group centered items={chair19} />
-        <Card.Group centered itemsPerRow={3} items={organizer2019} />
+        <Card.Group centered items={organizer2019} />
 
         <h3>2017-2018</h3>
         <Card.Group centered items={chair18} />
-        <Card.Group centered itemsPerRow={3} items={organizer2018} />
+        <Card.Group centered items={organizer2018} />
       </div>
     );
   }

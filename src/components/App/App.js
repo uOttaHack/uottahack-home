@@ -4,6 +4,11 @@ import Navbar from "../Navbar/Navbar.js";
 import Front from "../Front/Front.js";
 import Page from "../Page/Page.js";
 
+var http = require("http");
+setInterval(function() {
+  http.get("uottahack.ca/");
+}, 300000); // every 5 minutes (300000)
+
 class App extends Component {
   constructor() {
     super();

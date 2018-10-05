@@ -23,7 +23,7 @@ class About extends Component {
           to new languages and frameworks that real developers are adopting.
         </p>
 
-        <h3>Accerelate Your Career</h3>
+        <h3>Accelerate Your Career</h3>
         <p>
           Attend events like our flagship hackathon and have the opportunity to
           collaborate with students from across Canada and receive mentorship
