@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Organizer.css";
 import organizer2018 from "./organizers2018.json";
 import organizer2019 from "./organizers2019.json";
-import { Card, Icon } from "semantic-ui-react";
+import { Card, Button } from "semantic-ui-react";
 
 const chair18 = [
   {
@@ -46,13 +46,25 @@ class Organizer extends Component {
   render() {
     return (
       <div className="Organizer">
-        <h3>2018-2019</h3>
-        <Card.Group centered items={chair19} />
-        <Card.Group centered items={organizer2019} />
+        <div className="Organizer-Group">
+          <h3>2018-2019</h3>
+          <Card.Group centered items={chair19} />
+          <Card.Group centered items={organizer2019} />
+        </div>
 
-        <h3>2017-2018</h3>
-        <Card.Group centered items={chair18} />
-        <Card.Group centered items={organizer2018} />
+        <div className="Organizer-Group">
+          <h3>2017-2018</h3>
+          <Button
+            className="btn-org"
+            href="https://2018.uottahack.ca"
+            size="big"
+          >
+            Visit the 2018 site
+          </Button>
+
+          <Card.Group centered items={chair18} />
+          <Card.Group centered items={organizer2018} />
+        </div>
       </div>
     );
   }

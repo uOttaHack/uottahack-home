@@ -1,6 +1,5 @@
 import React from "react";
 import "./Navbar.css";
-import Link from "../Link.js";
 import { Icon } from "semantic-ui-react";
 import LogoDark from "../../images/uottahack19-dark.png";
 
@@ -9,7 +8,7 @@ const navbar = () => {
     <div className="Navbar">
       <div className="PageTitle">
         <a href="/">
-          <img src={LogoDark} />
+          <img src={LogoDark} alt="Logo" />
         </a>
       </div>
       <div className="NavLinks">

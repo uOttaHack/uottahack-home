@@ -28,3 +28,7 @@ h1 {
   background-color: #086788;
   color: white;
 }
+
+#body .btn:hover {
+  background-color: #1086ad;
+}
