@@ -1,0 +1,30 @@
+.nitskonami {
+  position: absolute;
+  left: 80%;
+  bottom: -2%;
+}
+
+.nits {
+  position: absolute;
+}
+
+img {
+  height: auto;
+  width: 350px;
+}
+
+.animatedIn {
+  animation: 2s left forwards ease;
+}
+
+@keyframes left {
+  0% {
+    left: 110%;
+  }
+  50% {
+    left: 10%;
+  }
+  100% {
+    left: 110%;
+  }
+}

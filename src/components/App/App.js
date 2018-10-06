@@ -3,7 +3,6 @@ import "./App.css";
 import Navbar from "../Navbar/Navbar.js";
 import Front from "../Front/Front.js";
 import Page from "../Page/Page.js";
-import Egg from "../Egg/Egg.js";
 
 class App extends Component {
   constructor() {
@@ -43,7 +42,6 @@ class App extends Component {
         <Navbar />
         <Front />
         <Page section={this.state.sections} />
-        <Egg />
       </div>
     );
   }

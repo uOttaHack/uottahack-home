@@ -2,6 +2,7 @@ import React from "react";
 import "./Front.css";
 import Logo from "../../images/uottahack19.png";
 import { Button } from "semantic-ui-react";
+import Egg from "../Egg/Egg.js";
 
 const front = () => {
   return (
@@ -14,6 +15,7 @@ const front = () => {
           Visit 2019
         </Button>
       </div>
+      <Egg />
     </div>
   );
 };
