@@ -4,9 +4,33 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url("../../images/bg.png");
   height: 100vh;
   margin-bottom: 100px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.Front::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  background-image: linear-gradient(
+      to right,
+      rgba(71, 185, 169, 0.65),
+      rgba(8, 103, 136, 0.65)
+    ),
+    url("../../images/hero-bg.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  height: 100vh;
+  width: 100vw;
 }
 
 .Logo {
@@ -25,10 +49,10 @@ h1 {
 }
 
 #body .btn {
-  background-color: #086788;
+  background-color: #47b9a9;
   color: white;
 }
 
 #body .btn:hover {
-  background-color: #1086ad;
+  background-color: #086788;
 }

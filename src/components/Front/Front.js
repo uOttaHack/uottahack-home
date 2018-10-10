@@ -7,15 +7,22 @@ import Egg from "../Egg/Egg.js";
 const front = () => {
   return (
     <div className="Front">
-      <img className="Logo" src={Logo} alt="" />
-      <h1>The University of Ottawa's Hackathon Community</h1>
+      <div className="Hero">
+        <img className="Logo" src={Logo} alt="" />
+        <h1>The University of Ottawa's Hackathon Community</h1>
 
-      <div className="button">
-        <Button className="btn" href="https://2019.uottahack.ca" size="massive">
-          Visit 2019
-        </Button>
+        <div className="button">
+          <Button
+            className="btn"
+            href="https://2019.uottahack.ca"
+            size="massive"
+          >
+            Visit 2019
+          </Button>
+        </div>
+
+        <Egg />
       </div>
-      <Egg />
     </div>
   );
 };
