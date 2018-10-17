@@ -1,30 +1,76 @@
 .nitskonami {
-  position: absolute;
-  left: 80%;
+  position: fixed;
+  left: 90%;
   bottom: -2%;
-}
-
-.nits {
-  position: absolute;
-}
-
-img {
   height: auto;
   width: 350px;
 }
 
-.animatedIn {
+img {
+  height: auto;
+  width: 100%;
+}
+
+.animatedIn-Nits {
   animation: 2s left forwards ease;
 }
 
 @keyframes left {
   0% {
-    left: 110%;
+    left: 90%;
   }
   50% {
-    left: 10%;
+    left: -20%;
   }
   100% {
-    left: 110%;
+    left: 90%;
   }
+}
+
+.animatedIn-Arsani {
+  animation: move 16s linear 0s 1 forwards;
+}
+
+@keyframes move {
+  0% {
+    left: 90%;
+    bottom: -2%;
+  }
+  15% {
+    left: -500%;
+    transform: translateY(-60%) rotate(900deg);
+  }
+  30% {
+    left: -100%;
+    transform: translateY(70%) rotate(360deg);
+  }
+  45% {
+    left: -200%;
+    transform: translateY(-300%) rotate(-600deg);
+  }
+  60% {
+    left: -400%;
+    transform: translateY(70%) rotate(900deg);
+  }
+  75% {
+    left: -100%;
+    transform: translateY(-300%) rotate(900deg);
+  }
+  90% {
+    left: -200%;
+    bottom: -2%;
+  }
+  100% {
+    left: 90%;
+    bottom: -2%;
+  }
+}
+
+.arsaniKonami {
+  position: fixed;
+  left: 90%;
+  bottom: -2%;
+  height: auto;
+  width: 300px;
+  z-index: 10;
 }
