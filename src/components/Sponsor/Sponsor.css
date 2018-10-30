@@ -1,0 +1,15 @@
+.Sponsor {
+  display: block;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.sponsor-row {
+  width: 100%;
+}
+
+img {
+  max-width: 50em;
+  height: auto;
+  margin: 30px;
+}

@@ -25,6 +25,10 @@ class App extends Component {
           subtitle: "Endeavours we're proud to lead"
         },
         {
+          sectionName: "Past Sponsors",
+          subtitle: ""
+        },
+        {
           sectionName: "Get in touch",
           subtitle: ""
         },
