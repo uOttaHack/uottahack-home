@@ -14,10 +14,10 @@ const front = () => {
         <div className="button">
           <Button
             className="btn"
-            href="https://2020.uottahack.ca/"
+            href="https://2021.uottahack.ca/"
             size="massive"
           >
-            Visit 2020
+            Visit 2021
           </Button>
         </div>
 
