@@ -21,6 +21,11 @@ class App extends Component {
         },
 
         {
+          sectionName: "Past uOttaHacks",
+          subTitle: ""
+        },
+
+        {
           sectionName: "Our Events & Initiatives",
           subtitle: "Endeavours we're proud to lead"
         },

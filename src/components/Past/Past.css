@@ -1,0 +1,65 @@
+.Past {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.logobutton {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 950px) {
+  .Past {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.logobutton img {
+  width: 125px;
+  height: 125px;
+  position: relative;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.logobutton button {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: relative;
+  width: 150px;
+  height: 60px;
+}
+
+.logobutton button:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+.btn1 {
+  background-color: #92051a;
+  color: white;
+}
+
+.btn2 {
+  background-color: #49e6c0;
+  color: white;
+}
+
+.btn3 {
+  background-color: #404ca3;
+  color: white;
+}
+
+.btn4 {
+  background-color: #f1f1f1;
+  color: black;
+}
