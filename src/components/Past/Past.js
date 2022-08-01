@@ -57,6 +57,12 @@ class Past extends Component {
             </a>
           </div>
         </div>
+        <div className="line" />
+        <div className="circle1" />
+        <div className="circle2" />
+        <div className="circle3" />
+        <div className="circle4" />
+        <div className="vline" />
       </div>
     );
   }

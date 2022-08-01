@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   flex-direction: row;
+  height: 300px;
 }
 
 .logobutton {
@@ -16,6 +17,32 @@
   .Past {
     display: flex;
     flex-direction: column;
+    height: 1100px;
+    align-items: flex-end;
+  }
+
+  .line {
+    visibility: hidden;
+  }
+
+  .circle1 {
+    visibility: hidden;
+  }
+
+  .circle2 {
+    visibility: hidden;
+  }
+
+  .circle3 {
+    visibility: hidden;
+  }
+
+  .circle4 {
+    visibility: hidden;
+  }
+
+  .logobutton {
+    margin-bottom: 100px;
   }
 }
 
@@ -24,6 +51,7 @@
   height: 125px;
   position: relative;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .logobutton button {
@@ -63,4 +91,53 @@
 .btn4 {
   background-color: #f1f1f1;
   color: black;
+}
+
+.line {
+  height: 3px;
+  background-color: grey;
+  width: 850px;
+  position: absolute;
+  top: 290px;
+  left: 80px;
+}
+
+.circle1 {
+  top: 281px;
+  height: 20px;
+  width: 20px;
+  left: 142px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle2 {
+  top: 281px;
+  height: 20px;
+  width: 20px;
+  left: 374px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle3 {
+  top: 281px;
+  height: 20px;
+  width: 20px;
+  left: 605px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle4 {
+  top: 281px;
+  height: 20px;
+  width: 20px;
+  left: 835px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
 }
