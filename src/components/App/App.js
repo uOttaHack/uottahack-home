@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "../Navbar/Navbar.js";
 import Front from "../Front/Front.js";
 import Page from "../Page/Page.js";
+import Footer from "../Footer/Footer";
 
 class App extends Component {
   constructor() {
@@ -46,6 +47,8 @@ class App extends Component {
         <Navbar />
         <Front />
         <Page section={this.state.sections} />
+        <hr />
+        <Footer />
       </div>
     );
   }

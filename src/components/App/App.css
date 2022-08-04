@@ -44,3 +44,12 @@ h5 {
 p {
   font-size: 1.3em;
 }
+
+hr {
+  width: 75%;
+  margin: auto;
+  background: gainsboro;
+  color: gainsboro;
+  border: none;
+  height: 1px;
+}

@@ -5,38 +5,54 @@
   left: 0%; /* HAS TO MATCH APP margin-left - 2*/
   right: 0%; /* HAS TO MATCH APP margin-right - 2*/
   top: 0;
-  border-bottom: 1px solid black;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 75px;
-  box-shadow: 0 3px 14px 0 #676767;
+  height: 95px;
+  align-items: center;
+  position: relative;
 }
 
 .Navbar img {
   margin-top: 15px;
   padding-left: 10px;
   height: auto;
-  width: 150px;
+  width: 75px;
 }
 
-.PageTite {
+.PageTitle {
   align-self: flex-start;
 }
 
 .NavLinks {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
   margin-right: 20px;
+  align-items: center;
+}
+
+.PageLinks {
+  margin-right: auto;
+  height: auto;
+  display: flex;
+}
+
+.PageLinks a {
+  color: black;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .NavLinks a {
-  color: inherit;
+  color: black;
 }
 
-.NavLinks i {
-  margin: 0 10px;
+.NavLinks box-icon {
+  margin: 15px;
 }
 
 @media only screen and (max-width: 768px) {

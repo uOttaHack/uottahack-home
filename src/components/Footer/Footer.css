@@ -1,0 +1,68 @@
+.Footer {
+  justify-content: center;
+}
+
+.FooterBody {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+}
+
+.FooterLogo {
+  display: block;
+}
+
+.FooterLogo img {
+  width: 175px;
+  height: auto;
+  margin: 0px auto;
+  padding-top: 50px;
+}
+
+.LogoText {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 50px;
+}
+
+.MediaLinks {
+  display: block;
+  flex-direction: row;
+  float: left;
+  margin: auto;
+}
+
+.MediaLinks a {
+  margin: 15px;
+}
+
+.FooterLinks {
+  float: left;
+  margin: auto;
+}
+
+.FooterLinks a {
+  font-size: 12px;
+  color: black;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  font-weight: 500;
+}
+
+.Signature {
+  float: left;
+  margin: auto;
+}
+
+.Signature p {
+  font-size: 12px;
+}
+
+.FooterContainer {
+  display: grid;
+  width: 75%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10%;
+  margin-bottom: 25px;
+}
