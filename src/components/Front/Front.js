@@ -9,18 +9,8 @@ const front = () => {
     <div className="Front">
       <div className="Hero">
         <img className="Logo" src={Logo} alt="" />
-        <h1>The University of Ottawa's Hackathon Community</h1>
-
-        <div className="button">
-          <Button
-            className="btn"
-            href="https://2021.uottahack.ca/"
-            size="massive"
-          >
-            Visit 2021
-          </Button>
-        </div>
-
+        <h1>The University of Ottawa's</h1>
+        <h1>Hackathon Community</h1>
         <Egg />
       </div>
     </div>

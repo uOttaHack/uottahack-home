@@ -16,28 +16,23 @@
   top: -5px;
   background-image: linear-gradient(
       to right,
-      rgba(71, 185, 169, 0.65),
-      rgba(8, 103, 136, 0.65)
+      rgba(1, 1, 1, 0.75),
+      rgba(1, 1, 1, 0.75)
     ),
-    url("../../images/hero-bg.jpg");
+    url("../../images/coverPhoto.png");
   background-repeat: no-repeat, no-repeat;
   background-position: center;
   background-size: cover;
   z-index: -1;
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-  -moz-filter: blur(4px);
-  -o-filter: blur(4px);
-  -ms-filter: blur(4px);
   height: 100vh;
   width: 100vw;
 }
 
 .Logo {
   align-self: center;
-  height: auto;
-  width: 50vw;
-  padding-bottom: 10vh;
+  max-width: 50vw;
+  padding-bottom: 5vh;
+  margin-top: 20vh;
 }
 
 .button {
@@ -46,6 +41,8 @@
 
 h1 {
   color: white;
+  font-weight: lighter;
+  font-size: 30px;
 }
 
 #body .btn {
