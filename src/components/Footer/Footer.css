@@ -25,44 +25,68 @@
   margin-bottom: 50px;
 }
 
-.MediaLinks {
-  display: block;
-  flex-direction: row;
-  float: left;
-  margin: auto;
+@media only screen and (max-width: 2560px) {
+  .MediaLinks {
+    display: block;
+    flex-direction: row;
+    float: left;
+    margin: auto;
+  }
+
+  .MediaLinks a {
+    margin: 15px;
+  }
+
+  .FooterLinks {
+    float: left;
+    margin: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 15px;
+  }
+
+  .FooterLinks a {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .FooterLinkMargin {
+    margin-left: 16px;
+  }
+
+  .Signature {
+    float: left;
+    margin: auto;
+  }
+
+  .Signature p {
+    font-size: 12px;
+  }
+
+  .FooterContainer {
+    display: grid;
+    width: 75%;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 25px;
+  }
 }
 
-.MediaLinks a {
-  margin: 15px;
-}
+@media only screen and (max-width: 1080px) {
+  .FooterContainer {
+    display: grid;
+    width: 75%;
+    grid-template-columns: auto;
+    margin-bottom: 25px;
+    gap: 25px;
+  }
 
-.FooterLinks {
-  float: left;
-  margin: auto;
-}
-
-.FooterLinks a {
-  font-size: 12px;
-  color: black;
-  margin-left: 16px;
-  text-decoration: none;
-  padding: 6px;
-  font-weight: 500;
-}
-
-.Signature {
-  float: left;
-  margin: auto;
-}
-
-.Signature p {
-  font-size: 12px;
-}
-
-.FooterContainer {
-  display: grid;
-  width: 75%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10%;
-  margin-bottom: 25px;
+  .FooterLinks {
+    float: left;
+    margin: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 15px;
+  }
 }
