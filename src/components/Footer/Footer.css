@@ -69,7 +69,7 @@
   }
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1200px) {
   .FooterContainer {
     display: grid;
     width: 75%;
