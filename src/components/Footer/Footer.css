@@ -52,10 +52,6 @@
     font-weight: 500;
   }
 
-  .FooterLinkMargin {
-    margin-left: 16px;
-  }
-
   .Signature {
     float: left;
     margin: auto;
@@ -79,7 +75,7 @@
     width: 75%;
     grid-template-columns: auto;
     margin-bottom: 25px;
-    gap: 25px;
+    gap: 50px;
   }
 
   .FooterLinks {
@@ -87,6 +83,11 @@
     margin: auto;
     display: grid;
     grid-auto-flow: column;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
     grid-column-gap: 15px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    align-items: center;
   }
 }
