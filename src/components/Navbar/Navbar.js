@@ -7,9 +7,7 @@ const navbar = () => {
   return (
     <div className="Navbar">
       <div className="PageTitle">
-        <a href="/">
-          <img src={ProfileLogo} alt="Logo" />
-        </a>
+        <img src={ProfileLogo} alt="Logo" />
       </div>
       <div className="PageLinks">
         <a href="/about">About</a>
@@ -35,6 +33,9 @@ const navbar = () => {
           <box-icon name="linkedin" type="logo" />
         </a>
       </div>
+      <a class="MobileMenu">
+        <i class="big bars icon" />
+      </a>
     </div>
   );
 };
