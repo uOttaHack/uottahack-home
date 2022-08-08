@@ -9,16 +9,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 95px;
+    height: 75px;
     align-items: center;
     position: relative;
   }
 
   .Navbar img {
-    margin-top: 15px;
+    margin-top: 13px;
     padding-left: 10px;
+    margin-left: 20px;
     height: auto;
-    width: 75px;
+    width: 60px;
   }
 
   .PageTitle {
@@ -77,5 +78,6 @@
   .MobileMenu {
     display: block;
     color: black;
+    margin-right: 25px;
   }
 }
