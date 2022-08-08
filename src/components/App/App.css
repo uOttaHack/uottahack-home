@@ -28,8 +28,9 @@ h1 {
 
 h2 {
   color: #47b9a9;
-  font-size: 4em;
+  font-size: 3.5em;
   font-family: "Poppins", sans-serif;
+  margin: auto;
 }
 
 h3 {
