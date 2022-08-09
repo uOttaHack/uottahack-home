@@ -52,23 +52,24 @@
   text-align: center;
 }
 
+h1 {
+  color: white;
+}
+
 @media only screen and (max-width: 2560px) {
   h1 {
-    color: white;
     font-size: 2vw;
   }
 }
 
 @media only screen and (max-width: 1440px) {
   h1 {
-    color: white;
     font-size: 3vw;
   }
 }
 
 @media only screen and (max-width: 1080px) {
   h1 {
-    color: white;
     font-size: 4vw;
   }
 }
@@ -82,7 +83,6 @@
   }
 
   h1 {
-    color: white;
     font-size: 5.5vw;
   }
 }
