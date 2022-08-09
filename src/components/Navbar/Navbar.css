@@ -78,3 +78,17 @@
     align-items: center;
   }
 }
+
+@media only screen and (max-width: 321px) {
+  .MediaLinks a {
+    margin: 1px;
+  }
+
+  .Navbar img {
+    margin-top: 20px;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: auto;
+    width: 60px;
+  }
+}

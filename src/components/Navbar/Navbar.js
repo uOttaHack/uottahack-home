@@ -5,7 +5,7 @@ import "boxicons";
 
 const navbar = () => {
   return (
-    <div className="Navbar" id="myTopnav">
+    <div className="Navbar">
       <div className="PageTitle">
         <img src={ProfileLogo} alt="Logo" />
       </div>
