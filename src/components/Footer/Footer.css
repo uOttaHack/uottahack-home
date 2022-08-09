@@ -91,3 +91,16 @@
     align-items: center;
   }
 }
+
+@media only screen and (max-width: 360px) {
+  .MediaLinks {
+    display: block;
+    flex-direction: row;
+    float: left;
+    margin: auto;
+  }
+
+  .MediaLinks a {
+    margin: 10px;
+  }
+}
