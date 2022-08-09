@@ -67,17 +67,14 @@
     right: 0;
   }
 
-  .NavLinks {
-    display: none;
-  }
-
   .PageLinks {
     display: none;
   }
 
-  .MobileMenu {
-    display: block;
-    color: black;
-    margin-right: 25px;
+  .NavLinks {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1px;
+    align-items: center;
   }
 }
