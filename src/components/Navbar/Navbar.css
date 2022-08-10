@@ -46,6 +46,8 @@
     padding: 6px;
     font-weight: 700;
     font-size: 15px;
+    display: inline-block;
+    position: relative;
   }
 
   .NavLinks a {
@@ -58,6 +60,24 @@
 
   .MobileMenu {
     display: none;
+  }
+
+  .PageLinks a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+  }
+
+  .PageLinks a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }
 

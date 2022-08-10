@@ -10,27 +10,37 @@ const navbar = () => {
         <img src={ProfileLogo} alt="Logo" />
       </div>
       <div className="PageLinks">
-        <a href="/about">About</a>
-        <a href="/explore">Hackathons</a>
-        <a href="/testimonials">Events</a>
-        <a href="/schedule">Sponsors</a>
-        <a href="/contact">Contact</a>
+        <a class="hover-underline-animation" href="/">
+          About
+        </a>
+        <a class="hover-underline-animation" href="/">
+          Hackathons
+        </a>
+        <a class="hover-underline-animation" href="/">
+          Events
+        </a>
+        <a class="hover-underline-animation" href="/">
+          Sponsors
+        </a>
+        <a class="hover-underline-animation" href="/">
+          Contact
+        </a>
       </div>
       <div className="NavLinks">
         <a href="https://facebook.com/uottahack">
-          <box-icon type="logo" name="facebook-square" />
+          <box-icon class="bx-tada-hover" type="logo" name="facebook-square" />
         </a>
         <a href="https://twitter.com/uottahack">
-          <box-icon name="twitter" type="logo" />
+          <box-icon class="bx-tada-hover" name="twitter" type="logo" />
         </a>
         <a href="https://www.instagram.com/uottahack/">
-          <box-icon name="instagram" type="logo" />
+          <box-icon class="bx-tada-hover" name="instagram" type="logo" />
         </a>
         <a href="https://www.tiktok.com/@uottahack">
-          <box-icon name="tiktok" type="logo" />
+          <box-icon class="bx-tada-hover" name="tiktok" type="logo" />
         </a>
         <a href="https://www.linkedin.com/company/uottahack/">
-          <box-icon name="linkedin" type="logo" />
+          <box-icon class="bx-tada-hover" name="linkedin" type="logo" />
         </a>
       </div>
     </div>
