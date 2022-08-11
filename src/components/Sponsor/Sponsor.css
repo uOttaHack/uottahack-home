@@ -1,15 +1,15 @@
 .Sponsor {
   display: block;
   text-align: center;
-  vertical-align: bottom;
 }
 
-.sponsor-row {
-  width: 100%;
+div[class^="row"] {
+  transition: width 0.3s, height 0.3s;
 }
 
 img {
-  max-width: 50em;
+  max-width: 100%;
   height: auto;
-  margin: 30px;
+  margin: 30px 20px;
+  align-self: center;
 }
