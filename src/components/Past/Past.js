@@ -17,7 +17,7 @@ class Past extends Component {
   render() {
     return (
       <div className="Past">
-        <div className="logobutton">
+        <div className="logobutton1">
           <div className="inner">
             <img src={images["uOttaHack-2018-Logo.png"]} />
           </div>
@@ -27,7 +27,7 @@ class Past extends Component {
             </a>
           </div>
         </div>
-        <div className="logobutton">
+        <div className="logobutton2">
           <div className="inner">
             <img src={images["uOttaHack-2019-Logo.png"]} />
           </div>
@@ -37,7 +37,7 @@ class Past extends Component {
             </a>
           </div>
         </div>
-        <div className="logobutton">
+        <div className="logobutton3">
           <div className="inner">
             <img src={images["uOttaHack-2020-Logo.png"]} />
           </div>
@@ -47,7 +47,7 @@ class Past extends Component {
             </a>
           </div>
         </div>
-        <div className="logobutton">
+        <div className="logobutton4">
           <div className="inner">
             <img src={images["uOttaHack-2021-Logo.png"]} />
           </div>
@@ -63,6 +63,10 @@ class Past extends Component {
         <div className="circle3" />
         <div className="circle4" />
         <div className="vline" />
+        <div className="vcircle1" />
+        <div className="vcircle2" />
+        <div className="vcircle3" />
+        <div className="vcircle4" />
       </div>
     );
   }

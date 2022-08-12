@@ -1,24 +1,11 @@
 .Past {
-  display: flex;
   width: 100%;
-  flex-direction: row;
   height: 300px;
-}
-
-.logobutton {
-  margin-left: 20px;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 @media screen and (max-width: 950px) {
   .Past {
-    display: flex;
-    flex-direction: column;
     height: 1100px;
-    align-items: flex-end;
   }
 
   .line {
@@ -41,34 +28,203 @@
     visibility: hidden;
   }
 
-  .logobutton {
-    margin-bottom: 100px;
+  .vline {
+    border-left: 3px solid grey;
+    height: 1250px;
+    position: absolute;
+    left: 250px;
+    top: 125px;
+  }
+
+  .vcircle1 {
+    position: absolute;
+    border-radius: 50%;
+    background-color: grey;
+    height: 20px;
+    width: 20px;
+    left: 242px;
+    top: 190px;
+  }
+
+  .vcircle2 {
+    position: absolute;
+    border-radius: 50%;
+    background-color: grey;
+    height: 20px;
+    width: 20px;
+    left: 242px;
+    top: 520px;
+  }
+
+  .vcircle3 {
+    position: absolute;
+    border-radius: 50%;
+    background-color: grey;
+    height: 20px;
+    width: 20px;
+    left: 242px;
+    top: 850px;
+  }
+
+  .vcircle4 {
+    position: absolute;
+    border-radius: 50%;
+    background-color: grey;
+    height: 20px;
+    width: 20px;
+    left: 242px;
+    top: 1180px;
+  }
+
+  .logobutton1 img {
+    top: 110px !important;
+    left: 280px !important;
+  }
+
+  .logobutton1 button {
+    top: 260px !important;
+    left: 280px !important;
+  }
+
+  .logobutton2 img {
+    top: 440px !important;
+    left: 280px !important;
+  }
+
+  .logobutton2 button {
+    top: 590px !important;
+    left: 280px !important;
+  }
+
+  .logobutton3 img {
+    top: 770px !important;
+    left: 280px !important;
+  }
+
+  .logobutton3 button {
+    top: 920px !important;
+    left: 280px !important;
+  }
+
+  .logobutton4 img {
+    top: 1100px !important;
+    left: 280px !important;
+  }
+
+  .logobutton4 button {
+    top: 1250px !important;
+    left: 280px !important;
   }
 }
 
-.logobutton img {
+.logobutton1 img {
   width: 125px;
   height: 125px;
-  position: relative;
-  align-items: center;
-  margin-bottom: 60px;
+  position: absolute;
+  top: 100px;
+  left: 58px;
 }
 
-.logobutton button {
+.logobutton1 button {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  text-align: center;
   margin: 20px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  position: relative;
+  position: absolute;
   width: 150px;
   height: 60px;
+  top: 317px;
+  left: 58px;
 }
 
-.logobutton button:hover {
+.logobutton1 button:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+.logobutton2 img {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 100px;
+  left: 290px;
+}
+
+.logobutton2 button {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 20px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  top: 317px;
+  left: 290px;
+}
+
+.logobutton2 button:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+.logobutton3 img {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 100px;
+  left: 522px;
+}
+
+.logobutton3 button {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 20px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  top: 317px;
+  left: 522px;
+}
+
+.logobutton3 button:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  cursor: pointer;
+}
+
+.logobutton4 img {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 100px;
+  left: 752px;
+}
+
+.logobutton4 button {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 20px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  top: 317px;
+  left: 752px;
+}
+
+.logobutton4 button:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   cursor: pointer;
 }
