@@ -23,4 +23,6 @@ img {
 
 #blurWrap:hover img:not(:hover) {
   opacity: 0.4;
+  height: auto;
+  margin: 30px 20px;
 }
