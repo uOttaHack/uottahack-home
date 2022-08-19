@@ -18,11 +18,11 @@ class Sponsor extends Component {
     return (
       <div className="Sponsor">
         <div className="sponsor-row">
-          <img src={images["canada.png"]} style={{ width: "500px" }} />
+          <img src={images["canada.png"]} style={{ width: "400px" }} />
         </div>
         <div className="sponsor-row">
           <img src={images["klipfolio.png"]} style={{ width: "200px" }} />
-          <img src={images["surveymonkey.png"]} style={{ width: "320px" }} />
+          <img src={images["surveymonkey.png"]} style={{ width: "300px" }} />
           <img src={images["marchnetworks.png"]} style={{ width: "200px" }} />
         </div>
         <div className="sponsor-row">

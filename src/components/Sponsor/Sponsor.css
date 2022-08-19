@@ -9,7 +9,7 @@
 }
 
 img {
-  max-width: 50em;
+  max-width: 100%;
   height: auto;
-  margin: 30px;
+  margin: 30px 20px;
 }
