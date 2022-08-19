@@ -1,15 +1,28 @@
 .Sponsor {
   display: block;
   text-align: center;
-  vertical-align: bottom;
 }
 
-.sponsor-row {
-  width: 100%;
+.row {
+  margin-top: 60px;
 }
 
 img {
-  max-width: 50em;
+  max-width: 100%;
+  align-self: center;
+  transition: 1s;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.row a {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#blurWrap:hover img:not(:hover) {
+  opacity: 0.4;
   height: auto;
-  margin: 30px;
+  margin: 30px 20px;
 }
