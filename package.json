@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mobiscroll/react-lite": "^4.10.9",
     "boxicons": "^2.1.2",
     "express": "*",
+    "mobiscroll": "^3.0.0-beta6",
     "react": "^16.4.1",
+    "react-card-scroll": "^2.2.4",
     "react-dom": "^16.4.1",
+    "react-horizontal-scrolling-menu": "^3.2.0",
+    "react-icons": "^4.4.0",
     "react-konami-code": "^1.2.0",
-    "react-scripts": "1.1.4",
+    "react-scripts": "^5.0.1",
+    "react-scroll-horizontal": "^1.6.6",
     "react-smooth-marquee": "^1.0.0",
     "semantic-ui-react": "^0.82.5"
   },
@@ -29,5 +35,17 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.7"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
