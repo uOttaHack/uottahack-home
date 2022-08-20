@@ -15,35 +15,59 @@ Orange #FCA311
 
 */
 
+@font-face {
+  font-family: HeaderFont;
+  src: url(../../fonts/Inter/Inter-Black.ttf);
+}
+
+@font-face {
+  font-family: BoldFont;
+  src: url(../../fonts/Inter/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: ParagraphFont;
+  src: url(../../fonts/Inter/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: SemiFont;
+  src: url(../../fonts/Inter/Inter-SemiBold.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  font-family: ParagraphFont;
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: BoldFont;
   font-size: 2em;
 }
 
 h2 {
   color: black;
   font-size: 3.5em;
-  font-family: "Poppins", sans-serif;
+  font-family: HeaderFont;
   margin: auto;
 }
 
 h3 {
   color: black;
   font-size: 1.5em;
+  font-family: BoldFont;
 }
 
 h5 {
   color: gray;
+  font-family: SemiFont;
 }
 
 p {
-  font-size: 1.3em;
+  font-size: 1.5em;
+  font-family: ParagraphFont;
 }
 
 hr {

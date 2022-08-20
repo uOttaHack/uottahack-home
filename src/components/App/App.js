@@ -28,7 +28,7 @@ class App extends Component {
 
         {
           sectionName: "Our Events & Initiatives",
-          subtitle: "Endeavours we're proud to lead"
+          subtitle: ""
         },
         {
           sectionName: "Past Sponsors",
