@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import ProfileLogo from "../../images/uOttaHack-Logo.svg";
 import "boxicons";
+import { Link } from "react-scroll";
 
 const navbar = () => {
   return (
@@ -10,21 +11,33 @@ const navbar = () => {
         <img src={ProfileLogo} alt="Logo" />
       </div>
       <div className="PageLinks">
-        <a class="hover-underline-animation" href="/">
+        <Link to="About" spy={true} smooth={true} offset={-150} duration={500}>
           About
-        </a>
-        <a class="hover-underline-animation" href="/">
+        </Link>
+        <Link to="Past" spy={true} smooth={true} offset={-150} duration={500}>
           Hackathons
-        </a>
-        <a class="hover-underline-animation" href="/">
+        </Link>
+        <Link to="Events" spy={true} smooth={true} offset={-150} duration={500}>
           Events
-        </a>
-        <a class="hover-underline-animation" href="/">
+        </Link>
+        <Link
+          to="Sponsors"
+          spy={true}
+          smooth={true}
+          offset={-150}
+          duration={500}
+        >
           Sponsors
-        </a>
-        <a class="hover-underline-animation" href="/">
+        </Link>
+        <Link
+          to="Contact"
+          spy={true}
+          smooth={true}
+          offset={-150}
+          duration={500}
+        >
           Contact
-        </a>
+        </Link>
       </div>
       <div className="NavLinks">
         <a href="https://facebook.com/uottahack">

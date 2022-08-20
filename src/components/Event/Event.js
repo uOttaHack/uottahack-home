@@ -41,7 +41,7 @@ const items4 = [
 class Event extends Component {
   render() {
     return (
-      <div className="Event">
+      <div className="Event" id="Events">
         <div className="ui centered grid">
           <div className="row" id="cardRow">
             <Card

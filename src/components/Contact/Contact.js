@@ -5,7 +5,7 @@ import { Button } from "semantic-ui-react";
 class Contact extends Component {
   render() {
     return (
-      <div className="Contact">
+      <div className="Contact" id="Contact">
         <p>
           We're always excited to partner with like minded and innovative groups
           both on campus and professionally. Reach out to us if you'd like to

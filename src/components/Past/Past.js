@@ -16,7 +16,7 @@ const images = importAll(
 class Past extends Component {
   render() {
     return (
-      <div class="Past">
+      <div class="Past" id="Past">
         <div className="ui centered grid">
           <div className="row">
             <div className="Hackathon">
