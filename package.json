@@ -6,16 +6,11 @@
     "@mobiscroll/react-lite": "^4.10.9",
     "boxicons": "^2.1.2",
     "express": "*",
-    "mobiscroll": "^3.0.0-beta6",
     "react": "^16.4.1",
-    "react-card-scroll": "^2.2.4",
     "react-dom": "^16.4.1",
-    "react-horizontal-scrolling-menu": "^3.2.0",
     "react-icons": "^4.4.0",
     "react-konami-code": "^1.2.0",
     "react-scripts": "^5.0.1",
-    "react-scroll-horizontal": "^1.6.6",
-    "react-smooth-marquee": "^1.0.0",
     "semantic-ui-react": "^0.82.5"
   },
   "scripts": {
