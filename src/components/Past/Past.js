@@ -16,57 +16,52 @@ const images = importAll(
 class Past extends Component {
   render() {
     return (
-      <div className="Past">
-        <div className="logobutton1">
-          <div className="inner">
-            <img src={images["uOttaHack-2018-Logo.png"]} />
-          </div>
-          <div className="inner">
-            <a href="https://2018.uottahack.ca/">
-              <button className="btn1">Visit 2018</button>
-            </a>
+      <div class="Past">
+        <div className="ui centered grid">
+          <div className="row">
+            <div className="Hackathon">
+              <img class="logo" src={images["uOttaHack-2018-Logo.png"]} />
+              <div class="line" />
+              <div className="circle" />
+              <div className="logobutton">
+                <a href="https://2018.uottahack.ca/">
+                  <button className="btn1">Visit 2018</button>
+                </a>
+              </div>
+            </div>
+            <div className="Hackathon">
+              <img class="logo" src={images["uOttaHack-2019-Logo.png"]} />
+              <div class="line" />
+              <div className="circle" />
+              <div className="logobutton">
+                <a href="https://2019.uottahack.ca/">
+                  <button className="btn2">Visit 2019</button>
+                </a>
+              </div>
+            </div>
+            <div className="Hackathon">
+              <img class="logo" src={images["uOttaHack-2020-Logo.png"]} />
+              <div class="line" />
+              <div className="circle" />
+              <div className="logobutton">
+                <a href="https://2020.uottahack.ca/">
+                  <button className="btn3">Visit 2020</button>
+                </a>
+              </div>
+            </div>
+            <div className="Hackathon">
+              <img class="logo" src={images["uOttaHack-Logo.svg"]} />
+              <div class="line" />
+              <div className="circle" />
+              <div className="logobutton">
+                <a href="https://2021.uottahack.ca/">
+                  <button className="btn4">Visit 2021</button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="logobutton2">
-          <div className="inner">
-            <img src={images["uOttaHack-2019-Logo.png"]} />
-          </div>
-          <div className="inner">
-            <a href="https://2019.uottahack.ca/">
-              <button className="btn2">Visit 2019</button>
-            </a>
-          </div>
-        </div>
-        <div className="logobutton3">
-          <div className="inner">
-            <img src={images["uOttaHack-2020-Logo.png"]} />
-          </div>
-          <div className="inner">
-            <a href="https://2020.uottahack.ca/">
-              <button className="btn3">Visit 2020</button>
-            </a>
-          </div>
-        </div>
-        <div className="logobutton4">
-          <div className="inner">
-            <img src={images["uOttaHack-2021-Logo.png"]} />
-          </div>
-          <div className="inner">
-            <a href="https://2021.uottahack.ca/">
-              <button className="btn4">Visit 2021</button>
-            </a>
-          </div>
-        </div>
-        <div className="line" />
-        <div className="circle1" />
-        <div className="circle2" />
-        <div className="circle3" />
-        <div className="circle4" />
-        <div className="vline" />
-        <div className="vcircle1" />
-        <div className="vcircle2" />
-        <div className="vcircle3" />
-        <div className="vcircle4" />
+        <div class="Timeline" />
       </div>
     );
   }
