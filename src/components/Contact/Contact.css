@@ -2,12 +2,18 @@
   padding-top: 30px;
 }
 
+.ui.large.animated.button {
+  width: 300px;
+  text-align: left;
+}
+
 .visible.content {
   font-family: BoldFont;
 }
 
 .hidden.content {
   font-family: BoldFont;
+  padding-left: 25px;
 }
 
 .Contact {

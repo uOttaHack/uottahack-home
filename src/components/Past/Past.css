@@ -1,4 +1,4 @@
-@media screen and (max-width: 2560px) {
+@media screen and (max-width: 10000px) {
   .Past {
     width: 100%;
   }
@@ -62,21 +62,22 @@
   .circle {
     height: 15px;
     width: 15px;
-    background-color: black;
+    background-color: #595959;
     margin: auto;
+    border-radius: 50%;
   }
 
   .line {
     height: 60px;
-    background-color: black;
-    width: 3px;
+    background-color: #595959;
+    width: 2px;
     margin: auto;
     margin-top: -10px;
   }
 
   .Timeline {
-    height: 3px;
-    background-color: black;
+    height: 2px;
+    background-color: #595959;
     width: 850px;
     position: absolute;
     top: 360px;

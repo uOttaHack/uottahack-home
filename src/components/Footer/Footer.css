@@ -25,7 +25,7 @@
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 2560px) {
+@media only screen and (max-width: 10000px) {
   .MediaLinks {
     display: block;
     flex-direction: row;
