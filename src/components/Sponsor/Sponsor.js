@@ -23,7 +23,7 @@ class Sponsor extends Component {
               <img src={images["ciena.png"]} style={{ width: "150px" }} />
             </a>
             <a href="https://innovapost.com/" target="_blank">
-              <img src={images["innovapost.png"]} style={{ width: "300px" }} />
+              <img src={images["innovapost.png"]} style={{ width: "275px" }} />
             </a>
             <a href="https://www.nokia.com/" target="_blank">
               <img src={images["nokia.png"]} style={{ width: "175px" }} />
@@ -34,7 +34,7 @@ class Sponsor extends Component {
               <img src={images["google.png"]} style={{ width: "175px" }} />
             </a>
             <a href="https://www.canada.ca/" target="_blank">
-              <img src={images["canada.png"]} style={{ width: "300px" }} />
+              <img src={images["canada.png"]} style={{ width: "250px" }} />
             </a>
             <a href="https://solace.com/" target="_blank">
               <img src={images["solace.png"]} style={{ width: "160px" }} />
@@ -45,7 +45,7 @@ class Sponsor extends Component {
               <img src={images["klipfolio.png"]} style={{ width: "175px" }} />
             </a>
             <a href="https://www.momentive.ai/en/" target="_blank">
-              <img src={images["momentive.png"]} style={{ width: "300px" }} />
+              <img src={images["momentive.png"]} style={{ width: "275px" }} />
             </a>
             <a href="https://www.deloitte.com/" target="_blank">
               <img src={images["deloitte.png"]} style={{ width: "200px" }} />
