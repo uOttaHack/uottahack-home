@@ -2,6 +2,14 @@
   padding-top: 30px;
 }
 
+.visible.content {
+  font-family: BoldFont;
+}
+
+.hidden.content {
+  font-family: BoldFont;
+}
+
 .Contact {
   max-width: 800px;
 }

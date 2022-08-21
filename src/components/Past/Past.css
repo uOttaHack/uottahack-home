@@ -17,7 +17,7 @@
     font-weight: 700;
     margin: 20px;
     border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     width: 175px;
     height: 60px;
@@ -47,8 +47,8 @@
   }
 
   .btn4 {
-    background-color: #f1f1f1;
-    color: black;
+    background-color: #515151 !important;
+    color: white;
   }
 
   .Hackathon {

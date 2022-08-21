@@ -22,6 +22,15 @@
   margin: 15px;
 }
 
+#cards > .ui.card > .content > .header {
+  font-family: SemiFont;
+}
+
+#cards > .ui.card > .content > .meta {
+  font-family: ParagraphFont;
+  color: rgb(150, 150, 150);
+}
+
 h3 {
   margin-bottom: 30px;
 }
