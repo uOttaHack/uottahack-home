@@ -45,21 +45,21 @@ class Event extends Component {
         <div className="ui centered grid">
           <div className="row" id="cardRow">
             <Card
-              header="uOttawaHack 5"
+              header="uOttaHack 5"
               meta="Flagship Hackathon"
               description="Our flagship event, the university's official MLH hackathon with over 600+ hackers and 20+ sponsors!"
             />
             <Card
-              header="Tech Intern Panel"
-              meta="Community"
-              description="A panel of several students who share their experiences working internships at top tech companies."
+              header="init uOttaHack 5"
+              meta="Intro Hackathon"
+              description="The catalyst to our hacking season, init is the university's official MLH Global Hack Week hackathon."
             />
           </div>
           <div className="row" id="cardRow">
             <Card
-              header="init uOttaHack 5"
-              meta="Intro Hackathon"
-              description="The catalyst to our hacking season, init is the university's official MLH Global Hack Week hackathon."
+              header="Tech Intern Panel"
+              meta="Community"
+              description="A panel of several students who share their experiences working internships at top tech companies."
             />
             <Card
               header="Workshops"
