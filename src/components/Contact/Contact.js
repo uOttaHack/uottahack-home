@@ -5,7 +5,7 @@ import { Button } from "semantic-ui-react";
 class Contact extends Component {
   render() {
     return (
-      <div className="Contact">
+      <div className="Contact" id="Contact">
         <p>
           We're always excited to partner with like minded and innovative groups
           both on campus and professionally. Reach out to us if you'd like to
@@ -25,11 +25,9 @@ class Contact extends Component {
             Would you like to partner with us for an on-campus event (workshop,
             speaker night, etc.)?
           </h3>
-          <Button animated size="large" href="mailto:community@uottahack.ca">
-            <Button.Content visible>
-              Message our Community Evangelism Team
-            </Button.Content>
-            <Button.Content hidden>community@uottahack.ca</Button.Content>
+          <Button animated size="large" href="mailto:logistics@uottahack.ca">
+            <Button.Content visible>Message our Logistics Team</Button.Content>
+            <Button.Content hidden>logistics@uottahack.ca</Button.Content>
           </Button>
 
           <h3>Looking for promotion or communication help? </h3>

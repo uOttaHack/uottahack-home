@@ -1,47 +1,115 @@
-.Navbar {
-  background-color: white;
-  position: fixed;
-  z-index: 10;
-  left: 0%; /* HAS TO MATCH APP margin-left - 2*/
-  right: 0%; /* HAS TO MATCH APP margin-right - 2*/
-  top: 0;
-  border-bottom: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 75px;
-  box-shadow: 0 3px 14px 0 #676767;
+@media only screen and (max-width: 10000px) {
+  .Navbar {
+    background-color: white;
+    z-index: 10;
+    left: 0%; /* HAS TO MATCH APP margin-left - 2*/
+    right: 0%; /* HAS TO MATCH APP margin-right - 2*/
+    top: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75px;
+    align-items: center;
+    position: absolute;
+  }
+
+  .Navbar img {
+    margin-top: 13px;
+    padding-left: 10px;
+    margin-left: 20px;
+    height: auto;
+    width: 60px;
+  }
+
+  .PageTitle {
+    align-self: flex-start;
+  }
+
+  .NavLinks {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    align-items: center;
+  }
+
+  .PageLinks {
+    margin-right: auto;
+    height: auto;
+    display: flex;
+  }
+
+  .PageLinks a {
+    color: black;
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .NavLinks a {
+    color: black;
+  }
+
+  .NavLinks box-icon {
+    margin: 15px;
+  }
+
+  .MobileMenu {
+    display: none;
+  }
+
+  .PageLinks a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+  }
+
+  .PageLinks a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
-.Navbar img {
-  margin-top: 15px;
-  padding-left: 10px;
-  height: auto;
-  width: 150px;
-}
-
-.PageTite {
-  align-self: flex-start;
-}
-
-.NavLinks {
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-
-.NavLinks a {
-  color: inherit;
-}
-
-.NavLinks i {
-  margin: 0 10px;
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 950px) {
   .Navbar {
     left: 0;
     right: 0;
+  }
+
+  .PageLinks {
+    display: none;
+  }
+
+  .NavLinks {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1px;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .MediaLinks a {
+    margin: 1px;
+  }
+
+  .Navbar img {
+    margin-top: 20px;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: auto;
+    width: 60px;
   }
 }

@@ -2,41 +2,72 @@ import React, { Component } from "react";
 import "./Event.css";
 import { Card } from "semantic-ui-react";
 
-const items = [
+const items1 = [
+  {
+    header: "uOttawaHack 5",
+    meta: "Flagship Hackathon",
+    description:
+      "Our flagship event, the university's official MLH hackathon with over 600+ hackers and 20+ sponsors!"
+  }
+];
+
+const items2 = [
   {
     header: "Tech Intern Panel",
-    href: "https://www.facebook.com/events/1927114657590477/",
     meta: "Community",
     description:
-      "A panel of several students who share their experiences working internships at top tech companies"
-  },
+      "A panel of several students who share their experiences working internships at top tech companies."
+  }
+];
+
+const items3 = [
   {
-    header: "Local Hack Day",
-    href: "https://localhackday.mlh.io/",
-    meta: "Community",
+    header: "init uOttaHack 5",
+    meta: "Intro Hackathon",
     description:
-      "A global hackathon in partnership with MLH, a 12 hour long event connected to communities around the world"
-  },
+      "The catalyst to our hacking season, init is the university's official MLH Global Hack Week hackathon."
+  }
+];
+
+const items4 = [
   {
     header: "Workshops",
     meta: "Community",
     description:
-      "Various workshops held on campus throughout the school year to focus on helping students learn skills outside the classroom"
+      "Various workshops held on campus focused on helping students learn skills outside the classroom."
   }
 ];
 
 class Event extends Component {
   render() {
     return (
-      <div className="Event">
-        <Card
-          centered
-          href="https://2019.uottahack.ca"
-          header="uOttaHack 2019"
-          meta="Hackathon"
-          description="Our flagship event, the university's official MLH hackathon."
-        />
-        <Card.Group centered items={items} />
+      <div className="Event" id="Events">
+        <div className="ui centered grid">
+          <div className="row" id="cardRow">
+            <Card
+              header="uOttaHack 5"
+              meta="Flagship Hackathon"
+              description="Our flagship event, the university's official MLH hackathon with over 600+ hackers and 20+ sponsors!"
+            />
+            <Card
+              header="init uOttaHack 5"
+              meta="Intro Hackathon"
+              description="The catalyst to our hacking season, init is the university's official MLH Global Hack Week hackathon."
+            />
+          </div>
+          <div className="row" id="cardRow">
+            <Card
+              header="Tech Intern Panel"
+              meta="Community"
+              description="A panel of several students who share their experiences working internships at top tech companies."
+            />
+            <Card
+              header="Workshops"
+              meta="Community"
+              description="Various workshops held on campus focused on helping students learn skills outside the classroom."
+            />
+          </div>
+        </div>
       </div>
     );
   }

@@ -1,40 +1,20 @@
 import React, { Component } from "react";
 import "./Organizer.css";
-import organizer2018 from "./organizers2018.json";
-import organizer2019 from "./organizers2019.json";
+import organizer2022 from "./organizers2022.json";
 import { Card, Button } from "semantic-ui-react";
 
-const chair18 = [
+const chair22 = [
   {
-    imgsrc: "../../images/paul-lee.png",
-    header: "Paul Lee",
-    meta: "Co-chair",
-    website: "",
-    linkedin: "",
-    github: ""
-  },
-  {
-    imgsrc: "../../images/matt-langlois.png",
-    header: "Matt Langlois",
-    meta: "Co-chair",
-    website: "",
-    linkedin: "",
-    github: ""
-  }
-];
-
-const chair19 = [
-  {
-    imgsrc: "../../images/paul-lee.png",
-    header: "Paul Lee",
+    imgsrc: "",
+    header: "Steven Li",
     meta: "Co-Director",
     website: "",
     linkedin: "",
     github: ""
   },
   {
-    imgsrc: "../../images/hamza-basrai.png",
-    header: "Hamza Basrai",
+    imgsrc: "",
+    header: "Deniz Jasarbasic",
     meta: "Co-Director",
     website: "",
     linkedin: "",
@@ -47,23 +27,9 @@ class Organizer extends Component {
     return (
       <div className="Organizer">
         <div className="Organizer-Group">
-          <h3>2018-2019</h3>
-          <Card.Group centered items={chair19} />
-          <Card.Group centered items={organizer2019} />
-        </div>
-
-        <div className="Organizer-Group">
-          <h3>2017-2018</h3>
-          <Button
-            className="btn-org"
-            href="https://2018.uottahack.ca"
-            size="big"
-          >
-            Visit the 2018 site
-          </Button>
-
-          <Card.Group centered items={chair18} />
-          <Card.Group centered items={organizer2018} />
+          <h3>2022-2023</h3>
+          <Card.Group centered items={chair22} id="cards" />
+          <Card.Group centered items={organizer2022} id="cards" />
         </div>
       </div>
     );
