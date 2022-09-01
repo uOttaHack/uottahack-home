@@ -3,6 +3,8 @@ import "./Front.css";
 import TextLogo from "../../images/uottahack19.png";
 import Egg from "../Egg/Egg.js";
 
+// <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
 const front = () => {
   return (
     <div className="Front">
