@@ -1,17 +1,21 @@
 {
   "name": "uottahack-home",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://uottahack.github.io/uottahack-home/",
   "dependencies": {
+    "-": "^0.0.1",
     "@mobiscroll/react-lite": "^4.10.9",
     "boxicons": "^2.1.2",
     "express": "*",
+    "gh-pages": "^4.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-icons": "^4.4.0",
     "react-konami-code": "^1.2.0",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.7",
+    "save-dev": "^0.0.1-security",
     "semantic-ui-react": "^0.82.5"
   },
   "scripts": {
@@ -19,7 +23,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
