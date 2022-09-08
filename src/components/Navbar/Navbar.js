@@ -11,20 +11,20 @@ const navbar = () => {
         <img src={ProfileLogo} alt="Logo" />
       </div>
       <div className="PageLinks">
-        <Link to="About" spy={true} smooth={true} offset={-150} duration={500}>
+        <Link to="About" spy={true} smooth={true} offset={-200} duration={500}>
           About
         </Link>
-        <Link to="Past" spy={true} smooth={true} offset={-150} duration={500}>
+        <Link to="Past" spy={true} smooth={true} offset={-200} duration={500}>
           Hackathons
         </Link>
-        <Link to="Events" spy={true} smooth={true} offset={-150} duration={500}>
+        <Link to="Events" spy={true} smooth={true} offset={-200} duration={500}>
           Events
         </Link>
         <Link
           to="Sponsors"
           spy={true}
           smooth={true}
-          offset={-150}
+          offset={-200}
           duration={500}
         >
           Sponsors
@@ -33,7 +33,7 @@ const navbar = () => {
           to="Contact"
           spy={true}
           smooth={true}
-          offset={-150}
+          offset={-200}
           duration={500}
         >
           Contact
