@@ -2,7 +2,6 @@
   "name": "uottahack-home",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://uottahack.github.io/uottahack-home/",
   "dependencies": {
     "-": "^0.0.1",
     "@mobiscroll/react-lite": "^4.10.9",
