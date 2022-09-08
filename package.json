@@ -23,9 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
