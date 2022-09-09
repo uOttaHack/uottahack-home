@@ -11,6 +11,14 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
+  .logo-2019 {
+    width: 143px;
+    height: 150px;
+    align-self: center;
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
   .logobutton button {
     font-family: BoldFont;
     font-size: 18px;
@@ -64,15 +72,8 @@
     width: 15px;
     background-color: #595959;
     margin: auto;
+    margin-top: 40px;
     border-radius: 50%;
-  }
-
-  .line {
-    height: 60px;
-    background-color: #595959;
-    width: 2px;
-    margin: auto;
-    margin-top: -10px;
   }
 
   .Timeline {
@@ -80,7 +81,7 @@
     background-color: #595959;
     width: 850px;
     position: absolute;
-    top: 360px;
+    top: 350px;
     left: 75px;
   }
 }
@@ -94,6 +95,11 @@
     width: 200px;
     height: 200px;
     align-self: center;
+  }
+
+  .logo-2019 {
+    width: 193px;
+    height: 200px;
   }
 
   .Hackathon {
