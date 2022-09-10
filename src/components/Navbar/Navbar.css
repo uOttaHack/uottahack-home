@@ -9,17 +9,25 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 75px;
+    height: 90px;
     align-items: center;
     position: absolute;
   }
 
+  .NavbarContainer {
+    width: 500px;
+  }
+
   .Navbar img {
-    margin-top: 13px;
+    margin-top: 22px;
+    margin-left: 22px;
     padding-left: 10px;
-    margin-left: 20px;
     height: auto;
     width: 60px;
+  }
+
+  .Navbar img:hover {
+    cursor: pointer;
   }
 
   .PageTitle {
@@ -29,7 +37,7 @@
   .NavLinks {
     display: flex;
     flex-direction: row;
-    margin-right: 20px;
+    margin-right: 22px;
     align-items: center;
   }
 
@@ -40,8 +48,9 @@
   }
 
   .PageLinks a {
-    color: black;
-    margin-left: 16px;
+    color: #0d0d0d;
+    margin-left: 25px;
+    margin-top: 5px;
     text-decoration: none;
     padding: 6px;
     font-weight: 700;
@@ -52,7 +61,7 @@
   }
 
   .NavLinks a {
-    color: black;
+    color: #0d0d0d;
   }
 
   .NavLinks box-icon {
@@ -68,12 +77,15 @@
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    border: solid;
+    border-radius: 5px;
+    border-color: #ffffff00;
+    height: 33px;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: #9a9a9a2d;
     transform-origin: bottom right;
-    transition: transform 0.4s ease-out;
+    transition: transform 0.2s ease-out;
   }
 
   .PageLinks a:hover:after {
@@ -95,7 +107,7 @@
   .NavLinks {
     display: flex;
     flex-direction: row;
-    margin-right: 1px;
+    margin-right: 20px;
     align-items: center;
   }
 }

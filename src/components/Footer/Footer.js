@@ -52,7 +52,7 @@ const footer = () => {
             </a>
           </div>
           <div class="Signature">
-            <p>Made with &#10084;&#65039; by uOttawa students</p>
+            <p>Made with &#10084;&#65039; by students for students!</p>
           </div>
         </div>
       </div>
