@@ -48,14 +48,14 @@ h1 {
 }
 
 h2 {
-  color: #0d0d0d;
+  color: black;
   font-size: 3.25em;
-  font-family: BoldFont;
-  margin-bottom: 0;
+  font-family: HeaderFont;
+  margin: auto;
 }
 
 h3 {
-  color: #0d0d0d;
+  color: black;
   font-size: 1.5em;
   font-family: BoldFont;
 }
