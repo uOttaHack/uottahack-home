@@ -28,7 +28,7 @@
     border-radius: 8px;
     width: 175px;
     height: 55px;
-    margin-top: 35px;
+    margin-top: 45px;
     transition: 0.3s ease-in-out;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.45)) top/100% 800%;
   }
@@ -71,15 +71,8 @@
     width: 12px;
     background-color: #595959;
     margin: auto;
-    margin-top: 41px;
+    margin-top: 36px;
     border-radius: 50%;
-  }
-
-  .line {
-    height: 60px;
-    background-color: #595959;
-    width: 2px;
-    margin: auto;
   }
 
   .Timeline {
@@ -87,7 +80,7 @@
     background-color: #595959;
     width: 850px;
     position: absolute;
-    top: 350px;
+    top: 345px;
     left: 75px;
   }
 }

@@ -24,7 +24,7 @@ class Past extends Component {
               <div className="circle" />
               <div className="logobutton">
                 <a href="https://2018.uottahack.ca/" target="_blank">
-                  <button className="btn1">Visit 2018 →</button>
+                  <button className="btn1">Visit 2018</button>
                 </a>
               </div>
             </div>
@@ -33,7 +33,7 @@ class Past extends Component {
               <div className="circle" />
               <div className="logobutton">
                 <a href="https://2019.uottahack.ca/" target="_blank">
-                  <button className="btn2">Visit 2019 →</button>
+                  <button className="btn2">Visit 2019</button>
                 </a>
               </div>
             </div>
@@ -42,7 +42,7 @@ class Past extends Component {
               <div className="circle" />
               <div className="logobutton">
                 <a href="https://2020.uottahack.ca/" target="_blank">
-                  <button className="btn3">Visit 2020 →</button>
+                  <button className="btn3">Visit 2020</button>
                 </a>
               </div>
             </div>
@@ -51,7 +51,7 @@ class Past extends Component {
               <div className="circle" />
               <div className="logobutton">
                 <a href="https://2021.uottahack.ca/" target="_blank">
-                  <button className="btn4">Visit 2021 →</button>
+                  <button className="btn4">Visit 2021</button>
                 </a>
               </div>
             </div>
