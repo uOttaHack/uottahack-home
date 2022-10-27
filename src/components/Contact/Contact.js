@@ -21,10 +21,7 @@ class Contact extends Component {
             <Button.Content hidden>sponsorship@uottahack.ca</Button.Content>
           </Button>
 
-          <h3>
-            Would you like to partner with us for an on-campus event (workshop,
-            speaker night, etc.)?
-          </h3>
+          <h3>Would you like to partner with us for an on-campus event?</h3>
           <Button animated size="large" href="mailto:logistics@uottahack.ca">
             <Button.Content visible>Message our Logistics Team</Button.Content>
             <Button.Content hidden>logistics@uottahack.ca</Button.Content>

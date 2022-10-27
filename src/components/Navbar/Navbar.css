@@ -1,25 +1,30 @@
 @media only screen and (max-width: 10000px) {
   .Navbar {
-    background-color: white;
     z-index: 10;
     left: 0%; /* HAS TO MATCH APP margin-left - 2*/
     right: 0%; /* HAS TO MATCH APP margin-right - 2*/
     top: 0;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.525);
     display: flex;
     flex-direction: row;
+    position: relative;
     justify-content: space-between;
-    height: 75px;
+    height: 90px;
     align-items: center;
-    position: absolute;
+    width: 100%;
+    transition: top 0.3s;
   }
 
   .Navbar img {
-    margin-top: 13px;
-    padding-left: 10px;
-    margin-left: 20px;
+    margin-top: 26px;
+    margin-left: 300px;
     height: auto;
-    width: 60px;
+    width: 42px;
+  }
+
+  .Navbar img:hover {
+    cursor: pointer;
   }
 
   .PageTitle {
@@ -29,7 +34,7 @@
   .NavLinks {
     display: flex;
     flex-direction: row;
-    margin-right: 20px;
+    margin-right: 300px;
     align-items: center;
   }
 
@@ -40,8 +45,9 @@
   }
 
   .PageLinks a {
-    color: black;
-    margin-left: 16px;
+    color: #ffffff;
+    margin-left: 30px;
+    margin-top: 5px;
     text-decoration: none;
     padding: 6px;
     font-weight: 700;
@@ -49,10 +55,6 @@
     display: inline-block;
     position: relative;
     cursor: pointer;
-  }
-
-  .NavLinks a {
-    color: black;
   }
 
   .NavLinks box-icon {
@@ -63,22 +65,51 @@
     display: none;
   }
 
-  .PageLinks a:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
+  .PageLinks a:hover {
+    transition: 0.3s ease-out;
+    border-radius: 5px;
+    background: #c7c7c764;
+    transition: 0.3s ease-out;
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .Navbar {
     left: 0;
-    background-color: black;
-    transform-origin: bottom right;
-    transition: transform 0.4s ease-out;
+    right: 0;
   }
 
-  .PageLinks a:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  .Navbar img {
+    margin-left: 150px;
+  }
+
+  .NavLinks {
+    margin-right: 150px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .PageLinks {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .Navbar {
+    left: 0;
+    right: 0;
+  }
+
+  .Navbar img {
+    margin-left: 30px;
+  }
+
+  .NavLinks {
+    margin-right: 30px;
+  }
+
+  .PageLinks {
+    display: none;
   }
 }
 
@@ -95,21 +126,19 @@
   .NavLinks {
     display: flex;
     flex-direction: row;
-    margin-right: 1px;
+    margin-right: 20px;
     align-items: center;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .NavLinks {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 321px) {
   .MediaLinks a {
     margin: 1px;
-  }
-
-  .Navbar img {
-    margin-top: 20px;
-    padding-left: 10px;
-    margin-left: 10px;
-    height: auto;
-    width: 60px;
   }
 }

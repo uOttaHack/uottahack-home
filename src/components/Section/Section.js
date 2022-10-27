@@ -5,6 +5,7 @@ import Organizer from "../Organizer/Organizer.js";
 import About from "../About/About.js";
 import Contact from "../Contact/Contact.js";
 import Sponsor from "../Sponsor/Sponsor.js";
+import Partners from "../Partners/Partners.js";
 import Past from "../Past/Past.js";
 
 class Section extends Component {
@@ -19,6 +20,7 @@ class Section extends Component {
           <Event />
         )}
         {this.props.section.sectionName === "Past Sponsors" && <Sponsor />}
+        {this.props.section.sectionName === "Our Partners" && <Partners />}
         {this.props.section.sectionName === "Get in touch" && <Contact />}
         {this.props.section.sectionName === "Our Team" && <Organizer />}
       </div>

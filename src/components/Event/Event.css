@@ -15,7 +15,7 @@
 
 #cardRow > .ui.card {
   width: 425px;
-  border-radius: 0%;
+  border-radius: 8px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   margin: 0px 0px 25px 0px;
   text-align: left;

@@ -22,7 +22,7 @@
 .LogoText {
   display: block;
   font-size: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
 }
 
 @media only screen and (max-width: 10000px) {
@@ -47,7 +47,7 @@
 
   .FooterLinks a {
     font-size: 12px;
-    color: black;
+    color: #0d0d0d;
     font-weight: 500;
   }
 
@@ -72,7 +72,7 @@
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1520px) {
   .FooterContainer {
     display: grid;
     width: 75%;
@@ -95,7 +95,7 @@
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 600px) {
   .MediaLinks {
     display: block;
     flex-direction: row;
@@ -104,6 +104,6 @@
   }
 
   .MediaLinks a {
-    margin: 10px;
+    margin: 7px;
   }
 }

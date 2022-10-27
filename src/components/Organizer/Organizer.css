@@ -4,6 +4,12 @@
   text-align: center;
 }
 
+.menu {
+  align-content: left;
+  justify-content: left;
+  text-align: left;
+}
+
 .Organizer-Group {
   margin-bottom: 50px;
 }
@@ -32,5 +38,9 @@
 }
 
 h3 {
-  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+img {
+  margin-top: 30px;
 }
