@@ -4,11 +4,11 @@ import "./About.css";
 class About extends Component {
   render() {
     return (
-      <div className="About">
+      <div className="About" id="About">
         <p>
           Our mission is to empower students on campus to explore their passion
           for tech, through building a community of like-minded individuals who
-          innovate and disrupt the worlds of business and technology.
+          innovate and disrupt the worlds of business and technology!
         </p>
 
         <h3>Connect with uOttawa's Tech Community</h3>

@@ -1,7 +1,25 @@
 .buttons {
-  padding-top: 30px;
+  padding-top: 0px;
+}
+
+.ui.large.animated.button {
+  width: 300px;
+}
+
+.visible.content {
+  font-family: BoldFont;
+  text-align: center;
+}
+
+.hidden.content {
+  font-family: BoldFont;
+  text-align: center;
 }
 
 .Contact {
   max-width: 800px;
+}
+
+h3 {
+  margin-bottom: 15px;
 }

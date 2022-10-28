@@ -1,70 +1,51 @@
 import React, { Component } from "react";
 import "./Organizer.css";
-import organizer2018 from "./organizers2018.json";
-import organizer2019 from "./organizers2019.json";
-import { Card, Button } from "semantic-ui-react";
+import organizer2022 from "./organizers2022.json";
+import { Card, Button, Dropdown, Menu } from "semantic-ui-react";
 
-const chair18 = [
+const chair22 = [
   {
-    imgsrc: "../../images/paul-lee.png",
-    header: "Paul Lee",
-    meta: "Co-chair",
-    website: "",
-    linkedin: "",
-    github: ""
-  },
-  {
-    imgsrc: "../../images/matt-langlois.png",
-    header: "Matt Langlois",
-    meta: "Co-chair",
+    imgsrc: "",
+    header: "",
+    meta: "",
     website: "",
     linkedin: "",
     github: ""
   }
 ];
 
-const chair19 = [
-  {
-    imgsrc: "../../images/paul-lee.png",
-    header: "Paul Lee",
-    meta: "Co-Director",
-    website: "",
-    linkedin: "",
-    github: ""
-  },
-  {
-    imgsrc: "../../images/hamza-basrai.png",
-    header: "Hamza Basrai",
-    meta: "Co-Director",
-    website: "",
-    linkedin: "",
-    github: ""
-  }
+const options = [
+  { key: 1, text: "2020/2021", value: 1 },
+  { key: 2, text: "2019/2020", value: 2 },
+  { key: 3, text: "2018/2019", value: 3 },
+  { key: 4, text: "2017/2018", value: 4 }
 ];
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
+
+const images = importAll(
+  require.context("../../images/organizers", false, /\.(png|jpe?g|svg)$/)
+);
 
 class Organizer extends Component {
   render() {
     return (
       <div className="Organizer">
-        <div className="Organizer-Group">
-          <h3>2018-2019</h3>
-          <Card.Group centered items={chair19} />
-          <Card.Group centered items={organizer2019} />
+        <div className="menu">
+          <Menu compact>
+            <Dropdown text="2022/2023" options={options} simple item />
+          </Menu>
         </div>
+        {/* <img src={images["2018.png"]} style={{ width: "100%" }} /> */}
 
-        <div className="Organizer-Group">
-          <h3>2017-2018</h3>
-          <Button
-            className="btn-org"
-            href="https://2018.uottahack.ca"
-            size="big"
-          >
-            Visit the 2018 site
-          </Button>
-
-          <Card.Group centered items={chair18} />
-          <Card.Group centered items={organizer2018} />
-        </div>
+        <Card.Group centered items={chair22} id="cards" />
+        <Card.Group centered items={organizer2022} id="cards" />
       </div>
     );
   }

@@ -5,6 +5,8 @@ import Organizer from "../Organizer/Organizer.js";
 import About from "../About/About.js";
 import Contact from "../Contact/Contact.js";
 import Sponsor from "../Sponsor/Sponsor.js";
+import Partners from "../Partners/Partners.js";
+import Past from "../Past/Past.js";
 
 class Section extends Component {
   render() {
@@ -13,10 +15,12 @@ class Section extends Component {
         <h2>{this.props.section.sectionName}</h2>
         <h3>{this.props.section.subtitle}</h3>
         {this.props.section.sectionName === "What is uOttaHack?" && <About />}
+        {this.props.section.sectionName === "Past uOttaHacks" && <Past />}
         {this.props.section.sectionName === "Our Events & Initiatives" && (
           <Event />
         )}
         {this.props.section.sectionName === "Past Sponsors" && <Sponsor />}
+        {this.props.section.sectionName === "Our Partners" && <Partners />}
         {this.props.section.sectionName === "Get in touch" && <Contact />}
         {this.props.section.sectionName === "Our Team" && <Organizer />}
       </div>
