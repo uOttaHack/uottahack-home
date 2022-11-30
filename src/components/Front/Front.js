@@ -14,7 +14,7 @@ const front = () => {
         </div>
         <div class="HeroText">
           <h1>The University of Ottawa's Hackathon Community</h1>
-          <div className="logobutton" z-index="99">
+          <div className="logobutton">
             <a href="https://2023.uottahack.ca/" target="_blank">
               <button className="btn">Visit 2023 →</button>
             </a>
