@@ -1,6 +1,22 @@
 [
   {
     "imgsrc": "",
+    "header": "Deniz Jasarbasic",
+    "meta": "Co-Director",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
+    "header": "Iaroslav Volkov",
+    "meta": "Co-Director",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
     "header": "Cattuong Le",
     "meta": "Director of Logistics",
     "website": "",
@@ -9,8 +25,56 @@
   },
   {
     "imgsrc": "",
+    "header": "Alona Petrova",
+    "meta": "Logistics Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
+    "header": "Saja Elkurtehi",
+    "meta": "Logistics Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
+    "header": "Marouane B.",
+    "meta": "Logistics Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
+    "header": "Yephihy Akissi Paule Noura Offia",
+    "meta": "Logistics Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
     "header": "Eric Dam",
     "meta": "Director of Software Developement",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
+    "header": "Lucas Rahn",
+    "meta": "Developer",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
+    "header": "Devon Knight",
+    "meta": "Developer",
     "website": "",
     "linkedin": "",
     "github": ""
@@ -33,6 +97,22 @@
   },
   {
     "imgsrc": "",
+    "header": "Shavon Thadani",
+    "meta": "Sponsorship Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
+    "header": "Shaylin Thadani",
+    "meta": "Sponsorship Coordinator",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "",
     "header": "Elayna Tian ",
     "meta": "Director of Design & Marketing",
     "website": "",
@@ -41,16 +121,16 @@
   },
   {
     "imgsrc": "",
-    "header": "Iaroslav Volkov",
-    "meta": "Co-Director",
+    "header": "Lauren Hong ",
+    "meta": "Design and Marketing Coordinator",
     "website": "",
     "linkedin": "",
     "github": ""
   },
   {
     "imgsrc": "",
-    "header": "Deniz Jasarbasic",
-    "meta": "Co-Director",
+    "header": "Aisorya Bhandari",
+    "meta": "Design and Marketing Coordinator",
     "website": "",
     "linkedin": "",
     "github": ""
