@@ -53,6 +53,29 @@ h1 {
   color: white;
 }
 
+.btn {
+  background-color: #ffffff !important;
+  color: black;
+}
+
+.logobutton button {
+  font-family: BoldFont;
+  font-size: 15px;
+  font-weight: 100;
+  margin: 20px;
+  border: none;
+  border-radius: 8px;
+  width: 175px;
+  height: 55px;
+  margin-top: 70px;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.411)) top/100% 800%;
+}
+.logobutton button:hover {
+  background-position: bottom;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 2560px) {
   h1 {
     font-size: 1.4vw;
