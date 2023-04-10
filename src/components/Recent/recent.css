@@ -1,0 +1,11 @@
+.parent-container > .Section > .Recent > iframe {
+  width: 100%;
+}
+
+.Recent.full-width {
+  width: 100%;
+}
+
+.Section iframe {
+  width: 100%;
+}

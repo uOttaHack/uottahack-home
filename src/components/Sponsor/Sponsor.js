@@ -19,8 +19,8 @@ class Sponsor extends Component {
       <div id="Sponsors">
         <div className="ui centered grid" id="blurWrap">
           <div className="row">
-            <a href="https://www.ciena.ca/" target="_blank">
-              <img src={images["ciena.png"]} style={{ width: "150px" }} />
+            <a href="https://solace.com/" target="_blank">
+              <img src={images["solace.png"]} style={{ width: "200px" }} />
             </a>
             <a href="https://innovapost.com/" target="_blank">
               <img src={images["innovapost.png"]} style={{ width: "275px" }} />
@@ -31,13 +31,13 @@ class Sponsor extends Component {
           </div>
           <div className="row">
             <a href="https://about.google/" target="_blank">
-              <img src={images["google.png"]} style={{ width: "175px" }} />
+              <img src={images["google.png"]} style={{ width: "200px" }} />
             </a>
             <a href="https://www.canada.ca/" target="_blank">
-              <img src={images["canada.png"]} style={{ width: "250px" }} />
+              <img src={images["microsoft.png"]} style={{ width: "220px" }} />
             </a>
-            <a href="https://solace.com/" target="_blank">
-              <img src={images["solace.png"]} style={{ width: "160px" }} />
+            <a href="https://www.ciena.ca/" target="_blank">
+              <img src={images["splunk.png"]} style={{ width: "200px" }} />
             </a>
           </div>
           <div className="row">
@@ -51,21 +51,7 @@ class Sponsor extends Component {
               <img src={images["bloomberg.png"]} style={{ width: "200px" }} />
             </a>
             <a href="https://www.accenture.com/" target="_blank">
-              <img src={images["accenture.png"]} style={{ width: "150px" }} />
-            </a>
-          </div>
-          <div className="row">
-            <a href="https://twilio.com/" target="_blank">
-              <img src={images["twilio.png"]} style={{ width: "160px" }} />
-            </a>
-            <a href="https://www.morganstanley.com/" target="_blank">
-              <img
-                src={images["morganstanley.png"]}
-                style={{ width: "220px" }}
-              />
-            </a>
-            <a href="https://www.klipfolio.com/" target="_blank">
-              <img src={images["klipfolio.png"]} style={{ width: "175px" }} />
+              <img src={images["accenture.png"]} style={{ width: "175px" }} />
             </a>
           </div>
           <div className="row">
@@ -83,6 +69,44 @@ class Sponsor extends Component {
             </a>
           </div>
           <div className="row">
+            <a href="https://about.google/" target="_blank">
+              <img src={images["noibu.png"]} style={{ width: "175px" }} />
+            </a>
+            <a href="https://www.canada.ca/" target="_blank">
+              <img src={images["trendmicro.png"]} style={{ width: "175px" }} />
+            </a>
+            <a href="https://solace.com/" target="_blank">
+              <img src={images["cse.png"]} style={{ width: "200px" }} />
+            </a>
+          </div>
+          <div className="row">
+            <a href="https://about.google/" target="_blank">
+              <img src={images["drdc1.png"]} style={{ width: "105px" }} />
+            </a>
+            <a href="https://www.canada.ca/" target="_blank">
+              <img src={images["canada.png"]} style={{ width: "290px" }} />
+            </a>
+            <a href="https://solace.com/" target="_blank">
+              <img src={images["neo.png"]} style={{ width: "175px" }} />
+            </a>
+          </div>
+
+          <div className="row">
+            <a href="https://twilio.com/" target="_blank">
+              <img src={images["twilio.png"]} style={{ width: "160px" }} />
+            </a>
+            <a href="https://www.morganstanley.com/" target="_blank">
+              <img
+                src={images["morganstanley.png"]}
+                style={{ width: "220px" }}
+              />
+            </a>
+            <a href="https://www.klipfolio.com/" target="_blank">
+              <img src={images["klipfolio.png"]} style={{ width: "175px" }} />
+            </a>
+          </div>
+
+          <div className="row">
             <a href="https://www.cdw.ca/" target="_blank">
               <img src={images["cdw.png"]} style={{ width: "125px" }} />
             </a>
@@ -93,20 +117,32 @@ class Sponsor extends Component {
               <img src={images["adga.png"]} style={{ width: "170px" }} />
             </a>
           </div>
+
+          <div className="row">
+            <a href="https://about.google/" target="_blank">
+              <img src={images["ciena.png"]} style={{ width: "175px" }} />
+            </a>
+            <a href="https://www.canada.ca/" target="_blank">
+              <img src={images["hub350.png"]} style={{ width: "150px" }} />
+            </a>
+            <a href="https://solace.com/" target="_blank">
+              <img src={images["cengen.png"]} style={{ width: "150px" }} />
+            </a>
+          </div>
           <div className="row">
             <a href="https://www.kanatanorthba.com/" target="_blank">
               <img
                 src={images["kanatanorthbia.png"]}
-                style={{ width: "150px" }}
+                style={{ width: "130px" }}
               />
             </a>
             <a href="https://www.phreesia.com/" target="_blank">
-              <img src={images["phreesia.png"]} style={{ width: "170px" }} />
+              <img src={images["phreesia.png"]} style={{ width: "220px" }} />
             </a>
             <a href="https://www.marchnetworks.com/" target="_blank">
               <img
                 src={images["marchnetworks.png"]}
-                style={{ width: "225px" }}
+                style={{ width: "200px" }}
               />
             </a>
           </div>
@@ -127,11 +163,6 @@ class Sponsor extends Component {
             </a>
             <a href="https://www.bitesite.ca/" target="_blank">
               <img src={images["bitesite.png"]} style={{ width: "200px" }} />
-            </a>
-          </div>
-          <div className="row">
-            <a href="https://www.wolfram.com/language/" target="_blank">
-              <img src={images["wolfram.png"]} style={{ width: "100px" }} />
             </a>
           </div>
         </div>

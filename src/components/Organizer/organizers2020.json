@@ -18,7 +18,15 @@
   {
     "imgsrc": "../../images/amar-jasarbasic.png",
     "header": "Amar Jasarbasic",
-    "meta": "Sponsorship Lead",
+    "meta": "Director of Finance",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/vivian-diec.png",
+    "header": "Vivian Diec",
+    "meta": "Director of Logistics",
     "website": "",
     "linkedin": "",
     "github": ""
@@ -186,14 +194,6 @@
   {
     "imgsrc": "../../images/shriya-gundala.png",
     "header": "Shriya Gundala",
-    "meta": "Logistics Coordinator",
-    "website": "",
-    "linkedin": "",
-    "github": ""
-  },
-  {
-    "imgsrc": "../../images/vivian-diec.png",
-    "header": "Vivian Diec",
     "meta": "Logistics Coordinator",
     "website": "",
     "linkedin": "",

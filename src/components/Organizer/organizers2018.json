@@ -1,6 +1,22 @@
 [
   {
     "imgsrc": "../../images/emily-pham.png",
+    "header": "Matt Langois",
+    "meta": "Co-Director",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/emily-pham.png",
+    "header": "Paul Lee",
+    "meta": "Co-Director",
+    "website": "",
+    "linkedin": "",
+    "github": ""
+  },
+  {
+    "imgsrc": "../../images/emily-pham.png",
     "header": "Emily Pham",
     "meta": "Director of Sponsorship",
     "website": "",

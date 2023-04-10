@@ -20,7 +20,10 @@ class App extends Component {
           sectionName: "What is uOttaHack?",
           subtitle: ""
         },
-
+        {
+          sectionName: "Our Most Recent Event",
+          subTitle: ""
+        },
         {
           sectionName: "Past uOttaHacks",
           subTitle: ""
