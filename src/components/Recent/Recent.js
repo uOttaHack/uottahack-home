@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import YoutubeVideo from "./YoutubeVideo.js";
 import "./recent.css";
 
 class Recent extends Component {
@@ -8,7 +9,8 @@ class Recent extends Component {
         className={`Recent ${this.props.fullWidth ? "full-width" : ""}`}
         id="Recent"
       >
-        <iframe
+        <YoutubeVideo />
+        {/* <iframe
           width="100%"
           height="500"
           src="https://www.youtube.com/embed/V7eiv3E0jUM?autoplay=1&mute=1"
@@ -16,7 +18,7 @@ class Recent extends Component {
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
-        />
+        /> */}
       </div>
     );
   }

@@ -1,14 +1,20 @@
 @media screen and (max-width: 10000px) {
   .Past {
     width: 100%;
+    max-width: 120%;
   }
+  .Row {
+    display: flex;
+    flex-direction: row;
+  }
+
   .logo {
     width: 150px;
     height: 150px;
     align-self: center;
   }
   .logo-2019 {
-    width: 140px;
+    width: 150px;
     height: 150px;
     align-self: center;
   }
@@ -52,6 +58,8 @@
   }
 
   .Hackathon {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px; /* Optional: Add gap between grid items */
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -67,7 +75,7 @@
     border-radius: 50%;
   }
   .line {
-    height: 60px;
+    height: 60%;
     background-color: #595959;
     width: 2px;
     margin: auto;
@@ -75,10 +83,10 @@
   .Timeline {
     height: 2px;
     background-color: #595959;
-    width: 850px;
+    width: 100%;
     position: absolute;
     top: 360px;
-    left: 75px;
+    margin-left: -5%;
   }
 }
 

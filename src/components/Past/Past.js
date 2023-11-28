@@ -16,49 +16,67 @@ const images = importAll(
 class Past extends Component {
   render() {
     return (
-      <div class="Past" id="Past">
-        <div className="ui centered grid">
-          <div className="row">
-            <div className="Hackathon">
-              <img class="logo" src={images["uOttaHack-2018-Logo.png"]} />
-              <div className="circle" />
-              <div className="logobutton">
-                <a href="https://2018.uottahack.ca/" target="_blank">
-                  <button className="btn1">Visit 2018 →</button>
-                </a>
+      <>
+        <div class="Past" id="Past">
+          <div className="ui centered grid">
+            <div className="Row">
+              <div className="Hackathon">
+                <img class="logo" src={images["uOttaHack-2018-Logo.png"]} />
+                <div className="circle" />
+                <div className="logobutton">
+                  <a href="https://2018.uottahack.ca/" target="_blank">
+                    <button className="btn1">Visit 2018 →</button>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="Hackathon">
-              <img class="logo-2019" src={images["uOttaHack-2019-Logo.png"]} />
-              <div className="circle" />
-              <div className="logobutton">
-                <a href="https://2019.uottahack.ca/" target="_blank">
-                  <button className="btn2">Visit 2019 →</button>
-                </a>
+
+              <div className="Hackathon">
+                <img
+                  class="logo-2019"
+                  src={images["uOttaHack-2019-Logo.png"]}
+                />
+                <div className="circle" />
+                <div className="logobutton">
+                  <a href="https://2019.uottahack.ca/" target="_blank">
+                    <button className="btn2">Visit 2019 →</button>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="Hackathon">
-              <img class="logo" src={images["uOttaHack-2020-Logo.png"]} />
-              <div className="circle" />
-              <div className="logobutton">
-                <a href="https://2020.uottahack.ca/" target="_blank">
-                  <button className="btn3">Visit 2020 →</button>
-                </a>
+
+              <div className="Hackathon">
+                <img class="logo" src={images["uOttaHack-2020-Logo.png"]} />
+                <div className="circle" />
+                <div className="logobutton">
+                  <a href="https://2020.uottahack.ca/" target="_blank">
+                    <button className="btn3">Visit 2020 →</button>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="Hackathon">
-              <img class="logo" src={images["2.png"]} />
-              <div className="circle" />
-              <div className="logobutton">
-                <a href="https://2021.uottahack.ca/" target="_blank">
-                  <button className="btn4">Visit 2021 →</button>
-                </a>
+
+              <div className="Hackathon">
+                <img class="logo" src={images["2.png"]} />
+                <div className="circle" />
+                <div className="logobutton">
+                  <a href="https://2021.uottahack.ca/" target="_blank">
+                    <button className="btn4">Visit 2021 →</button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="Hackathon">
+                <img class="logo" src={images["uottahack5.png"]} />
+                <div className="circle" />
+                <div className="logobutton">
+                  <a href="https://2023.uottahack.ca/" target="_blank">
+                    <button className="btn5">Visit 2023 →</button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="Timeline" />
-      </div>
+      </>
     );
   }
 }
