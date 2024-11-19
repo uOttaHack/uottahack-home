@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("../app/assets/bg.svg") no-repeat center center fixed;
+  min-height: 100vh; /* Makes the body span the viewport */
+  background-size: 100vw auto; /* Full width, height scales automatically */
+  min-width: 100vw;
+  background-attachment: local; /* Makes the SVG scroll with the content */
+  background-position: top center; /* Aligns the SVG at the top and center */
+}

@@ -1,0 +1,61 @@
+.twinklingdots {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ffffff 50%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px #ffffff, 0 0 20px 5px rgba(255, 255, 255, 0.5),
+    0 0 30px 10px rgba(255, 255, 255, 0.3);
+  animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+    box-shadow: 0 0 10px 2px #ffffff, 0 0 20px 5px rgba(255, 255, 255, 0.5),
+      0 0 30px 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px 5px #ffffff, 0 0 25px 10px rgba(255, 255, 255, 0.6),
+      0 0 35px 15px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.gradienttext {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  background: var(
+    --aura,
+    linear-gradient(
+      90deg,
+      #14c7ff 1.55%,
+      #c75bf4 48.31%,
+      #f67258 60.62%,
+      #f65745 69.48%,
+      #df6557 77.36%,
+      #f83df1 85.72%,
+      #14c7ff 100%
+    )
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: blur(8px); /* Stronger blur for background layer */
+  position: absolute;
+  z-index: 1;
+}
+
+.sharpWhiteText {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  color: #fff; /* Sharp white for the top layer */
+  position: absolute;
+  z-index: 3;
+}

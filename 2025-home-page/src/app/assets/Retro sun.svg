@@ -1,0 +1,40 @@
+<svg viewBox="0 0 790 799" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f_5095_3516)">
+        <mask id="mask0_5095_3516" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="42" y="40" width="728"
+            height="697">
+            <rect x="42.3379" y="658.001" width="725.764" height="78.2722" fill="#D9D9D9" />
+            <rect x="43.4756" y="584.747" width="725.764" height="38.1326" fill="#D9D9D9" />
+            <rect x="43.4756" y="521.526" width="725.764" height="30.1047" fill="#D9D9D9" />
+            <rect x="43.4756" y="463.324" width="724.627" height="28.0977" fill="#D9D9D9" />
+            <rect x="42.6494" y="40.855" width="725.455" height="390.357" fill="#D9D9D9" />
+        </mask>
+        <g mask="url(#mask0_5095_3516)">
+            <ellipse cx="395.013" cy="399.101" rx="294.13" ry="299.04" fill="#FF4921" />
+        </g>
+    </g>
+    <mask id="mask1_5095_3516" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="42" y="40" width="728"
+        height="697">
+        <rect x="42.3379" y="658.001" width="725.764" height="78.2722" fill="#D9D9D9" />
+        <rect x="43.4756" y="584.747" width="725.764" height="38.1326" fill="#D9D9D9" />
+        <rect x="43.4756" y="521.526" width="725.764" height="30.1047" fill="#D9D9D9" />
+        <rect x="43.4756" y="463.324" width="724.627" height="28.0977" fill="#D9D9D9" />
+        <rect x="42.6494" y="40.855" width="725.455" height="390.357" fill="#D9D9D9" />
+    </mask>
+    <g mask="url(#mask1_5095_3516)">
+        <ellipse cx="395.013" cy="399.101" rx="294.13" ry="299.04" fill="url(#paint0_linear_5095_3516)" />
+    </g>
+    <defs>
+        <filter id="filter0_f_5095_3516" x="0.882812" y="0.0610352" width="788.26" height="798.08"
+            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_5095_3516" />
+        </filter>
+        <linearGradient id="paint0_linear_5095_3516" x1="395.013" y1="100.061" x2="395.013" y2="837.124"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0.08" stop-color="#FFB46F" />
+            <stop offset="0.605" stop-color="#FF4FF0" />
+            <stop offset="0.98" stop-color="#1F70FD" />
+        </linearGradient>
+    </defs>
+</svg>
