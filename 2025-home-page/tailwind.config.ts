@@ -10,7 +10,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ['var(--font-inter)'],
-       
+        harabara: ['var(--font-harabara)']
       },
       colors: {
         background: "var(--background)",

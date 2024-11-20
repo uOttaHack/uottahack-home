@@ -23,7 +23,7 @@ const ParticleEffect = () => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-blue-100"
+          className="absolute rounded-full bg-blue-500"
           style={{
             width: `${particle.size}px`,
             height: `${particle.size}px`,

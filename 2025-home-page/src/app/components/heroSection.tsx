@@ -1,7 +1,7 @@
 import Grid from "../assets/Grid.svg";
 import Sun from "@/app/assets/Retro sun.svg";
 import Parliament from "@/app/assets/parliment.svg";
-import UottaHack from "@/app/assets/uOttaHack.svg";
+import UottaHack from "@/app/assets/words/uOttaHack.svg";
 import { motion } from "motion/react";
 import Rock1 from "@/app/assets/Small_Rocks/rock1.svg";
 import Rock2 from "@/app/assets/Small_Rocks/rock2.svg";
@@ -12,22 +12,20 @@ import Rock6 from "@/app/assets/Small_Rocks/rock6.svg";
 import Rock7 from "@/app/assets/Small_Rocks/rock7.svg";
 import Rock8 from "@/app/assets/Small_Rocks/rock8.svg";
 import Rock9 from "@/app/assets/Small_Rocks/rock9.svg";
-
-import Tagline from "@/app/assets/tagline.svg";
-interface HeroSectionProps {}
-
 import styles from "@/app/styles/heroSection.module.css";
 import ParticleEffect from "./Particles";
+import Tagline from "@/app/assets/tagline.svg";
 
+interface HeroSectionProps {}
 const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
-    <main className="min-h-screen flex  items-center  overflow-hidden relative">
-      <div className="absolute z-1 top-[20%] w-full h-full">
+    <main className="min-h-screen flex  items-center   relative z-1">
+      <div className="absolute z-1 top-[20%] overlflow-hidden max-h-screen w-full h-full">
         <ParticleEffect />
       </div>
       <div className="relative inset-0 flex items-center justify-center min-h-screen overflow-hidden bg-center">
         {/* Center-aligned SVG */}
-        <div className="relative w-[100vw] flex items-center justify-center">
+        <div className="relative w-[100vw] flex items-center overlflow-hidden justify-center">
           <Grid className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" />
         </div>
       </div>
@@ -36,19 +34,19 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       <div className=" absolute top-[65%] md:top-[30%] left-[10%] w-[60%] md:w-[40%] h-[40vh]">
         <UottaHack />
         <div className="relative left-[5%] w-full">
-          <span className={`${styles.gradienttext} text-4xl `}>
+          <span className={`${styles.gradienttext} text-[2.5rem] `}>
             Canada’s Capital Hackathon
           </span>
-          <span className={`${styles.gradienttext} text-4xl`}>
+          <span className={`${styles.gradienttext} text-[2.5rem]`}>
             Canada’s Capital Hackathon
           </span>
-          <span className={`${styles.sharpWhiteText} text-4xl`}>
+          <span className={`${styles.sharpWhiteText} text-[2.5rem]`}>
             Canada’s Capital Hackathon
           </span>
         </div>
       </div>
 
-      <div className="absolute top-[10%] right-[5%] h-full w-auto p-[5%] flex items-start justify-end">
+      <div className="absolute top-[5%] right-[5%] h-full w-auto p-[5%] flex items-start justify-end">
         {/* Sun Component */}
         <div className="relative">
           <div className=" w-[70vw] md:w-[40vw] h-auto">

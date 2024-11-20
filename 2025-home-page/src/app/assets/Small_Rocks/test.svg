@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 132 136">
+    {/* Define Gradient */}
+
+    <defs>
+        <filter id="glow" x="-50%" y="-50%" width="400%" height="400%">
+            <!-- Blur the glow -->
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <!-- Add the blur back on top of the original -->
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <path filter="url(#glow)"
+        d="M31.9816 68.1045C60.4619 71.6923 63.5978 74.5939 67.4752 100.947C71.3527 74.5939 74.4884 71.6923 102.969 68.1045C74.4884 64.5166 71.3527 61.615 67.4752 35.2617C63.5978 61.615 60.4619 64.5166 31.9816 68.1045Z"
+        fill="#F2E1FF" />
+    <!-- <defs>
+        <radialGradient id="paint0_radial_5246_8020" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(65.9212 67.5709) scale(50.7453 52.0331)">
+            <stop stopColor="#F2E1FF" />
+            <stop offset="0.04" stopColor="#0541F1" />
+            <stop offset="0.25" stopColor="#032DA8" />
+            <stop offset="0.45" stopColor="#021D6C" />
+            <stop offset="0.63" stopColor="#01103D" />
+            <stop offset="0.78" stopColor="#00071C" />
+            <stop offset="0.91" stopColor="#000207" />
+            <stop offset="1" />
+        </radialGradient>
+    </defs> -->
+</svg>
+
+<!-- fill="url(#paint0_radial_5246_8020)" -->

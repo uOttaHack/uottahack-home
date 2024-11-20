@@ -1,0 +1,22 @@
+<svg width="100%" height="100%" viewBox="0 0 335 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M0 0H334.865L307.776 35.2008L287.882 45.3923L231.028 101.217L167.826 149.479L70.9164 106.032L45.4178 65.1852V58.8155L28.0485 53.0091L0 0Z"
+        fill="url(#paint0_linear_5246_8120)" />
+    <path style="mix-blend-mode:multiply" opacity="0.7" fill-rule="evenodd" clip-rule="evenodd"
+        d="M268.039 0L247.842 23.1186L185.13 25.1032L160.894 38.8617L28.0488 53.0091L45.4182 58.8155L150.871 41.9192L208.786 40.5916L205.857 76.2217L203.181 90.9992L97.5769 107.466L70.9168 106.032L119.495 128.403L167.826 150.259L231.028 101.217L287.882 45.3923L307.776 35.2008L334.866 0H268.039Z"
+        fill="url(#paint1_linear_5246_8120)" />
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H334.89C334.89 0 193.537 16.2527 0 0Z" fill="#FFBCEA" />
+    <defs>
+        <linearGradient id="paint0_linear_5246_8120" x1="167.433" y1="127.233" x2="167.433" y2="0"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#5A30CD" />
+            <stop offset="0.28" stop-color="#6255EB" />
+            <stop offset="1" stop-color="#A693FF" />
+        </linearGradient>
+        <linearGradient id="paint1_linear_5246_8120" x1="28.0488" y1="63.6163" x2="334.866" y2="63.6163"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#C77CBD" />
+            <stop offset="1" stop-color="#974577" />
+        </linearGradient>
+    </defs>
+</svg>

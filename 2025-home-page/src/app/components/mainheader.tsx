@@ -11,13 +11,13 @@ const MainHeader: React.FC<MainHeader> = () => {
   return (
     <main className="absolute bg-[#04081C] z-[100] w-full inset-0 h-[10%] flex items-center">
       {/* Logo on the Left */}
-      <div className="absolute left-10 w-20">
+      <div className="absolute left-10 w-[10vw] md:w-[4vw] ">
         <Logo className="" />
       </div>
 
       {/* Centered Navigation Text */}
       {!isMobile ? (
-        <div className="w-full flex justify-center font-inter text-[1.5vw] items-center text-white font-bold gap-x-[5%]">
+        <div className="w-full flex justify-center font-inter text-xl items-center text-white font-bold gap-x-[5%]">
           <div>About</div>
           <div>Sponsors</div>
           <div>FAQ</div>

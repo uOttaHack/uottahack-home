@@ -1,0 +1,81 @@
+
+
+.UottaHack{
+    color: #FFF;
+    font-size: 76px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+    z-index: 2;
+}
+
+.uOttahackgradient{
+background: linear-gradient(90deg, #0D2978 1.55%, #C75BF4 30.31%, #F67258 30.62%, #F65745 69.48%, #DF6557 90.36%, #F83DF1 85.72%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+filter: blur(7.5px);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 76px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+    z-index: 1;
+
+}
+
+.uOttahacktop{
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+    z-index: 2;
+    background: linear-gradient(90deg, #0D2978 1.55%, #C75BF4 48.31%, #F67258 60.62%, #F65745 69.48%, #DF6557 77.36%, #F83DF1 85.72%, #14C7FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(7.5px);
+        background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Harabara;
+    font-size: 76px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.textEffect{
+    position: absolute;
+    color: var(--localhost-Turbo, #ffffff);
+    font-family: "Inter", sans-serif;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+    z-index: 2;
+}
+
+.textEffectGradient{
+    position: absolute;
+    font-family: "Inter", sans-serif;
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: 42px;
+    background: linear-gradient(90deg, #0D2978 1.55%, #C75BF4 48.31%, #F67258 60.62%, #F65745 69.48%, #DF6557 77.36%, #F83DF1 85.72%, #14C7FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(7.5px);
+      background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    filter: blur(8px);
+    z-index: 1;
+}
