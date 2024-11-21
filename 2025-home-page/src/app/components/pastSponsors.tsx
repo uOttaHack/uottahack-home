@@ -12,13 +12,13 @@ const PastSponsor: React.FC<PastSponsor> = () => {
         </div>
         <div className="relative flex w-full justify-center items-center top-[100%] text-3xl md:text-6xl">
           <div className="relative  flex w-full justify-center items-center font-harabara font-black w-full">
-            <span className={`${styles.gradienttext} text-[4.5rem] `}>
+            <span className={`${styles.gradienttext} text-[4.5vw] `}>
               Past Sponsors
             </span>
-            <span className={`${styles.gradienttext} text-[4.5rem]`}>
+            <span className={`${styles.gradienttext} text-[4.5vw]`}>
               Past Sponsors
             </span>
-            <span className={`${styles.sharpWhiteText} text-[4.5rem]`}>
+            <span className={`${styles.sharpWhiteText} text-[4.5vw]`}>
               Past Sponsors
             </span>
           </div>
@@ -85,13 +85,13 @@ const PastSponsor: React.FC<PastSponsor> = () => {
             </div>
             <div className=" relative flex w-full justify-center items-center pt-[5%] pb-[2%] text-3xl md:text-6xl">
               <div className="  relative flex w-full justify-center items-center font-harabara font-black w-full">
-                <span className={`${styles.gradienttext} text-[2.5rem] `}>
+                <span className={`${styles.gradienttext} text-[2.5vw] `}>
                   Our Partners
                 </span>
-                <span className={`${styles.gradienttext} text-[2.5rem]`}>
+                <span className={`${styles.gradienttext} text-[2.5vw]`}>
                   Our Partners
                 </span>
-                <span className={`${styles.sharpWhiteText} text-[2.5rem]`}>
+                <span className={`${styles.sharpWhiteText} text-[2.5vw]`}>
                   Our Partners
                 </span>
               </div>

@@ -9,6 +9,7 @@ import RecapSection from "./components/recapSection";
 import ValueSection from "./components/valueSection";
 import PastSponsor from "./components/pastSponsors";
 import OurStory from "./components/ourstory";
+import FooterSection from "./components/footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <OurStory />
       <PastSponsor />
       <FaqSection />
+      <FooterSection />
     </div>
   );
 }

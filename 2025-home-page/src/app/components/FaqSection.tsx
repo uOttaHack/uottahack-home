@@ -2,9 +2,9 @@ import Waves from "@/app/assets/faq_waves.svg";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Star from "@/app/assets/Vector.svg";
-interface FaqSection {}
-
 import styles from "@/app/styles/faq.module.css";
+
+interface FaqSection {}
 
 const FaqSection: React.FC<FaqSection> = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -81,11 +81,9 @@ const FaqSection: React.FC<FaqSection> = () => {
         </div>
         <div className="relative flex flex-col w-full justify-center items-center  text-3xl md:text-6xl">
           <div className="relative  flex w-full justify-center items-center mb-[10%] font-harabara font-black w-full">
-            <span className={`${styles.gradienttext} text-[4.5rem] `}>FAQ</span>
-            <span className={`${styles.gradienttext} text-[4.5rem]`}>FAQ</span>
-            <span className={`${styles.sharpWhiteText} text-[4.5rem]`}>
-              FAQ
-            </span>
+            <span className={`${styles.gradienttext} text-[4.5vw] `}>FAQ</span>
+            <span className={`${styles.gradienttext} text-[4.5vw]`}>FAQ</span>
+            <span className={`${styles.sharpWhiteText} text-[4.5vw]`}>FAQ</span>
           </div>
           <div className="w-full flex justify-center pl-[10%]">
             <div className="relaitve grid grid-cols-2 z-[10] w-[75%] gap-[20%]   flex font-urbanist">
@@ -99,7 +97,7 @@ const FaqSection: React.FC<FaqSection> = () => {
                       onClick={() => toggleAnswer(index)}
                     >
                       <span
-                        className={`absolute -left-[5rem] w-[6%] ${
+                        className={`absolute -left-[5vw] w-[6%] ${
                           activeIndex === index
                             ? "scale-[1.5] rotate-45"
                             : "scale-[1] "
@@ -122,7 +120,7 @@ const FaqSection: React.FC<FaqSection> = () => {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <p className=" w-full text-[1rem] text-[#D5D5D5] leading-7">
+                          <p className=" w-full text-[1vw] text-[#D5D5D5] leading-7">
                             {faq.answer}
                           </p>
                         </motion.div>
@@ -149,7 +147,7 @@ const FaqSection: React.FC<FaqSection> = () => {
                       onClick={() => toggleAnswer(index + column1.length)}
                     >
                       <span
-                        className={`absolute -left-[5rem] w-[6%] ${
+                        className={`absolute -left-[5vw] w-[6%] ${
                           activeIndex === index + column1.length
                             ? "scale-[1.5] rotate-45"
                             : "scale-[1] "
@@ -172,7 +170,7 @@ const FaqSection: React.FC<FaqSection> = () => {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <p className="mt-4 text-[1rem] text-[#D5D5D5] ">
+                          <p className="mt-4 text-[1vw] text-[#D5D5D5] ">
                             {faq.answer}
                           </p>
                         </motion.div>

@@ -15,7 +15,7 @@ import Image from "next/image";
 interface ValueSection {}
 const ValueSection: React.FC<ValueSection> = () => {
   return (
-    <main className=" flex min-h-screen  relative z-1">
+    <main className=" flex  relative z-1">
       <div className="relative h-full pt-[40%] w-[100vw]">
         <div className="absolute top-[70%] z-[1] w-[100%]">
           <Waves />
