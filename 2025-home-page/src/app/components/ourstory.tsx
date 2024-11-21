@@ -4,9 +4,25 @@ import Blobs_right from "@/app/assets/pinkblob_right.svg";
 
 import people from "@/app/assets/people/image1.avif";
 import styles from "@/app/styles/ourstory.module.css";
+import { motion } from "motion/react";
 interface OurStory {}
 
 const OurStory: React.FC<OurStory> = () => {
+  function getGradientColor(index: number): string {
+    const colors = [
+      "#FFB389",
+      "#FF8B90",
+      "#FF73A4",
+      "#FE5AB5",
+      "#B351DB",
+      "#3C63F1",
+      "#15A1EF",
+    ];
+
+    // Calculate which part of the gradient the index represents
+    const segment = Math.floor((index / 15) * colors.length);
+    return colors[segment] || "#FFFFFF"; // Default to white if undefined
+  }
   return (
     <main className=" flex our-story w-full relative z-1">
       <div className="relative h-full pt-[110%] w-[100vw]">
@@ -29,7 +45,7 @@ const OurStory: React.FC<OurStory> = () => {
                 of type and scrambled it to make a type specimen book.
               </p>
             </div>
-            <div className="w-full  pl-[10%] pr-[15%] overflow-hidden">
+            <div className="w-full  pl-[10%] pr-[15%] ">
               <div
                 className={`w-full h-[30vw]  pb-[3%] p-[1%] ${styles.window} rounded-xl`}
               >
@@ -56,9 +72,47 @@ const OurStory: React.FC<OurStory> = () => {
                   />
                 </div>
               </div>
+
+              <div className="pt-[5%]">
+                <div className="relative flex items-center  w-full h-[3vw] bg-stone-900/40 rounded-full  backdrop-blur-lg">
+                  {/* Pads */}
+                  <div className="relative flex gap-[0.3vw] z-10 px-[0.5vw] w-full">
+                    {Array.from({ length: 15 }).map((_, index) => (
+                      <motion.div
+                        key={index}
+                        className={`w-[2vw] h-[2vw] shadow-xl ${
+                          index === 0
+                            ? "rounded-l-full"
+                            : index === 15
+                            ? "rounded-r-full"
+                            : "rounded-md"
+                        }`}
+                        style={{
+                          background:
+                            "linear-gradient(104deg, #FFB389, #FF8B90, #FF73A4, #FE5AB5, #B351DB, #3C63F1, #15A1EF)",
+                          backgroundSize: `${15 * 100}%`, // Spans across all pads
+                          backgroundPosition: `${(index / 15) * 100}%`, // Shift gradient for each pad
+                          filter: `drop-shadow(0px 0px 10px ${getGradientColor(
+                            index
+                          )})`, // Glow matches the gradient
+                        }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: [0, 1, 0] }}
+                        transition={{
+                          duration: 10, // Duration for each pad to appear
+                          delay: index * 0.3, // Staggered delay for each pad
+                          times: [0, 0.5, 0.8], // Control the duration at each opacity stage
+                          repeat: Infinity, // Repeat the animation
+                          //   repeatType: "reverse", // Reverse the animation direction
+                        }}
+                      ></motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className=" absolute z-[10] top-[240%] flex flex-row ">
+          <div className=" absolute z-[10] top-[200%] flex flex-row ">
             <div className="w-full  pl-[5%] pr-[10%] overflow-hidden">
               <div
                 className={`w-[100%] h-[30vw]  pb-[3%] p-[1%] ${styles.window2} rounded-xl`}
@@ -84,6 +138,41 @@ const OurStory: React.FC<OurStory> = () => {
                     src={people.src}
                     className="object-cover rounded-xl w-full h-full"
                   />
+                </div>
+              </div>
+              <div className="pt-[5%]">
+                <div className="relative flex items-center  w-full h-[3vw] bg-stone-900/40 rounded-full  backdrop-blur-lg">
+                  {/* Pads */}
+                  <div className="relative flex gap-[0.1vw] z-10 px-[0.5vw] w-full">
+                    {Array.from({ length: 15 }).map((_, index) => (
+                      <motion.div
+                        key={index}
+                        className={`w-[2vw] h-[2.5vw] shadow-xl ${
+                          index === 0
+                            ? "rounded-l-full"
+                            : index === 15
+                            ? "rounded-r-full"
+                            : "rounded-md"
+                        }`}
+                        style={{
+                          background:
+                            "linear-gradient(104deg, #15A1EF, #15A1EF, #15A1EF, #15A1EF, #15A1EF, #15A1EF, #15A1EF)",
+                          backgroundSize: `${15 * 100}%`, // Spans across all pads
+                          backgroundPosition: `${(index / 15) * 100}%`, // Shift gradient for each pad
+                          filter: `drop-shadow(0px 0px 10px #15A1EF)`, // Glow matches the gradient
+                        }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: [0, 1, 0] }}
+                        transition={{
+                          duration: 10, // Duration for each pad to appear
+                          delay: index * 0.3, // Staggered delay for each pad
+                          times: [0, 0.5, 0.8], // Control the duration at each opacity stage
+                          repeat: Infinity, // Repeat the animation
+                          //   repeatType: "reverse", // Reverse the animation direction
+                        }}
+                      ></motion.div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

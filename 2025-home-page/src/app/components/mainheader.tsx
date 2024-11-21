@@ -20,7 +20,9 @@ const MainHeader: React.FC<MainHeader> = () => {
         <div className="w-full flex justify-center font-inter text-xl items-center text-white font-bold gap-x-[5%]">
           <div>About</div>
           <div>Sponsors</div>
-          <div>FAQ</div>
+          <div>
+            <a href="#faq">FAQ</a>
+          </div>
           <div>Events</div>
           <div>Contact</div>
         </div>
