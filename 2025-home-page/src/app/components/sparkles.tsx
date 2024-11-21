@@ -39,13 +39,10 @@ export default function Sparkle() {
           fill="none"
           style={{
             position: "absolute",
-            top: `${Math.random() * 100}vh`, // Random vertical position
-            left: `${Math.random() * 100}vw`, // Random horizontal position
+            top: `${sparkle.y}vh`,
+            left: `${sparkle.x}vw`,
             width: `${sparkle.size}px`, // Dynamic size
             height: `${sparkle.size}px`, // Dynamic size
-            // boxShadow: `0px 0px 0px 0px rgba(255, 255, 255, 0.9),
-            //       0 0 0px 0px rgba(255, 255, 255, 0.6),
-            //       0 0 30px 10px rgba(255, 255, 255, 0.4)`,
           }}
           animate={{
             scale: [1, 2], // Grow and shrink

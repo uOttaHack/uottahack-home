@@ -20,7 +20,7 @@ const IntroSection: React.FC<IntroSection> = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <main className="h-auto flex  items-center  pt-[5%]  relative z-1">
+    <main className="h-auto flex  items-center  pt-[5%]  overlfow-x-hidden overflow-y-visible relative z-1">
         <div className="absolute w-full z-[100]">
         <Sparkle></Sparkle>
         </div>

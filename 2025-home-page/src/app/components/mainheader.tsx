@@ -9,7 +9,7 @@ const MainHeader: React.FC<MainHeader> = () => {
   }
 
   return (
-    <main className="absolute bg-[#04081C] z-[100] w-full inset-0 h-[10%] flex items-center">
+    <main className="absolute bg-[#04081C] z-[100] w-full inset-0 h-[10%] flex items-center overflow-hidden">
       {/* Logo on the Left */}
       <div className="absolute left-10 w-[10vw] md:w-[4vw] ">
         <Logo className="" />

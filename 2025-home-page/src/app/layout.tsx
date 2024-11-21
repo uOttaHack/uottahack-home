@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Inter } from 'next/font/google'
+import { Inter, Urbanist } from "next/font/google";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -18,7 +18,7 @@ const geistMono = localFont({
 const harabara = localFont({
   src: "./fonts/Harabara.woff",
   variable: "--font-harabara",
-  weight: "100 900",
+  weight: "100 700 900",
 });
 
 export const metadata: Metadata = {
@@ -27,10 +27,15 @@ export const metadata: Metadata = {
 };
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
- 
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const urbanist = Urbanist({
+  subsets: ["latin"], // Include subsets as needed
+  weight: ["700"], // Include only the weights you need
+  variable: "--font-urbanist", // Define a CSS variable
+});
 
 export default function RootLayout({
   children,
@@ -40,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${harabara.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${harabara.variable} ${urbanist.variable} antialiased`}
       >
         {children}
       </body>

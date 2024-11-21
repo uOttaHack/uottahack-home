@@ -19,7 +19,7 @@ import Tagline from "@/app/assets/tagline.svg";
 interface HeroSectionProps {}
 const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
-    <main className="min-h-screen flex  items-center   relative z-1">
+    <main className="min-h-screen flex  items-center   overlfow-x-hidden overflow-y-visible relative z-1">
       <div className="absolute z-1 top-[20%] overlflow-hidden max-h-screen w-full h-full">
         <ParticleEffect />
       </div>
@@ -74,7 +74,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           <div className="absolute top-[70%] left-[50%] w-[30vw] h-full">
             <div>
               <motion.div
-                className="absolute -left-[80%] transform top-[10%] w-[12%] h-auto"
+                className="absolute -left-[80%] transform top-[10%] w-[15%] h-auto"
                 animate={{
                   y: [0, -20, 0], // Moves up and down
                 }}
@@ -108,7 +108,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               </motion.div>
 
               <motion.div
-                className="absolute -left-[50%] transform top-[20%] w-[6%] h-auto"
+                className="absolute -left-[50%] transform top-[20%] w-[3%] h-auto"
                 animate={{
                   y: [0, -10, 0],
                 }}
@@ -143,7 +143,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               </motion.div>
 
               <motion.div
-                className="absolute -left-[65%] transform -top-[10%] w-[10%] h-auto"
+                className="absolute -left-[65%] transform -top-[10%] w-[8%] h-auto"
                 animate={{
                   y: [0, -15, 0],
                 }}

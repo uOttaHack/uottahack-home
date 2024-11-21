@@ -16,4 +16,6 @@ body {
   min-width: 100vw;
   background-attachment: local; /* Makes the SVG scroll with the content */
   background-position: top center; /* Aligns the SVG at the top and center */
+  overflow-x: hidden;
+  overflow-y: visible;
 }
