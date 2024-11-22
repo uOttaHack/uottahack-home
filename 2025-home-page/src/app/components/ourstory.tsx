@@ -4,10 +4,19 @@ import Blobs_right from "@/app/assets/pinkblob_right.svg";
 
 import people from "@/app/assets/people/image1.avif";
 import styles from "@/app/styles/ourstory.module.css";
+import { useState, useEffect } from "react";
+import Carret from "@/app/assets/carret.svg";
 import { motion } from "motion/react";
 interface OurStory {}
 
 const OurStory: React.FC<OurStory> = () => {
+  const [circles, setCircles] = useState<number[]>([]); // Store random top positions
+  const [isParentHovered, setIsParentHovered] = useState(false);
+  useEffect(() => {
+    // Generate random top positions for the circles
+    const initialCircles = Array.from({ length: 20 }, () => Math.random() * 90); // Random values between 0% - 50%
+    setCircles(initialCircles);
+  }, []);
   function getGradientColor(index: number): string {
     const colors = [
       "#FFB389",
@@ -44,6 +53,59 @@ const OurStory: React.FC<OurStory> = () => {
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </p>
+              <div className="relative top-[10%] left-[0%] w-full h-full z-[11] ">
+                <div
+                  className={`w-[16vw] h-[4vw] rounded-full  bg-black  hover:scale-110 transition-transform duration-300 group `}
+                  onClick={() =>
+                    (window.location.href = "https://2025.uottahack.ca/")
+                  }
+                  onMouseEnter={() => {
+                    console.log("Parent hovered");
+                    setIsParentHovered(true);
+                  }}
+                  onMouseLeave={() => {
+                    console.log("Parent hover ended");
+                    setIsParentHovered(false);
+                  }}
+                >
+                  <div
+                    className={`relative w-full h-full text-white font-bold rounded-full ${styles.animategradient} overflow-hidden`}
+                  >
+                    {/* Centered Text */}
+                    <span
+                      className="absolute inset-0 flex text-[1.3vw] pointer-events-none justify-center items-center z-10"
+                      style={{
+                        filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
+                      }}
+                    >
+                      Past Hackathons
+                      <span className="pl-[4%]">
+                        <Carret className="w-[1vw]" />
+                      </span>
+                    </span>
+
+                    {/* Render Circles */}
+                    {circles.map((randomTop, index) => (
+                      <motion.span
+                        key={`${isParentHovered}-${index}`} // Use key to reinitialize animation
+                        className="absolute left-0 w-[3px] h-[3px]  bg-white   rounded-full"
+                        style={{
+                          top: `${randomTop}%`,
+                          filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
+                        }}
+                        initial={{ x: -20 }} // Start off-screen to the left
+                        animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                        transition={{
+                          duration: isParentHovered ? 1 : 4, // Faster when hovered
+                          repeat: Infinity,
+                          ease: "linear",
+                          delay: index * 0.6,
+                        }}
+                      ></motion.span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="w-full  pl-[10%] pr-[15%] ">
               <div
@@ -97,11 +159,11 @@ const OurStory: React.FC<OurStory> = () => {
                           )})`, // Glow matches the gradient
                         }}
                         initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: [0, 1, 0] }}
+                        animate={{ opacity: [0, 1, 1, 0] }}
                         transition={{
                           duration: 10, // Duration for each pad to appear
                           delay: index * 0.3, // Staggered delay for each pad
-                          times: [0, 0.5, 0.8], // Control the duration at each opacity stage
+                          times: [0, 0.8, 0.8, 1], // Control the duration at each opacity stage
                           repeat: Infinity, // Repeat the animation
                           //   repeatType: "reverse", // Reverse the animation direction
                         }}
@@ -162,11 +224,11 @@ const OurStory: React.FC<OurStory> = () => {
                           filter: `drop-shadow(0px 0px 10px #15A1EF)`, // Glow matches the gradient
                         }}
                         initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: [0, 1, 0] }}
+                        animate={{ opacity: [0, 1, 1, 0] }}
                         transition={{
                           duration: 10, // Duration for each pad to appear
                           delay: index * 0.3, // Staggered delay for each pad
-                          times: [0, 0.5, 0.8], // Control the duration at each opacity stage
+                          times: [0, 0.8, 0.8, 1], // Control the duration at each opacity stage
                           repeat: Infinity, // Repeat the animation
                           //   repeatType: "reverse", // Reverse the animation direction
                         }}
@@ -183,6 +245,59 @@ const OurStory: React.FC<OurStory> = () => {
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </p>
+              <div className="relative top-[10%] left-[0%] w-full h-full z-[11] ">
+                <div
+                  className={`w-[16vw] h-[4vw] rounded-full  bg-black  hover:scale-110 transition-transform duration-300 group `}
+                  onClick={() =>
+                    (window.location.href = "https://2025.uottahack.ca/")
+                  }
+                  onMouseEnter={() => {
+                    console.log("Parent hovered");
+                    setIsParentHovered(true);
+                  }}
+                  onMouseLeave={() => {
+                    console.log("Parent hover ended");
+                    setIsParentHovered(false);
+                  }}
+                >
+                  <div
+                    className={`relative w-full h-full text-white font-bold rounded-full ${styles.animategradient2} overflow-hidden`}
+                  >
+                    {/* Centered Text */}
+                    <span
+                      className="absolute inset-0 flex text-[1.3vw] pointer-events-none justify-center items-center z-10"
+                      style={{
+                        filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
+                      }}
+                    >
+                      Events & Initiatives
+                      <span className="pl-[4%]">
+                        <Carret className="w-[1vw]" />
+                      </span>
+                    </span>
+
+                    {/* Render Circles */}
+                    {circles.map((randomTop, index) => (
+                      <motion.span
+                        key={`${isParentHovered}-${index}`} // Use key to reinitialize animation
+                        className="absolute left-0 w-[3px] h-[3px]  bg-white   rounded-full"
+                        style={{
+                          top: `${randomTop}%`,
+                          filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
+                        }}
+                        initial={{ x: -20 }} // Start off-screen to the left
+                        animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                        transition={{
+                          duration: isParentHovered ? 1 : 4, // Faster when hovered
+                          repeat: Infinity,
+                          ease: "linear",
+                          delay: index * 0.6,
+                        }}
+                      ></motion.span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -19,7 +19,9 @@ const MainHeader: React.FC<MainHeader> = () => {
       {!isMobile ? (
         <div className="w-full flex justify-center font-inter text-xl items-center text-white font-bold gap-x-[5%]">
           <div>About</div>
-          <div>Sponsors</div>
+          <div>
+            <a href="#sponsors">Sponsors</a>
+          </div>
           <div>
             <a href="#faq">FAQ</a>
           </div>

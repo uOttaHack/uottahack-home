@@ -5,7 +5,7 @@ interface PastSponsor {}
 
 const PastSponsor: React.FC<PastSponsor> = () => {
   return (
-    <main className="flex faq  relative z-1">
+    <main className="flex faq  relative z-1" id="sponsors">
       <div className="relative h-full pt-[120%] w-[100vw]">
         <div className="absolute top-[55%] z-[1] w-[100%]">
           <BG />

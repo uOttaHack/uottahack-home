@@ -59,3 +59,46 @@
   position: absolute;
   z-index: 3;
 }
+
+/* @keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+} */
+
+@keyframes circle-flow {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
+
+.animategradient {
+  background: linear-gradient(92deg, #643A47 -0.73%, #502E40 25.86%, #3B2944 58.33%, #392A4B 76.24%, #392A4B 110.63%, #392A4B 76.24%);
+  background-size: 200%; /* Gradient size for continuous flow */
+  animation: gradient-move 3s infinite linear;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background-color: #ffffff; /* Circle color */
+  border-radius: 50%;
+  transform: translateY(-50%);
+  animation: circle-flow 5s infinite linear;
+  filter: drop-shadow(100px 30px 30px rgba(255, 255, 255, 0.8)),
+
+}
+
+.border{
+  background: linear-gradient(92deg, #FFB389 -10.82%, #FF8B90 8.8%, #FF73A4 39.55%, #FE5AB5 62.52%, #E29AFF 110.57%);
+
+}

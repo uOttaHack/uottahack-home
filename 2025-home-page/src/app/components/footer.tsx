@@ -11,30 +11,30 @@ import Tiktok from "@/app/assets/logo/tiktok.svg";
 
 const FooterSection: React.FC<FooterSection> = () => {
   return (
-    <main className="flex  w-[100vw] relative z-1" id="">
+    <main className="flex  w-[100vw] overflow-hidden  relative z-1 " id="">
       <div className="pt-[10%] w-[100vw] ">
         <div className="w-full flex flex-col w-[100vw] justify-center items-center flex w-full ">
           <div className="w-[90%] h-[0.1vh]   bg-[#938D8D]"></div>
           <div className="flex flex-col w-full pl-[10%] pt-[1%] pb-[2%]">
-            <div className="flex flex-row w-full  items-center">
-              <div className="relative justify-self-start w-full flex flex-col  justify-start items-center  text-3xl md:text-6xl">
-                <div className="relative  flex w-full justify-start items-center  font-harabara font-black w-full">
-                  <span className={`${styles.gradienttext} text-[3vw]`}>
+            <div className="flex md:flex-row flex-col justify-center w-full  items-center">
+              <div className="relative  w-full flex flex-col  justify-center items-center  text-3xl md:text-6xl">
+                <div className="relative  flex w-full justify-center md:justify-start items-center  font-harabara font-black w-full">
+                  <span className={`${styles.gradienttext} text-[3.5rem]`}>
                     uOttaHack
                   </span>
-                  <span className={`${styles.sharpWhiteText} text-[3vw]`}>
+                  <span className={`${styles.sharpWhiteText} text-[3.5rem]`}>
                     uOttaHack
                   </span>
-                  <div className="left-[45%]  relative">
+                  <div className="left-[12vw]  relative">
                     <Logo className="w-[5vw]  "></Logo>
                   </div>
                 </div>
-                <p className="text-[1vw]  text-white w-full">
+                <p className="text-[1rem]  text-white w-full">
                   The capital of Canada’s largest hackathon.
                 </p>
               </div>
               <div className="w-full">
-                <div className="grid grid-cols-1 md:text-[0.7vw] w-1/2 justify-self-center flex underline  underline-offset-4 md:grid-cols-2 gap-y-[100%] ">
+                <div className="grid grid-cols-1 md:text-[0.7vw] w-1/2 justify-self-center flex underline  underline-offset-4 md:grid-cols-2  ">
                   <a
                     href="https://mlh.io/privacy"
                     className="text-center md:text-start text-white "
@@ -63,11 +63,12 @@ const FooterSection: React.FC<FooterSection> = () => {
                   </a>
                 </div>
               </div>
-              <div className="justify-self-center flex w-full items-center gap-4">
+              <div className="justify-center flex w-full items-center gap-4">
                 <div className="w-[70%] flex ring-2 p-1 rounded-full">
                   <input
                     type="email"
                     id="email"
+                    data-gramm="false"
                     placeholder="example@domain.com"
                     className="w-full p-[3%] rounded-full bg-white/0 text-white placeholder-white focus:outline-none"
                   />

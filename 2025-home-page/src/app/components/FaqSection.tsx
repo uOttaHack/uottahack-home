@@ -74,7 +74,7 @@ const FaqSection: React.FC<FaqSection> = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <main className="min-h-screen flex faq  relative z-1" id="faq">
+    <main className=" flex faq  relative z-1">
       <div className="relative h-full pt-[20%] w-[100vw]">
         <div className="absolute top-[5%] z-[1] w-[100%]">
           <Waves />
@@ -85,7 +85,7 @@ const FaqSection: React.FC<FaqSection> = () => {
             <span className={`${styles.gradienttext} text-[4.5vw]`}>FAQ</span>
             <span className={`${styles.sharpWhiteText} text-[4.5vw]`}>FAQ</span>
           </div>
-          <div className="w-full flex justify-center pl-[10%]">
+          <div className="w-full flex justify-center pl-[10%]" id="faq">
             <div className="relaitve grid grid-cols-2 z-[10] w-[75%] gap-[20%]   flex font-urbanist">
               {/* First Column */}
               <div className="space-y-[5%]">
