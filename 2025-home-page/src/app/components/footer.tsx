@@ -6,7 +6,7 @@ import Linkedin from "@/app/assets/logo/linkedin.svg";
 import Instagram from "@/app/assets/logo/instagram.svg";
 import Discord from "@/app/assets/logo/discord.svg";
 import Logo from "@/app/assets/footer_logo.svg";
-
+import Uottahack from "@/app/assets/uottahack_footer.svg";
 import Tiktok from "@/app/assets/logo/tiktok.svg";
 
 const FooterSection: React.FC<FooterSection> = () => {
@@ -15,26 +15,18 @@ const FooterSection: React.FC<FooterSection> = () => {
       <div className="pt-[10%] w-[100vw] ">
         <div className="w-full flex flex-col w-[100vw] justify-center items-center flex w-full ">
           <div className="w-[90%] h-[0.1vh]   bg-[#938D8D]"></div>
-          <div className="flex flex-col w-full pl-[10%] pt-[1%] pb-[2%]">
+          <div className="flex flex-col w-full md:pl-[10%] pt-[1%] pb-[2%]">
             <div className="flex md:flex-row flex-col justify-center w-full  items-center">
-              <div className="relative  w-full flex flex-col  justify-center items-center  text-3xl md:text-6xl">
-                <div className="relative  flex w-full justify-center md:justify-start items-center  font-harabara font-black w-full">
-                  <span className={`${styles.gradienttext} text-[3.5rem]`}>
-                    uOttaHack
-                  </span>
-                  <span className={`${styles.sharpWhiteText} text-[3.5rem]`}>
-                    uOttaHack
-                  </span>
-                  <div className="left-[12vw]  relative">
-                    <Logo className="w-[5vw]  "></Logo>
-                  </div>
+              <div className="relative  w-full flex flex-col  justify-center items-center md:justify-start md:items-start text-3xl md:text-6xl">
+                <div className="w-[70%] md:w-[50%]">
+                  <Uottahack />
                 </div>
-                <p className="text-[1rem]  text-white w-full">
+                <p className="text-[1rem]  justify-center md:justify-start flex text-white w-full">
                   The capital of Canada’s largest hackathon.
                 </p>
               </div>
-              <div className="w-full">
-                <div className="grid grid-cols-1 md:text-[0.7vw] w-1/2 justify-self-center flex underline  underline-offset-4 md:grid-cols-2  ">
+              <div className="w-full p-[10%] md:p-0 ">
+                <div className="grid md:grid-cols-2 grid-cols-1 md:text-[0.7vw] w-1/2 justify-self-center flex underline gap-y-[10%] md:gap-y-0 underline-offset-4 md:grid-cols-2  ">
                   <a
                     href="https://mlh.io/privacy"
                     className="text-center md:text-start text-white "
@@ -63,8 +55,8 @@ const FooterSection: React.FC<FooterSection> = () => {
                   </a>
                 </div>
               </div>
-              <div className="justify-center flex w-full items-center gap-4">
-                <div className="w-[70%] flex ring-2 p-1 rounded-full">
+              <div className="justify-center pt-[10%] md:pt-0 flex w-full items-center gap-4">
+                <div className="md:w-[70%] w-[90%] flex ring-2 p-1 rounded-full">
                   <input
                     type="email"
                     id="email"
@@ -83,20 +75,20 @@ const FooterSection: React.FC<FooterSection> = () => {
             </div>
           </div>
           <div className="w-[90%] h-[0.1vh]  flex bg-[#938D8D]"></div>
-          <div className="flex w-full justify-center items-center gap-x-[2%] pt-[2%] flex-row">
-            <div className="w-[2%]">
+          <div className="flex w-full justify-center items-center md:gap-x-[2%] gap-x-[5%] pt-[10%] md:pt-[2%] flex-row">
+            <div className="w-[10%] md:w-[2%]">
               <Linkedin />
             </div>
-            <div className="w-[2%]">
+            <div className="w-[10%] md:w-[2%]">
               <Instagram />
             </div>
-            <div className="w-[2%]">
+            <div className="w-[10%] md:w-[2%]">
               <Youtube />
             </div>
-            <div className="w-[2%]">
+            <div className="w-[10%] md:w-[2%]">
               <Tiktok />
             </div>
-            <div className="w-[2%]">
+            <div className="w-[10%] md:w-[2%]">
               <Discord />
             </div>
           </div>
@@ -105,13 +97,15 @@ const FooterSection: React.FC<FooterSection> = () => {
             Copyright. All rights reserved.
           </p>
         </div>
-        <div className="flex flex-col w-full  pt-[3%] pb-[2%]">
+        <div className="flex flex-col w-full  pt-[10%] pb-[2%]">
           <div className="relative flex flex-col w-full justify-center items-center  text-3xl md:text-6xl">
             <div className="relative  flex w-full justify-center items-center  font-harabara font-black w-full">
-              <span className={`${styles.gradienttext} text-[1vw]`}>
+              <span className={`${styles.gradienttext} md:text-[1vw] text-sm`}>
                 Made with 🤍 by the uOttaHack Team
               </span>
-              <span className={`${styles.sharpWhiteText} text-[1vw]`}>
+              <span
+                className={`${styles.sharpWhiteText} md:text-[1vw] text-sm`}
+              >
                 Made with 🤍 by the uOttaHack Team
               </span>
             </div>

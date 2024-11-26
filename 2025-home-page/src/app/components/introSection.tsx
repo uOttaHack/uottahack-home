@@ -7,7 +7,7 @@ import Achievement2 from "@/app/assets/achievements/achievement2.svg";
 import Achievement3 from "@/app/assets/achievements/achievement3.svg";
 import Achievement4 from "@/app/assets/achievements/achievement4.svg";
 import Achievement5 from "@/app/assets/achievements/achievement5.svg";
-import BigRock from "@/app/assets/Small_Rocks/intro_big_rock.svg"
+import BigRock from "@/app/assets/Small_Rocks/intro_big_rock.svg";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
@@ -21,9 +21,9 @@ const IntroSection: React.FC<IntroSection> = () => {
 
   return (
     <main className="h-auto flex  items-center  pt-[5%]  overlfow-x-hidden overflow-y-visible relative z-1">
-        <div className="absolute w-full z-[100]">
+      <div className="absolute w-full z-[100]">
         <Sparkle></Sparkle>
-        </div>
+      </div>
       <div className="relative   pt-[10%] w-[100vw]">
         <div className="w-[100%]">
           <Blobs />
@@ -113,7 +113,8 @@ const IntroSection: React.FC<IntroSection> = () => {
                   printer took a galley of type and scrambled it to make a type
                   specimen book.
                 </p>
-                <motion.div className="w-[40%] pt-[10%]"
+                <motion.div
+                  className="w-[40%] pt-[10%]"
                   animate={{
                     y: [0, -10, 0], // Moves up by 20px and back down
                   }}
@@ -121,8 +122,9 @@ const IntroSection: React.FC<IntroSection> = () => {
                     duration: 6, // Duration of one complete float cycle
                     repeat: Infinity, // Repeat infinitely
                     ease: "easeInOut", // Smooth easing
-                  }}    >
-                    <BigRock/>
+                  }}
+                >
+                  <BigRock />
                 </motion.div>
               </div>
             </div>

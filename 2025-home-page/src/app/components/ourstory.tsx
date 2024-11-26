@@ -34,7 +34,7 @@ const OurStory: React.FC<OurStory> = () => {
   }
   return (
     <main className=" flex our-story w-full relative z-1">
-      <div className="relative h-full pt-[110%] w-[100vw]">
+      <div className="relative h-full pt-[50%] md:pt-[110%] w-[100vw]">
         <div className="relative  z-[1] left-[10%] w-[20%]">
           <Ourstory />
         </div>
@@ -174,7 +174,7 @@ const OurStory: React.FC<OurStory> = () => {
               </div>
             </div>
           </div>
-          <div className=" absolute z-[10] top-[200%] flex flex-row ">
+          <div className=" absolute z-[10] top-[150%] flex flex-row ">
             <div className="w-full  pl-[5%] pr-[10%] overflow-hidden">
               <div
                 className={`w-[100%] h-[30vw]  pb-[3%] p-[1%] ${styles.window2} rounded-xl`}

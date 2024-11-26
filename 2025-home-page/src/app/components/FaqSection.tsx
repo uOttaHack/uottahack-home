@@ -81,23 +81,33 @@ const FaqSection: React.FC<FaqSection> = () => {
         </div>
         <div className="relative flex flex-col w-full justify-center items-center  text-3xl md:text-6xl">
           <div className="relative  flex w-full justify-center items-center mb-[10%] font-harabara font-black w-full">
-            <span className={`${styles.gradienttext} text-[4.5vw] `}>FAQ</span>
-            <span className={`${styles.gradienttext} text-[4.5vw]`}>FAQ</span>
-            <span className={`${styles.sharpWhiteText} text-[4.5vw]`}>FAQ</span>
+            <span
+              className={`${styles.gradienttext} text-6xl md:text-[4.5vw] `}
+            >
+              FAQ
+            </span>
+            <span className={`${styles.gradienttext} text-6xl md:text-[4.5vw]`}>
+              FAQ
+            </span>
+            <span
+              className={`${styles.sharpWhiteText} text-6xl  md:text-[4.5vw]`}
+            >
+              FAQ
+            </span>
           </div>
           <div className="w-full flex justify-center pl-[10%]" id="faq">
-            <div className="relaitve grid grid-cols-2 z-[10] w-[75%] gap-[20%]   flex font-urbanist">
+            <div className="relaitve grid grid-cols-1 md:grid-cols-2 z-[10] w-full md:w-[75%] md:gap-[20%]   flex font-urbanist">
               {/* First Column */}
               <div className="space-y-[5%]">
                 {column1.map((faq, index) => (
                   <div key={index} className={` pb-[5%] text-[#E6DAFF] `}>
                     {/* Question */}
                     <div
-                      className="relative flex items-center justify-start gap-x-[10%] cursor-pointer"
+                      className="relative flex items-center justify-start md:gap-x-[10%] cursor-pointer"
                       onClick={() => toggleAnswer(index)}
                     >
                       <span
-                        className={`absolute -left-[5vw] w-[6%] ${
+                        className={`absolute md:-left-[5vw] -left-[8vw] w-[6%] ${
                           activeIndex === index
                             ? "scale-[1.5] rotate-45"
                             : "scale-[1] "
@@ -106,7 +116,7 @@ const FaqSection: React.FC<FaqSection> = () => {
                         <Star className="text-[#E6DAFF]" />
                       </span>
 
-                      <span className="text-[1.4vw] font-bold">
+                      <span className="md:text-[1.4vw] text-lg font-bold">
                         {faq.question}
                       </span>
                     </div>
@@ -120,7 +130,7 @@ const FaqSection: React.FC<FaqSection> = () => {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <p className=" w-full text-[1vw] text-[#D5D5D5] leading-7">
+                          <p className=" w-full mt-[4%] md:text-[1vw] text-sm pr-[3%] md:pr-0 text-[#D5D5D5] leading-7">
                             {faq.answer}
                           </p>
                         </motion.div>
@@ -147,7 +157,7 @@ const FaqSection: React.FC<FaqSection> = () => {
                       onClick={() => toggleAnswer(index + column1.length)}
                     >
                       <span
-                        className={`absolute -left-[5vw] w-[6%] ${
+                        className={`absolute md:-left-[5vw] -left-[8vw] w-[6%] ${
                           activeIndex === index + column1.length
                             ? "scale-[1.5] rotate-45"
                             : "scale-[1] "
@@ -156,7 +166,7 @@ const FaqSection: React.FC<FaqSection> = () => {
                         <Star className="text-[#E6DAFF]" />
                       </span>
 
-                      <span className="text-[1.4vw] font-bold">
+                      <span className="md:text-[1.4vw] text-lg font-bold">
                         {faq.question}
                       </span>
                     </div>
@@ -170,7 +180,7 @@ const FaqSection: React.FC<FaqSection> = () => {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <p className="mt-4 text-[1vw] text-[#D5D5D5] ">
+                          <p className=" w-full mt-[4%] md:text-[1vw] text-sm pr-[3%] md:pr-0 text-[#D5D5D5] leading-7">
                             {faq.answer}
                           </p>
                         </motion.div>

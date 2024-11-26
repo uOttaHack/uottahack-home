@@ -26,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
   useEffect(() => {
     // Generate random top positions for the circles
-    const initialCircles = Array.from({ length: 20 }, () => Math.random() * 90); // Random values between 0% - 50%
+    const initialCircles = Array.from({ length: 30 }, () => Math.random() * 90); // Random values between 0% - 50%
     setCircles(initialCircles);
   }, []);
   return (
@@ -58,7 +58,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         </div>
         <div className="relative top-[60%] left-[15%] w-full h-full z-[11] ">
           <div
-            className={`w-[13vw] h-[8vh] rounded-full p-[10px] bg-black  hover:scale-110 transition-transform duration-300 group ${styles.border}`}
+            className={`w-[13vw] h-[4vw] rounded-full p-[5px] bg-black  hover:scale-110 transition-transform duration-300 group ${styles.border}`}
             onClick={() =>
               (window.location.href = "https://2025.uottahack.ca/")
             }

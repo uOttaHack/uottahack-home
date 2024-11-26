@@ -4,8 +4,20 @@ import Blobs from "@/app/assets/recapblobs.svg";
 import UottaHack6 from "@/app/assets/Uottahack6reacp.png";
 import Image from "next/image";
 import RockPlatform from "@/app/assets/rock platform.svg";
+import { useState, useEffect } from "react";
 import { inherits } from "util";
+import { motion } from "motion/react";
+import styles from "@/app/styles/recapsection.module.css";
+import Carret from "@/app/assets/carret.svg";
 const RecapSection: React.FC<RecapSection> = () => {
+  const [circles, setCircles] = useState<number[]>([]); // Store random top positions
+  const [isParentHovered, setIsParentHovered] = useState(false);
+
+  useEffect(() => {
+    // Generate random top positions for the circles
+    const initialCircles = Array.from({ length: 20 }, () => Math.random() * 90); // Random values between 0% - 50%
+    setCircles(initialCircles);
+  }, []);
   return (
     <main className="h-auto flex  relative z-1">
       <div className="relative h-full w-[100vw]">
@@ -70,6 +82,59 @@ const RecapSection: React.FC<RecapSection> = () => {
               community together to connect students with each other, to
               employers & opportunities, and solve real-world challenges.
             </p>
+            <div className="relative top-[120%] left-[15%] w-full h-full z-[11] ">
+              <div
+                className={`w-[18vw] h-[4vw] rounded-full bg-black  hover:scale-110 transition-transform duration-300 group `}
+                onClick={() =>
+                  (window.location.href = "https://2025.uottahack.ca/")
+                }
+                onMouseEnter={() => {
+                  console.log("Parent hovered");
+                  setIsParentHovered(true);
+                }}
+                onMouseLeave={() => {
+                  console.log("Parent hover ended");
+                  setIsParentHovered(false);
+                }}
+              >
+                <div
+                  className={`relative w-full h-full text-white font-bold rounded-full ${styles.animategradient} overflow-hidden`}
+                >
+                  {/* Centered Text */}
+                  <span
+                    className="absolute inset-0 flex text-2xl pointer-events-none justify-center items-center z-10"
+                    style={{
+                      filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
+                    }}
+                  >
+                    2024 Recap
+                    <span className="pl-[4%]">
+                      <Carret className="w-[0.8vw]" />
+                    </span>
+                  </span>
+
+                  {/* Render Circles */}
+                  {circles.map((randomTop, index) => (
+                    <motion.span
+                      key={`${isParentHovered}-${index}`} // Use key to reinitialize animation
+                      className="absolute left-0 w-[3px] h-[3px]  bg-white   rounded-full"
+                      style={{
+                        top: `${randomTop}%`,
+                        filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
+                      }}
+                      initial={{ x: -20 }} // Start off-screen to the left
+                      animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                      transition={{
+                        duration: isParentHovered ? 1 : 4, // Faster when hovered
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: index * 0.6,
+                      }}
+                    ></motion.span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

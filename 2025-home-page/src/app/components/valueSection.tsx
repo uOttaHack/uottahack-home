@@ -12,53 +12,66 @@ import Stem from "@/app/assets/valuesection/stem rock.svg";
 import Tabaret from "@/app/assets/valuesection/tabaret rock.svg";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useState } from "react";
+import { useIsMobile } from "../hooks/useIsMobile";
 interface ValueSection {}
 const ValueSection: React.FC<ValueSection> = () => {
+  const [firstStartup, isFirstStartup] = useState<boolean>(false);
+  const isMobile = useIsMobile();
+
+  const test = () => {
+    isFirstStartup(true);
+    console.log("test");
+  };
   return (
     <main className=" flex  relative z-1">
-      <div className="relative h-full pt-[40%] w-[100vw]">
+      <div className="relative h-full pt-[35%] w-[100vw]">
         <div className="absolute top-[70%] z-[1] w-[100%]">
           <Waves />
         </div>
 
-        <div className="absolute top-[190%]  h-full  z-[1] w-[100%]">
-          <div className="absolute z-[1] w-[100%]">
-            <Blobs />
+        {!isMobile ? (
+          <div className="absolute top-[210%]  h-full  z-[1] w-[100%]">
+            <div className="absolute z-[1] w-[100%]">
+              <Blobs />
+            </div>
+
+            <motion.div
+              animate={{
+                y: [0, -20, 0], // Moves up by 20px and back down
+              }}
+              transition={{
+                duration: 5, // Duration of one complete float cycle
+                repeat: Infinity, // Repeat infinitely
+                ease: "easeInOut", // Smooth easing
+              }}
+              className="  absolute z-[2] -top-[15%] left-[15%] w-[30%]  "
+            >
+              <Stem className=" " />
+            </motion.div>
+
+            <motion.div
+              animate={{
+                y: [0, -20, 0], // Moves up by 20px and back down
+              }}
+              transition={{
+                duration: 8, // Duration of one complete float cycle
+                repeat: Infinity, // Repeat infinitely
+                ease: "easeInOut", // Smooth easing
+              }}
+              className="  absolute z-[2]  top-[25%] right-[15%] w-[30%]  "
+            >
+              <Tabaret className=" " />
+            </motion.div>
           </div>
-
-          <motion.div
-            animate={{
-              y: [0, -20, 0], // Moves up by 20px and back down
-            }}
-            transition={{
-              duration: 5, // Duration of one complete float cycle
-              repeat: Infinity, // Repeat infinitely
-              ease: "easeInOut", // Smooth easing
-            }}
-            className="  absolute z-[2] -top-[15%] left-[15%] w-[30%]  "
-          >
-            <Stem className=" " />
-          </motion.div>
-
-          <motion.div
-            animate={{
-              y: [0, -20, 0], // Moves up by 20px and back down
-            }}
-            transition={{
-              duration: 8, // Duration of one complete float cycle
-              repeat: Infinity, // Repeat infinitely
-              ease: "easeInOut", // Smooth easing
-            }}
-            className="  absolute z-[2]  top-[25%] right-[15%] w-[30%]  "
-          >
-            <Tabaret className=" " />
-          </motion.div>
-        </div>
+        ) : (
+          <></>
+        )}
         <div className="realitve z-[10] flex flex-col  w-full  items-center">
           <div className="  realitve z-[10] top-0 w-[20%]  ">
             <OurValues className="realitve " />
           </div>
-          <div className="relative w-full  z-10 text-[#E6DAFF] p-[10%]  font-medium font-urbanist leading-[2] text-[2vw]">
+          <div className="relative w-full  z-10 text-[#E6DAFF] p-[5%]  font-medium font-urbanist leading-[2] text-[2vw]">
             {/* Blurred / Glow Layer */}
             <p
               className="absolute  blur-lg opacity-50 text-[#E6DAFF] z-[9]"
@@ -81,6 +94,7 @@ const ValueSection: React.FC<ValueSection> = () => {
         </div>
         <div className="absolute z-[10] pt-[10%] gap-x-[10%] flex justify-center items-center">
           <motion.div
+            key={`${firstStartup} + test`}
             initial="hidden"
             whileHover="visible"
             className="w-[20%] p-[1%] h-[28vw] rounded-xl backdrop-blur-2xl overflow-hidden relative group"
@@ -93,10 +107,12 @@ const ValueSection: React.FC<ValueSection> = () => {
               visible: { height: "40vw" },
             }}
             transition={{ duration: 0.5 }}
+            onMouseEnter={() => {
+              test();
+            }}
           >
             <Image src={PeopleImage1} alt="" className="rounded" />
             <div className="flex items-center pt-[10%] justify-center gap-x-[5%]">
-              {/* Rocket SVG */}
               <motion.div
                 className="w-[30%]"
                 variants={{
@@ -116,7 +132,6 @@ const ValueSection: React.FC<ValueSection> = () => {
                   hidden: { width: "0%", opacity: 0 }, // Text hidden initially
                   visible: { width: "100%", opacity: 1 }, // Text appears and aligns
                 }}
-                transition={{ duration: 1 }}
               >
                 Community
               </motion.p>
@@ -148,6 +163,9 @@ const ValueSection: React.FC<ValueSection> = () => {
               visible: { height: "40vw" },
             }}
             transition={{ duration: 0.5 }}
+            onMouseEnter={() => {
+              test();
+            }}
           >
             <Image src={PeopleImage2} alt="" className="rounded" />
             <div className="flex items-center pt-[10%] justify-center gap-x-[5%]">

@@ -1,0 +1,35 @@
+
+@keyframes circle-flow {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(110%);
+    }
+  }
+  
+  .animategradient {
+    background: linear-gradient(92deg, #3C3688 -0.73%, #5C3A8B 25.86%, #733993 58.33%, #7E498B 76.24%, #8F4287 110.63%);
+    background-size: 200%; /* Gradient size for continuous flow */
+    animation: gradient-move 3s infinite linear;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background-color: #ffffff; /* Circle color */
+    border-radius: 50%;
+    transform: translateY(-50%);
+    animation: circle-flow 5s infinite linear;
+    filter: drop-shadow(100px 30px 30px rgba(255, 255, 255, 0.8)),
+  
+  }
+  
+  .border{
+    background: linear-gradient(92deg, #FFB389 -10.82%, #FF8B90 8.8%, #FF73A4 39.55%, #FE5AB5 62.52%, #E29AFF 110.57%);
+  
+  }
+  

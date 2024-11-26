@@ -10,12 +10,19 @@
 body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  background: url("../app/assets/bg.svg") no-repeat center center fixed;
+  /* background: url("../app/assets/bg.svg") repeat center center fixed; */
+  background: 
+  url("../app/assets/bg.svg") center top no-repeat,
+  url("../app/assets/bg.svg") center bottom no-repeat;
   min-height: 100vh; /* Makes the body span the viewport */
-  background-size: 100vw auto; /* Full width, height scales automatically */
+  /* background-size: 100vw auto; Full width, height scales automatically */
+  background-size: cover; /* Scales the SVG proportionally to cover the entire viewport */
+
   min-width: 100vw;
+  
   background-attachment: local; /* Makes the SVG scroll with the content */
   background-position: top center; /* Aligns the SVG at the top and center */
   overflow-x: hidden;
   overflow-y: visible;
 }
+

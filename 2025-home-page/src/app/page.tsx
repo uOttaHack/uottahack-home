@@ -14,7 +14,7 @@ import FooterSection from "./components/footer";
 export default function Home() {
   return (
     <div
-      className="min-h-screen w-full   flex flex-col"
+      className="min-h-screen w-full overflow-hidden  flex flex-col"
       suppressHydrationWarning
     >
       <MainHeader />
