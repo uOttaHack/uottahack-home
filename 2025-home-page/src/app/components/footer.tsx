@@ -25,7 +25,7 @@ const FooterSection: React.FC<FooterSection> = () => {
                   The capital of Canada’s largest hackathon.
                 </p>
               </div>
-              <div className="w-full p-[10%] md:p-0 ">
+              <div className="w-full pt-[10%] pb-[10%]  flex justify-center md:p-0 ">
                 <div className="grid md:grid-cols-2 grid-cols-1 md:text-[0.7vw] w-1/2 justify-self-center flex underline gap-y-[10%] md:gap-y-0 underline-offset-4 md:grid-cols-2  ">
                   <a
                     href="https://mlh.io/privacy"
@@ -76,19 +76,19 @@ const FooterSection: React.FC<FooterSection> = () => {
           </div>
           <div className="w-[90%] h-[0.1vh]  flex bg-[#938D8D]"></div>
           <div className="flex w-full justify-center items-center md:gap-x-[2%] gap-x-[5%] pt-[10%] md:pt-[2%] flex-row">
-            <div className="w-[10%] md:w-[2%]">
+            <div className="w-[5%] md:w-[2%]">
               <Linkedin />
             </div>
-            <div className="w-[10%] md:w-[2%]">
+            <div className="w-[5%] md:w-[2%]">
               <Instagram />
             </div>
-            <div className="w-[10%] md:w-[2%]">
+            <div className="w-[5%] md:w-[2%]">
               <Youtube />
             </div>
-            <div className="w-[10%] md:w-[2%]">
+            <div className="w-[5%] md:w-[2%]">
               <Tiktok />
             </div>
-            <div className="w-[10%] md:w-[2%]">
+            <div className="w-[5%] md:w-[2%]">
               <Discord />
             </div>
           </div>
@@ -97,7 +97,7 @@ const FooterSection: React.FC<FooterSection> = () => {
             Copyright. All rights reserved.
           </p>
         </div>
-        <div className="flex flex-col w-full  pt-[10%] pb-[2%]">
+        <div className="flex flex-col w-full overlfow-hidden pt-[10%] md:pt-[2%] pb-[2%]">
           <div className="relative flex flex-col w-full justify-center items-center  text-3xl md:text-6xl">
             <div className="relative  flex w-full justify-center items-center  font-harabara font-black w-full">
               <span className={`${styles.gradienttext} md:text-[1vw] text-sm`}>

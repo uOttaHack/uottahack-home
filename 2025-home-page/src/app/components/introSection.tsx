@@ -12,13 +12,107 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import Sparkle from "./sparkles";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 interface IntroSection {}
 const IntroSection: React.FC<IntroSection> = () => {
   const ref = useRef(null);
-
+  const isMobile = useIsMobile();
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  if (isMobile) {
+    return (
+      <>
+        <div className="relative  min-h-screen md:h-auto pt-[10%] w-[100vw]">
+          <div className="absolute w-full top-[10%]">
+            <div className=" relaitive w-full ">
+              <div className="relative  flex flex-col justify-center items-center w-full">
+                <div className="w-[80%]">
+                  <WhatisUotthack />
+                  <div className="w-[100%] text-[#F2E1FF] pl-[1%] pt-10 font-inter font-medium leading-[2] text-sm ">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div />
+            </div>
+          </div>
+          <div className="w-[100%]">
+            <Blobs />
+          </div>
+          <div className="w-full flex justify-center ">
+            <div className="w-[85%] absolute justify-self-center top-[50%]">
+              <CRX />
 
+              <div className=" w-[100%] absolute h-full top-0 ">
+                <motion.div
+                  ref={ref}
+                  className="w-[15%] absolute  right-[90%] top-[30%] "
+                  initial={{ opacity: 1 }} // Start fully transparent
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 2, // Duration of the fade-in
+                    delay: 0, // Delay before the animation starts
+                  }}
+                >
+                  <Achievement1 />
+                </motion.div>
+                <motion.div
+                  className="w-[25%] absolute  right-[70%] top-[-5%] "
+                  initial={{ opacity: 1 }} // Start fully transparent
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 2, // Duration of the fade-in
+                    delay: 0.25, // Delay before the animation starts
+                  }}
+                >
+                  <Achievement2 />
+                </motion.div>
+                <motion.div
+                  className="w-[35%] absolute  right-[25%] top-[-20%] "
+                  initial={{ opacity: 1 }} // Start fully transparent
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 2, // Duration of the fade-in
+                    delay: 0.5, // Delay before the animation starts
+                  }}
+                >
+                  <Achievement3 />
+                </motion.div>
+                <motion.div
+                  className="w-[20%] absolute  right-[0%] top-[10%] "
+                  initial={{ opacity: 1 }} // Start fully transparent
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 2, // Duration of the fade-in
+                    delay: 0.75, // Delay before the animation starts
+                  }}
+                >
+                  <Achievement4 />
+                </motion.div>
+                <motion.div
+                  className="w-[14%] absolute  right-[0%] top-[40%] "
+                  initial={{ opacity: 1 }} // Start fully transparent
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 2, // Duration of the fade-in
+                    delay: 1, // Delay before the animation starts
+                  }}
+                >
+                  <Achievement5 />
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
   return (
     <main className="h-auto flex  items-center  pt-[5%]  overlfow-x-hidden overflow-y-visible relative z-1">
       <div className="absolute w-full z-[100]">
@@ -128,26 +222,6 @@ const IntroSection: React.FC<IntroSection> = () => {
                 </motion.div>
               </div>
             </div>
-
-            {/* <span className={`${styles.textEffectGradient}  `}>
-              What is{" "}
-              <span className={`${styles.uOttahackgradient} font-harabara`}>
-                uOttaHack?
-              </span>
-            </span>
-            <span className={`${styles.textEffectGradient}  `}>
-              What is{" "}
-              <span className={`${styles.uOttahackgradient} font-harabara`}>
-                uOttaHack?
-              </span>
-            </span>
-
-            <span className={`${styles.textEffect} `}>
-              What is{" "}
-              <span className={`${styles.UottaHack} font-harabara`}>
-                uOttaHack?
-              </span>
-            </span> */}
           </div>
           <div />
         </div>

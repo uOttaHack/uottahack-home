@@ -5,6 +5,7 @@ import Blobs_right from "@/app/assets/pinkblob_right.svg";
 import people from "@/app/assets/people/image1.avif";
 import styles from "@/app/styles/ourstory.module.css";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Carret from "@/app/assets/carret.svg";
 import { motion } from "motion/react";
 interface OurStory {}
@@ -33,9 +34,9 @@ const OurStory: React.FC<OurStory> = () => {
     return colors[segment] || "#FFFFFF"; // Default to white if undefined
   }
   return (
-    <main className=" flex our-story w-full relative z-1">
-      <div className="relative h-full pt-[50%] md:pt-[110%] w-[100vw]">
-        <div className="relative  z-[1] left-[10%] w-[20%]">
+    <main className=" flex our-story w-full relative z-1 ">
+      <div className="relative h-full pt-[500%] md:pt-[110%] w-[100vw]">
+        <div className="relative  z-[1] left-[10%] w-[20%] " id="story">
           <Ourstory />
         </div>
         <div className="absolute top-[130%] z-[1] -left-[20%] w-[70%]">
@@ -128,9 +129,13 @@ const OurStory: React.FC<OurStory> = () => {
                   </div>
                 </div>
                 <div className="w-full h-full overflow-hidden pb-[5%]">
-                  <img
+                  <Image
                     src={people.src}
                     className="object-cover rounded-xl w-full h-full"
+                    alt=""
+                    loading="eager"
+                    width={100}
+                    height={100}
                   />
                 </div>
               </div>
@@ -196,9 +201,14 @@ const OurStory: React.FC<OurStory> = () => {
                   </div>
                 </div>
                 <div className="w-full h-full overflow-hidden pb-[5%]">
-                  <img
+                  <Image
                     src={people.src}
+                    alt=""
+                    loading="eager"
                     className="object-cover rounded-xl w-full h-full"
+                    width={2000} // Set to a large value for high quality
+                    height={2000} // Set to a large value for high quality
+                    sizes="100vw" // Tells browser image can be full viewport width
                   />
                 </div>
               </div>

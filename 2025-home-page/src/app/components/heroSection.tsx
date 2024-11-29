@@ -16,14 +16,14 @@ import Rock9 from "@/app/assets/Small_Rocks/rock9.svg";
 import styles from "@/app/styles/heroSection.module.css";
 import ParticleEffect from "./Particles";
 import Carret from "@/app/assets/carret.svg";
-
+import { useIsMobile } from "../hooks/useIsMobile";
 import Tagline from "@/app/assets/tagline.svg";
 
 interface HeroSectionProps {}
 const HeroSection: React.FC<HeroSectionProps> = () => {
   const [circles, setCircles] = useState<number[]>([]); // Store random top positions
   const [isParentHovered, setIsParentHovered] = useState(false);
-
+  const isMobile = useIsMobile();
   useEffect(() => {
     // Generate random top positions for the circles
     const initialCircles = Array.from({ length: 30 }, () => Math.random() * 90); // Random values between 0% - 50%
@@ -42,70 +42,79 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       </div>
       {/* <div className={`${styles.twinklingdots}`} /> */}
       <div className="  absolute w-full h-full  z-[10] flex flex-col">
-        <div className=" absolute top-[65%] md:top-[30%] left-[10%] w-[60%] md:w-[40%] h-[40vh]">
+        <div className=" absolute top-[60%] md:top-[30%] left-[10%] w-[80%] md:w-[40%] h-[40vh]">
           <UottaHack />
           <div className="relative left-[5%] w-full">
-            <span className={`${styles.gradienttext} text-[2.5rem] `}>
+            <span
+              className={`${styles.gradienttext} text-lg md:text-[2.5rem] `}
+            >
               Canada’s Capital Hackathon
             </span>
-            <span className={`${styles.gradienttext} text-[2.5rem]`}>
+            <span className={`${styles.gradienttext} text-lg md:text-[2.5rem]`}>
               Canada’s Capital Hackathon
             </span>
-            <span className={`${styles.sharpWhiteText} text-[2.5rem]`}>
+            <span
+              className={`${styles.sharpWhiteText} text-lg  md:text-[2.5rem]`}
+            >
               Canada’s Capital Hackathon
             </span>
           </div>
-        </div>
-        <div className="relative top-[60%] left-[15%] w-full h-full z-[11] ">
-          <div
-            className={`w-[13vw] h-[4vw] rounded-full p-[5px] bg-black  hover:scale-110 transition-transform duration-300 group ${styles.border}`}
-            onClick={() =>
-              (window.location.href = "https://2025.uottahack.ca/")
-            }
-            onMouseEnter={() => {
-              console.log("Parent hovered");
-              setIsParentHovered(true);
-            }}
-            onMouseLeave={() => {
-              console.log("Parent hover ended");
-              setIsParentHovered(false);
-            }}
-          >
+          <div className="relative md:top-[30%] top-[20%] left-[15%] w-full h-[50vh] z-[11] ">
             <div
-              className={`relative w-full h-full text-white font-bold rounded-full ${styles.animategradient} overflow-hidden`}
+              className={`md:w-[25vh] md:h-[15%] w-[50%] h-[15%] rounded-full p-[5px] bg-black  hover:scale-110 transition-transform duration-300 group ${styles.border}`}
+              onClick={() =>
+                (window.location.href = "https://2025.uottahack.ca/")
+              }
+              onMouseEnter={() => {
+                console.log("Parent hovered");
+                setIsParentHovered(true);
+              }}
+              onMouseLeave={() => {
+                console.log("Parent hover ended");
+                setIsParentHovered(false);
+              }}
             >
-              {/* Centered Text */}
-              <span
-                className="absolute inset-0 flex text-2xl pointer-events-none justify-center items-center z-10"
-                style={{
-                  filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
-                }}
+              <div
+                className={`relative w-full h-full text-white font-bold rounded-full ${styles.animategradient} overflow-hidden`}
               >
-                See 2025
-                <span className="pl-[4%]">
-                  <Carret className="w-[0.8vw]" />
-                </span>
-              </span>
-
-              {/* Render Circles */}
-              {circles.map((randomTop, index) => (
-                <motion.span
-                  key={`${isParentHovered}-${index}`} // Use key to reinitialize animation
-                  className="absolute left-0 w-[3px] h-[3px]  bg-white   rounded-full"
+                {/* Centered Text */}
+                <span
+                  className="absolute inset-0 flex text-2xl pointer-events-none justify-center items-center z-10"
                   style={{
-                    top: `${randomTop}%`,
                     filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                   }}
-                  initial={{ x: -20 }} // Start off-screen to the left
-                  animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
-                  transition={{
-                    duration: isParentHovered ? 1 : 4, // Faster when hovered
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: index * 0.6,
-                  }}
-                ></motion.span>
-              ))}
+                >
+                  See 2025
+                  <span className="pl-[4%]">
+                    <Carret className="w-[0.8vw]" />
+                  </span>
+                </span>
+
+                {!isMobile ? (
+                  <>
+                    {circles.map((randomTop, index) => (
+                      <motion.span
+                        key={`${isParentHovered}-${index}`} // Use key to reinitialize animation
+                        className="absolute left-0 w-[3px] h-[3px]  bg-white   rounded-full"
+                        style={{
+                          top: `${randomTop}%`,
+                          filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
+                        }}
+                        initial={{ x: -20 }} // Start off-screen to the left
+                        animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                        transition={{
+                          duration: isParentHovered ? 1 : 4, // Faster when hovered
+                          repeat: Infinity,
+                          ease: "linear",
+                          delay: index * 0.6,
+                        }}
+                      ></motion.span>
+                    ))}
+                  </>
+                ) : (
+                  <></>
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -75,7 +75,7 @@ const FaqSection: React.FC<FaqSection> = () => {
   };
   return (
     <main className=" flex faq  relative z-1">
-      <div className="relative h-full pt-[20%] w-[100vw]">
+      <div className="relative h-full md:pt-[20%] pt-[30%] w-[100vw]">
         <div className="absolute top-[5%] z-[1] w-[100%]">
           <Waves />
         </div>

@@ -18,14 +18,15 @@ interface ValueSection {}
 const ValueSection: React.FC<ValueSection> = () => {
   const [firstStartup, isFirstStartup] = useState<boolean>(false);
   const isMobile = useIsMobile();
+  console.log("is mobile ", isMobile);
 
   const test = () => {
     isFirstStartup(true);
     console.log("test");
   };
   return (
-    <main className=" flex  relative z-1">
-      <div className="relative h-full pt-[35%] w-[100vw]">
+    <main className=" flex min-h-screen md:h-auto relative z-1">
+      <div className="relative h-full  md:p-[35%] w-[100vw]">
         <div className="absolute top-[70%] z-[1] w-[100%]">
           <Waves />
         </div>
@@ -68,10 +69,10 @@ const ValueSection: React.FC<ValueSection> = () => {
           <></>
         )}
         <div className="realitve z-[10] flex flex-col  w-full  items-center">
-          <div className="  realitve z-[10] top-0 w-[20%]  ">
+          <div className="  realitve z-[10] top-0 md:w-[20%] w-[50%] ">
             <OurValues className="realitve " />
           </div>
-          <div className="relative w-full  z-10 text-[#E6DAFF] p-[5%]  font-medium font-urbanist leading-[2] text-[2vw]">
+          <div className="relative w-full  z-10 text-[#E6DAFF] p-[5%]  font-medium font-urbanist leading-[2] md:text-[2vw]">
             {/* Blurred / Glow Layer */}
             <p
               className="absolute  blur-lg opacity-50 text-[#E6DAFF] z-[9]"
@@ -92,19 +93,19 @@ const ValueSection: React.FC<ValueSection> = () => {
             </p>
           </div>
         </div>
-        <div className="absolute z-[10] pt-[10%] gap-x-[10%] flex justify-center items-center">
+        <div className="absolute z-[10] md:pt-[10%] pt-[40%] gap-x-[10%] gap-y-[10vh] flex flex-col md:flex-row justify-center items-center">
           <motion.div
-            key={`${firstStartup} + test`}
-            initial="hidden"
+            key={`${isMobile} + 1`}
+            initial={isMobile ? "visible" : "hidden"}
             whileHover="visible"
-            className="w-[20%] p-[1%] h-[28vw] rounded-xl backdrop-blur-2xl overflow-hidden relative group"
+            className="md:w-[20%]  md:h-[28vw] w-[80%] p-[1%] h-[70vh]    rounded-xl backdrop-blur-2xl overflow-hidden relative group"
             style={{
               background:
                 "linear-gradient(207deg, rgba(215, 215, 255, 0.20) 0.68%, rgba(59, 37, 74, 0.20) 133.85%)",
             }}
             variants={{
               hidden: { height: "28vw" },
-              visible: { height: "40vw" },
+              visible: { height: isMobile ? "70vh" : "40vw" },
             }}
             transition={{ duration: 0.5 }}
             onMouseEnter={() => {
@@ -126,7 +127,7 @@ const ValueSection: React.FC<ValueSection> = () => {
 
               {/* Text */}
               <motion.p
-                className="text-[#00E0FF] w-[0%] text-[1.6vw] overflow-hidden whitespace-nowrap"
+                className="text-[#00E0FF] w-[0%] text-xl md:text-[1.6vw] overflow-hidden whitespace-nowrap"
                 style={{ display: "inline-block" }} // Ensures inline expansion
                 variants={{
                   hidden: { width: "0%", opacity: 0 }, // Text hidden initially
@@ -137,7 +138,7 @@ const ValueSection: React.FC<ValueSection> = () => {
               </motion.p>
             </div>
             <motion.p
-              className="text-[#F2E1FF] w-[100%] text-[1.2vw]   "
+              className="text-[#F2E1FF] w-[100%] text-md md:text-[1.2vw]   "
               style={{ display: "inline-block" }} // Ensures inline expansion
               variants={{
                 hidden: { opacity: 0 }, // Text hidden initially
@@ -151,16 +152,17 @@ const ValueSection: React.FC<ValueSection> = () => {
             </motion.p>
           </motion.div>
           <motion.div
-            initial="hidden"
+            key={`${isMobile} + 2`}
+            initial={isMobile ? "visible" : "hidden"}
             whileHover="visible"
-            className="w-[20%] p-[1%] h-[28vw] rounded-xl backdrop-blur-2xl overflow-hidden relative group"
+            className=" md:w-[20%]  md:h-[28vw] w-[80%] p-[1%] h-[70vh]  rounded-xl backdrop-blur-2xl overflow-hidden relative group"
             style={{
               background:
                 "linear-gradient(207deg, rgba(215, 215, 255, 0.20) 0.68%, rgba(59, 37, 74, 0.20) 133.85%)",
             }}
             variants={{
               hidden: { height: "28vw" },
-              visible: { height: "40vw" },
+              visible: { height: isMobile ? "70vh" : "40vw" },
             }}
             transition={{ duration: 0.5 }}
             onMouseEnter={() => {
@@ -183,7 +185,7 @@ const ValueSection: React.FC<ValueSection> = () => {
 
               {/* Text */}
               <motion.p
-                className="text-[#00E0FF] w-[0%] text-[1.6vw] overflow-hidden whitespace-nowrap"
+                className="text-[#00E0FF] w-[0%] text-xl md:text-[1.6vw] overflow-hidden whitespace-nowrap"
                 style={{ display: "inline-block" }} // Ensures inline expansion
                 variants={{
                   hidden: { width: "0%", opacity: 0 }, // Text hidden initially
@@ -195,7 +197,7 @@ const ValueSection: React.FC<ValueSection> = () => {
               </motion.p>
             </div>
             <motion.p
-              className="text-[#F2E1FF] w-[100%] text-[1.2vw]  "
+              className="text-[#F2E1FF] w-[100%] text-md md:text-[1.2vw]  "
               style={{ display: "inline-block" }} // Ensures inline expansion
               variants={{
                 hidden: { opacity: 0 }, // Text hidden initially
@@ -210,16 +212,17 @@ const ValueSection: React.FC<ValueSection> = () => {
           </motion.div>
 
           <motion.div
-            initial="hidden"
+            key={`${isMobile} + 3`}
+            initial={isMobile ? "visible" : "hidden"}
             whileHover="visible"
-            className="w-[20%] p-[1%] h-[28vw] rounded-xl backdrop-blur-2xl overflow-hidden relative group"
+            className="md:w-[20%]  md:h-[28vw] w-[80%] p-[1%] h-[70vh]  rounded-xl backdrop-blur-2xl overflow-hidden relative group"
             style={{
               background:
                 "linear-gradient(207deg, rgba(215, 215, 255, 0.20) 0.68%, rgba(59, 37, 74, 0.20) 133.85%)",
             }}
             variants={{
               hidden: { height: "28vw" },
-              visible: { height: "40vw" },
+              visible: { height: isMobile ? "70vh" : "40vw" },
             }}
             transition={{ duration: 0.5 }}
           >
@@ -239,7 +242,7 @@ const ValueSection: React.FC<ValueSection> = () => {
 
               {/* Text */}
               <motion.p
-                className="text-[#00E0FF] w-[0%] text-[1.2vw] overflow-hidden whitespace-nowrap"
+                className="text-[#00E0FF] w-[0%] text-xl md:text-[1.2vw] overflow-hidden whitespace-nowrap"
                 style={{ display: "inline-block" }} // Ensures inline expansion
                 variants={{
                   hidden: { width: "0%", opacity: 0 }, // Text hidden initially
@@ -251,7 +254,7 @@ const ValueSection: React.FC<ValueSection> = () => {
               </motion.p>
             </div>
             <motion.p
-              className="text-[#F2E1FF] w-[100%] text-[1.2vw]  "
+              className="text-[#F2E1FF] w-[100%] text-md md:text-[1.2vw]  "
               style={{ display: "inline-block" }} // Ensures inline expansion
               variants={{
                 hidden: { opacity: 0 }, // Text hidden initially

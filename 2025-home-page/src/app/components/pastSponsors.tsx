@@ -44,267 +44,278 @@ interface PastSponsor {}
 
 const PastSponsor: React.FC<PastSponsor> = () => {
   return (
-    <main className="flex faq  relative z-1" id="sponsors">
+    <main className="flex faq  relative z-1">
       <div className="relative h-full pt-[110%] w-[100vw]">
         <div className="absolute top-[55%] z-[1] w-[100%]">
           <BG />
         </div>
         <div className="relative flex w-full justify-center items-center top-[100%] text-3xl md:text-6xl">
           <div className="relative  flex w-full justify-center items-center font-harabara font-black w-full">
-            <span className={`${styles.gradienttext} text-[4.5vw] `}>
+            <span
+              className={`${styles.gradienttext} text-5xl md:text-[4.5vw] `}
+            >
               Past Sponsors
             </span>
-            <span className={`${styles.gradienttext} text-[4.5vw]`}>
+            <span className={`${styles.gradienttext} text-5xl md:text-[4.5vw]`}>
               Past Sponsors
             </span>
-            <span className={`${styles.sharpWhiteText} text-[4.5vw]`}>
+            <span
+              className={`${styles.sharpWhiteText} text-5xl md:text-[4.5vw]`}
+              id="sponsors"
+            >
               Past Sponsors
             </span>
           </div>
         </div>
         <div>
-          <div className="relative z-[10] flex pt-[10%] space-y-[0.5%] justify-center items-center  w-full flex-col">
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex pl-[10%] pr-[10%]">
+          <div className="relative z-[10] flex pt-[10%] space-y-[0.5%] justify-center items-center md:pl-[10%] md:pr-[10%] pl-[3%] pr-[3%]  w-full flex-col">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
               <div className="w-[50%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center   ">
-                <div className="w-[50%]  items-center flex h-full">
-                  <Solace />
+                <div className=" w-[50%] items-center h-full flex">
+                  <Solace className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center"></div>
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Nokia />
+                  <Nokia className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
               <div className="w-[30%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 <div className="w-[50%]  items-center flex h-full">
-                  <Google />
+                  <Google className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center ">
                 <div className="w-[50%]  items-center flex h-full">
-                  <Microsoft />
+                  <Microsoft className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[45%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center ">
                 <div className="w-[50%]  items-center flex h-full">
-                  <Ciena />
+                  <Ciena className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Deloitte />
+                  <Deloitte className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Bloomberg />
+                  <Bloomberg className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[50%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 <div className="w-[50%]  items-center flex h-full">
-                  <Accenture />
+                  <Accenture className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
               <div className="w-[50%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Momentive />
+                  <Momentive className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[25%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Sunlife />
+                  <Sunlife className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[25%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 <div className="w-[50%]  items-center flex h-full">
-                  <GitHub />
+                  <GitHub className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
               <div className="w-2/3 h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 <div className="w-[50%]  items-center flex h-full">
-                  <Noibu />
+                  <Noibu className="w-full h-full" />
                 </div>
               </div>
               <div className="w-2/3 h-full  bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 <div className="w-[50%]  items-center flex h-full">
-                  <TrendMicro />
+                  <TrendMicro className="w-full h-full" />
                 </div>
               </div>
               <div className="w-2/3 h-full  bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 <div className="w-[50%]  items-center flex h-full">
-                  <CSTLogo />
+                  <CSTLogo className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
               <div className="w-[30%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[40%]  items-center flex h-full">
-                  <DRDC />
+                  <DRDC className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[20%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[80%]  items-center flex h-full">
-                  <GovernmentOfCanada />
+                  <GovernmentOfCanada className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[50%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center ">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Neo />
+                  <Neo className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
               <div className="w-[15%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Twilio />
+                  <Twilio className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[15%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center ">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <MorganStanley />
+                  <MorganStanley className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[70%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Klipfolio />
+                  <Klipfolio className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
               <div className="w-[50%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Kinaxis />
+                  <Kinaxis className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[40%]  items-center flex h-full">
-                  <CDW />
+                  <CDW className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <ADGA />
+                  <ADGA className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
               <div className="w-[35%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Hub350 />
+                  <Hub350 className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[15%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <KanataNorth />
+                  <KanataNorth className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[50%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center ">
                 {" "}
                 <div className="w-[40%]  items-center flex h-full">
-                  <CENGN />
+                  <CENGN className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
               <div className="w-[15%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 <div className="w-[70%]  items-center flex h-full">
-                  <Phreesia />
+                  <Phreesia className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[15%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 <div className="w-[50%]  items-center flex h-full">
-                  <MarchNetwork />
+                  <MarchNetwork className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[70%] h-full  bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 <div className="w-[10%]  items-center flex h-full">
-                  <BankOfCanada />
+                  <BankOfCanada className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
               <div className="w-[50%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <OnePassword />
+                  <OnePassword className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center ">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Balsamiq />
+                  <Balsamiq className="w-full h-full" />
                 </div>
               </div>
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <Fitbit />
+                  <Fitbit className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
               <div className="w-[100%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <BiteSite />
+                  <BiteSite className="w-full h-full" />
                 </div>
               </div>
             </div>
-            <div className=" relative flex w-full justify-center items-center pt-[5%] pb-[2%] text-3xl md:text-6xl">
+            <div className=" relative flex w-full justify-center items-center md:pt-[5%] pt-[10%] pb-[5%] text-3xl md:text-6xl">
               <div className="  relative flex w-full justify-center items-center font-harabara font-black w-full">
-                <span className={`${styles.gradienttext} text-[2.5vw] `}>
+                <span
+                  className={`${styles.gradienttext} text-3xl md:text-[2.5vw] `}
+                >
                   Our Partners
                 </span>
-                <span className={`${styles.gradienttext} text-[2.5vw]`}>
+                <span
+                  className={`${styles.gradienttext} text-3xl md:text-[2.5vw]`}
+                >
                   Our Partners
                 </span>
-                <span className={`${styles.sharpWhiteText} text-[2.5vw]`}>
+                <span
+                  className={`${styles.sharpWhiteText} text-3xl md:text-[2.5vw]`}
+                >
                   Our Partners
                 </span>
               </div>
             </div>
-            <div className=" flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex pl-[10%] pr-[10%]">
+            <div className=" flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
               <div className="w-2/3 h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <MLH />
+                  <MLH className="w-full h-full" />
                 </div>
               </div>
               <div className="w-2/3 h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <UOttawa />
+                  <UOttawa className="w-full h-full" />
                 </div>
               </div>
               <div className="w-2/3 h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
-                  <UOttawa />
+                  <UOttawa className="w-full h-full" />
                 </div>
               </div>
             </div>

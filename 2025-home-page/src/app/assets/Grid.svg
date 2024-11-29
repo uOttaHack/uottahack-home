@@ -110,9 +110,15 @@
     <defs>
         <linearGradient id="paint0_linear_1077_468" x1="976.143" y1="274.366" x2="976.143" y2="1004.58"
             gradientUnits="userSpaceOnUse">
-            <stop stop-color="#B3B3B3" />
-            <stop offset="0.65" stop-color="#808080" />
-            <stop offset="1" stop-color="#B3B3B3" />
+            <stop stop-color="#B3B3B3">
+                <animate attributeName="offset" values="0;1;0" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="0.65" stop-color="#808080">
+                <animate attributeName="offset" values="0.65;1;0.65" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="1" stop-color="#B3B3B3">
+                <animate attributeName="offset" values="1;1.5;1" dur="3s" repeatCount="indefinite" />
+            </stop>
         </linearGradient>
         <linearGradient id="paint1_linear_1077_468" x1="1863" y1="-21" x2="1856.74" y2="1020.48"
             gradientUnits="userSpaceOnUse">
