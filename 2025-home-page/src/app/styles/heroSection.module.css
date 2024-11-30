@@ -80,7 +80,6 @@
 
 .animategradient {
   background: linear-gradient(92deg, #643A47 -0.73%, #502E40 25.86%, #3B2944 58.33%, #392A4B 76.24%, #392A4B 110.63%, #392A4B 76.24%);
-  background-size: 200%; /* Gradient size for continuous flow */
   animation: gradient-move 3s infinite linear;
 }
 

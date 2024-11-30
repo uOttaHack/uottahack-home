@@ -21,21 +21,21 @@ const RecapSection: React.FC<RecapSection> = () => {
     const initialCircles = Array.from({ length: 20 }, () => Math.random() * 90); // Random values between 0% - 50%
     setCircles(initialCircles);
   }, []);
-
+  if (isMobile === undefined) return null;
   if (isMobile) {
     return (
       <>
-        <main className="h-auto flex min-h-screen md:h-auto relative z-1">
+        <main className="h-auto flex min-h-screen md:h-auto pt-[30%] relative">
           <div className="relative h-full  w-[100vw]">
             <div className="absolute top-0 z-[1] w-[100%]">
               <Blobs />
             </div>
             <div className="realitve z-2 flex ">
-              <div className="  top-0 w-[60%] pl-[1%]">
+              <div className="  top-0 w-[90%] pl-[5%]">
                 <DiveInto className="realitve " />
               </div>
             </div>
-            <div className="flex  w-full relative z-[2]   ">
+            <div className="flex flex-col w-full relative z-[2]   ">
               <div className="video w-[100%] pl-[5%] pr-[5%] pt-[2%]   group h-auto relative">
                 {/* Image Container */}
                 <div className="relative w-full overflow-hidden rounded-lg h-auto">
@@ -65,26 +65,28 @@ const RecapSection: React.FC<RecapSection> = () => {
                   <RockPlatform />
                 </div>
               </div>
-              <div className="absolute  h-full pt-[80%] w-full  flex left-0  z-10 text-[#E6DAFF]  font-medium font-urbanist leading-[2] text-md">
-                {/* Blurred / Glow Layer */}
-                <p
-                  className="absolute p-10 blur-lg opacity-50 text-[#E6DAFF] z-[9]"
-                  aria-hidden="true"
-                >
-                  Over the past six years, our hackathon event has brought the
-                  community together to connect students with each other, to
-                  employers & opportunities, and solve real-world challenges.
-                </p>
+              <div className="w-full pt-[20%] flex-row min-h-[XXX] overflow-hidden">
+                <div className="relative  min-h-[XXX] overflow-hidden w-full  flex left-0  z-10 text-[#E6DAFF]  font-medium font-urbanist leading-[2] text-[2.5vh]">
+                  <p
+                    className="absolute p-[5%] blur-lg text-justify opacity-50 text-[#E6DAFF] z-[9]"
+                    aria-hidden="true"
+                  >
+                    Over the past six years, our hackathon event has brought the
+                    community together to connect students with each other, to
+                    employers & opportunities, and solve real-world challenges.
+                  </p>
 
-                {/* Sharp, Clear Layer */}
-                <p className="absolute p-10 z-[10]">
-                  Over the past six years, our hackathon event has brought the
-                  community together to connect students with each other, to
-                  employers & opportunities, and solve real-world challenges.
-                </p>
-                <div className="absolute top-[170%] left-[10%] w-full h-full z-[11] ">
+                  {/* Sharp, Clear Layer */}
+                  <p className="relative p-[5%] text-justify z-[10]">
+                    Over the past six years, our hackathon event has brought the
+                    community together to connect students with each other, to
+                    employers & opportunities, and solve real-world challenges.
+                  </p>
+                </div>
+
+                <div className=" relative w-full h-[10vw] left-[10%] z-[11] ">
                   <div
-                    className={`md:w-[18vw] md:h-[4vw] w-[50%] h-[15%] rounded-full bg-black  hover:scale-110 transition-transform duration-300 group `}
+                    className={`md:w-[18vw] md:h-[4vw] w-[50%] h-full rounded-full bg-black  hover:scale-110 transition-transform duration-300 group `}
                     onClick={() =>
                       (window.location.href = "https://2025.uottahack.ca/")
                     }
@@ -109,7 +111,7 @@ const RecapSection: React.FC<RecapSection> = () => {
                       >
                         2024 Recap
                         <span className="pl-[4%]">
-                          <Carret className="w-[0.8vw]" />
+                          <Carret className="w-[4vw]" />
                         </span>
                       </span>
 
@@ -123,7 +125,10 @@ const RecapSection: React.FC<RecapSection> = () => {
                             filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                           }}
                           initial={{ x: -20 }} // Start off-screen to the left
-                          animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                          animate={{
+                            x: 320,
+                            scale: isParentHovered ? 1.3 : 1,
+                          }} // End off-screen to the right
                           transition={{
                             duration: isParentHovered ? 1 : 4, // Faster when hovered
                             repeat: Infinity,
@@ -149,7 +154,7 @@ const RecapSection: React.FC<RecapSection> = () => {
           <Blobs />
         </div>
         <div className="realitve z-2 flex ">
-          <div className="  top-0 w-[40%] pl-[10%]">
+          <div className="  top-0 w-[40%] pl-[5%]">
             <DiveInto className="realitve " />
           </div>
         </div>

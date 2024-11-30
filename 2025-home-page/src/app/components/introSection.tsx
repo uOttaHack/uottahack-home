@@ -18,13 +18,20 @@ interface IntroSection {}
 const IntroSection: React.FC<IntroSection> = () => {
   const ref = useRef(null);
   const isMobile = useIsMobile();
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, {
+    once: true,
+    amount: isMobile ? 0.3 : 0.5, // Controls how much of element needs to be visible
+  });
+  if (isMobile === undefined) return null;
   if (isMobile) {
     return (
       <>
         <div className="relative  min-h-screen md:h-auto pt-[10%] w-[100vw]">
-          <div className="absolute w-full top-[10%]">
-            <div className=" relaitive w-full ">
+          <div className="relative w-full top-[10%]">
+            <div className=" relative  w-full ">
+              <div className=" absolute top-0 z-1 w-[100%]">
+                <Blobs />
+              </div>
               <div className="relative  flex flex-col justify-center items-center w-full">
                 <div className="w-[80%]">
                   <WhatisUotthack />
@@ -37,76 +44,76 @@ const IntroSection: React.FC<IntroSection> = () => {
                       type specimen book.
                     </p>
                   </div>
+                  <div className="w-full relative flex pt-[30%] justify-center ">
+                    <div className="w-[100%] relative justify-self-center ">
+                      <CRX />
+
+                      <div className=" w-[100%] absolute h-full top-0 ">
+                        <motion.div
+                          ref={ref}
+                          className="w-[15%] absolute  right-[90%] top-[30%] "
+                          initial={{ opacity: 0 }} // Start fully transparent
+                          animate={isInView ? { opacity: 1, y: 0 } : {}}
+                          transition={{
+                            duration: 2, // Duration of the fade-in
+                            delay: 0, // Delay before the animation starts
+                          }}
+                        >
+                          <Achievement1 />
+                        </motion.div>
+                        <motion.div
+                          ref={ref}
+                          className="w-[25%] absolute  right-[70%] top-[-5%] "
+                          initial={{ opacity: 0 }} // Start fully transparent
+                          animate={isInView ? { opacity: 1, y: 0 } : {}}
+                          transition={{
+                            duration: 2, // Duration of the fade-in
+                            delay: 0.25, // Delay before the animation starts
+                          }}
+                        >
+                          <Achievement2 />
+                        </motion.div>
+                        <motion.div
+                          ref={ref}
+                          className="w-[35%] absolute  right-[25%] top-[-20%] "
+                          initial={{ opacity: 0 }} // Start fully transparent
+                          animate={isInView ? { opacity: 1, y: 0 } : {}}
+                          transition={{
+                            duration: 2, // Duration of the fade-in
+                            delay: 0.5, // Delay before the animation starts
+                          }}
+                        >
+                          <Achievement3 />
+                        </motion.div>
+                        <motion.div
+                          ref={ref}
+                          className="w-[20%] absolute  right-[0%] top-[10%] "
+                          initial={{ opacity: 0 }} // Start fully transparent
+                          animate={isInView ? { opacity: 1, y: 0 } : {}}
+                          transition={{
+                            duration: 2, // Duration of the fade-in
+                            delay: 0.75, // Delay before the animation starts
+                          }}
+                        >
+                          <Achievement4 />
+                        </motion.div>
+                        <motion.div
+                          className="w-[14%] absolute  right-[0%] top-[40%] "
+                          initial={{ opacity: 0 }} // Start fully transparent
+                          animate={isInView ? { opacity: 1, y: 0 } : {}}
+                          transition={{
+                            duration: 2, // Duration of the fade-in
+                            delay: 1, // Delay before the animation starts
+                          }}
+                        >
+                          <Achievement5 />
+                        </motion.div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div />
-            </div>
-          </div>
-          <div className="w-[100%]">
-            <Blobs />
-          </div>
-          <div className="w-full flex justify-center ">
-            <div className="w-[85%] absolute justify-self-center top-[50%]">
-              <CRX />
-
-              <div className=" w-[100%] absolute h-full top-0 ">
-                <motion.div
-                  ref={ref}
-                  className="w-[15%] absolute  right-[90%] top-[30%] "
-                  initial={{ opacity: 1 }} // Start fully transparent
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{
-                    duration: 2, // Duration of the fade-in
-                    delay: 0, // Delay before the animation starts
-                  }}
-                >
-                  <Achievement1 />
-                </motion.div>
-                <motion.div
-                  className="w-[25%] absolute  right-[70%] top-[-5%] "
-                  initial={{ opacity: 1 }} // Start fully transparent
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{
-                    duration: 2, // Duration of the fade-in
-                    delay: 0.25, // Delay before the animation starts
-                  }}
-                >
-                  <Achievement2 />
-                </motion.div>
-                <motion.div
-                  className="w-[35%] absolute  right-[25%] top-[-20%] "
-                  initial={{ opacity: 1 }} // Start fully transparent
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{
-                    duration: 2, // Duration of the fade-in
-                    delay: 0.5, // Delay before the animation starts
-                  }}
-                >
-                  <Achievement3 />
-                </motion.div>
-                <motion.div
-                  className="w-[20%] absolute  right-[0%] top-[10%] "
-                  initial={{ opacity: 1 }} // Start fully transparent
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{
-                    duration: 2, // Duration of the fade-in
-                    delay: 0.75, // Delay before the animation starts
-                  }}
-                >
-                  <Achievement4 />
-                </motion.div>
-                <motion.div
-                  className="w-[14%] absolute  right-[0%] top-[40%] "
-                  initial={{ opacity: 1 }} // Start fully transparent
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{
-                    duration: 2, // Duration of the fade-in
-                    delay: 1, // Delay before the animation starts
-                  }}
-                >
-                  <Achievement5 />
-                </motion.div>
-              </div>
             </div>
           </div>
         </div>

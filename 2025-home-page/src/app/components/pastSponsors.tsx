@@ -44,10 +44,13 @@ interface PastSponsor {}
 
 const PastSponsor: React.FC<PastSponsor> = () => {
   return (
-    <main className="flex faq  relative z-1">
-      <div className="relative h-full pt-[110%] w-[100vw]">
-        <div className="absolute top-[55%] z-[1] w-[100%]">
-          <BG />
+    <main className="flex faq min-h-screen relative z-1">
+      <div className="relative h-full pt-[400%] md:pt-[110%] w-[100vw]">
+        <div className="relative h-full  w-full">
+          <div className="absolute  z-[1]  w-[100%]">
+            {" "}
+            <BG className="" />
+          </div>
         </div>
         <div className="relative flex w-full justify-center items-center top-[100%] text-3xl md:text-6xl">
           <div className="relative  flex w-full justify-center items-center font-harabara font-black w-full">

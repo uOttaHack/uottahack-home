@@ -24,43 +24,52 @@ const ValueSection: React.FC<ValueSection> = () => {
     isFirstStartup(true);
     console.log("test");
   };
+  if (isMobile === undefined) return null;
   return (
     <main className=" flex min-h-screen md:h-auto relative z-1">
-      <div className="relative h-full  md:p-[35%] w-[100vw]">
+      <div className="relative h-full pt-[30%] md:pt-[20%] w-[100vw]">
         <div className="absolute top-[70%] z-[1] w-[100%]">
           <Waves />
         </div>
 
         {!isMobile ? (
-          <div className="absolute top-[210%]  h-full  z-[1] w-[100%]">
+          <div className="absolute top-[200%]  h-full  z-[1] w-[100%]">
             <div className="absolute z-[1] w-[100%]">
               <Blobs />
             </div>
 
             <motion.div
               animate={{
-                y: [0, -20, 0], // Moves up by 20px and back down
+                transform: [
+                  "translateY(0px)",
+                  "translateY(-20px)",
+                  "translateY(0px)",
+                ],
               }}
               transition={{
                 duration: 5, // Duration of one complete float cycle
                 repeat: Infinity, // Repeat infinitely
                 ease: "easeInOut", // Smooth easing
               }}
-              className="  absolute z-[2] -top-[15%] left-[15%] w-[30%]  "
+              className=" will-change-transform  absolute z-[2] -top-[15%] left-[15%] w-[30%]  "
             >
               <Stem className=" " />
             </motion.div>
 
             <motion.div
               animate={{
-                y: [0, -20, 0], // Moves up by 20px and back down
+                transform: [
+                  "translateY(0px)",
+                  "translateY(-20px)",
+                  "translateY(0px)",
+                ],
               }}
               transition={{
                 duration: 8, // Duration of one complete float cycle
                 repeat: Infinity, // Repeat infinitely
                 ease: "easeInOut", // Smooth easing
               }}
-              className="  absolute z-[2]  top-[25%] right-[15%] w-[30%]  "
+              className="  absolute z-[2] will-change-transform top-[25%] right-[15%] w-[30%]  "
             >
               <Tabaret className=" " />
             </motion.div>
@@ -72,10 +81,10 @@ const ValueSection: React.FC<ValueSection> = () => {
           <div className="  realitve z-[10] top-0 md:w-[20%] w-[50%] ">
             <OurValues className="realitve " />
           </div>
-          <div className="relative w-full  z-10 text-[#E6DAFF] p-[5%]  font-medium font-urbanist leading-[2] md:text-[2vw]">
+          <div className="relative w-full  z-10 text-[#E6DAFF]    font-medium font-urbanist leading-[2] text-[2vh] md:text-[2vw]">
             {/* Blurred / Glow Layer */}
             <p
-              className="absolute  blur-lg opacity-50 text-[#E6DAFF] z-[9]"
+              className="absolute  blur-lg opacity-50 text-[#E6DAFF] text-justify p-[5%] z-[9]"
               aria-hidden="true"
             >
               Our mission is to empower students to comfortably explore their
@@ -85,7 +94,7 @@ const ValueSection: React.FC<ValueSection> = () => {
             </p>
 
             {/* Sharp, Clear Layer */}
-            <p className="absolute z-[10]">
+            <p className="relative z-[10] p-[5%] text-justify">
               Our mission is to empower students to comfortably explore their
               passion for technology and entrepreneurship, through building a
               community of like-minded individuals who innovate and disrupt the
@@ -93,7 +102,7 @@ const ValueSection: React.FC<ValueSection> = () => {
             </p>
           </div>
         </div>
-        <div className="absolute z-[10] md:pt-[10%] pt-[40%] gap-x-[10%] gap-y-[10vh] flex flex-col md:flex-row justify-center items-center">
+        <div className="absolute z-[10] md:pt-[0%] pt-[40%] gap-x-[10%] gap-y-[10vh] flex flex-col md:flex-row justify-center items-center">
           <motion.div
             key={`${isMobile} + 1`}
             initial={isMobile ? "visible" : "hidden"}
@@ -105,7 +114,7 @@ const ValueSection: React.FC<ValueSection> = () => {
             }}
             variants={{
               hidden: { height: "28vw" },
-              visible: { height: isMobile ? "70vh" : "40vw" },
+              visible: { height: isMobile ? "100%" : "40vw" },
             }}
             transition={{ duration: 0.5 }}
             onMouseEnter={() => {
@@ -113,7 +122,7 @@ const ValueSection: React.FC<ValueSection> = () => {
             }}
           >
             <Image src={PeopleImage1} alt="" className="rounded" />
-            <div className="flex items-center pt-[10%] justify-center gap-x-[5%]">
+            <div className="flex items-center pb-[5%] pl-[1%] pt-[10%] justify-center gap-x-[5%]">
               <motion.div
                 className="w-[30%]"
                 variants={{
@@ -127,7 +136,7 @@ const ValueSection: React.FC<ValueSection> = () => {
 
               {/* Text */}
               <motion.p
-                className="text-[#00E0FF] w-[0%] text-xl md:text-[1.6vw] overflow-hidden whitespace-nowrap"
+                className="text-[#00E0FF] w-[0%] text-[5vw]  md:text-[1.6vw] overflow-hidden whitespace-nowrap"
                 style={{ display: "inline-block" }} // Ensures inline expansion
                 variants={{
                   hidden: { width: "0%", opacity: 0 }, // Text hidden initially
@@ -138,7 +147,7 @@ const ValueSection: React.FC<ValueSection> = () => {
               </motion.p>
             </div>
             <motion.p
-              className="text-[#F2E1FF] w-[100%] text-md md:text-[1.2vw]   "
+              className="text-[#F2E1FF] w-[100%] p-[2%] text-[4vw] md:text-[1.2vw]   "
               style={{ display: "inline-block" }} // Ensures inline expansion
               variants={{
                 hidden: { opacity: 0 }, // Text hidden initially
@@ -162,7 +171,7 @@ const ValueSection: React.FC<ValueSection> = () => {
             }}
             variants={{
               hidden: { height: "28vw" },
-              visible: { height: isMobile ? "70vh" : "40vw" },
+              visible: { height: isMobile ? "100%" : "40vw" },
             }}
             transition={{ duration: 0.5 }}
             onMouseEnter={() => {
@@ -185,7 +194,7 @@ const ValueSection: React.FC<ValueSection> = () => {
 
               {/* Text */}
               <motion.p
-                className="text-[#00E0FF] w-[0%] text-xl md:text-[1.6vw] overflow-hidden whitespace-nowrap"
+                className="text-[#00E0FF] w-[0%] text-[5vw]  md:text-[1.6vw] overflow-hidden whitespace-nowrap"
                 style={{ display: "inline-block" }} // Ensures inline expansion
                 variants={{
                   hidden: { width: "0%", opacity: 0 }, // Text hidden initially
@@ -197,7 +206,7 @@ const ValueSection: React.FC<ValueSection> = () => {
               </motion.p>
             </div>
             <motion.p
-              className="text-[#F2E1FF] w-[100%] text-md md:text-[1.2vw]  "
+              className="text-[#F2E1FF] w-[100%] p-[2%] text-[4vw] md:text-[1.2vw]   "
               style={{ display: "inline-block" }} // Ensures inline expansion
               variants={{
                 hidden: { opacity: 0 }, // Text hidden initially
@@ -222,7 +231,7 @@ const ValueSection: React.FC<ValueSection> = () => {
             }}
             variants={{
               hidden: { height: "28vw" },
-              visible: { height: isMobile ? "70vh" : "40vw" },
+              visible: { height: isMobile ? "100%" : "40vw" },
             }}
             transition={{ duration: 0.5 }}
           >
@@ -242,7 +251,7 @@ const ValueSection: React.FC<ValueSection> = () => {
 
               {/* Text */}
               <motion.p
-                className="text-[#00E0FF] w-[0%] text-xl md:text-[1.2vw] overflow-hidden whitespace-nowrap"
+                className="text-[#00E0FF] w-[0%] text-[5vw]  md:text-[1.6vw] overflow-hidden whitespace-nowrap"
                 style={{ display: "inline-block" }} // Ensures inline expansion
                 variants={{
                   hidden: { width: "0%", opacity: 0 }, // Text hidden initially
@@ -254,7 +263,7 @@ const ValueSection: React.FC<ValueSection> = () => {
               </motion.p>
             </div>
             <motion.p
-              className="text-[#F2E1FF] w-[100%] text-md md:text-[1.2vw]  "
+              className="text-[#F2E1FF] w-[100%] p-[2%] text-[4vw] md:text-[1.2vw]   "
               style={{ display: "inline-block" }} // Ensures inline expansion
               variants={{
                 hidden: { opacity: 0 }, // Text hidden initially

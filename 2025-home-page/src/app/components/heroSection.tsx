@@ -1,4 +1,4 @@
-import Grid from "../assets/Grid.svg";
+import Grid from "../assets/Grid.png";
 import Sun from "@/app/assets/Retro sun.svg";
 import Parliament from "@/app/assets/parliment.svg";
 import { useState, useEffect } from "react";
@@ -18,6 +18,7 @@ import ParticleEffect from "./Particles";
 import Carret from "@/app/assets/carret.svg";
 import { useIsMobile } from "../hooks/useIsMobile";
 import Tagline from "@/app/assets/tagline.svg";
+import Image from "next/image";
 
 interface HeroSectionProps {}
 const HeroSection: React.FC<HeroSectionProps> = () => {
@@ -26,18 +27,31 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
   const isMobile = useIsMobile();
   useEffect(() => {
     // Generate random top positions for the circles
-    const initialCircles = Array.from({ length: 30 }, () => Math.random() * 90); // Random values between 0% - 50%
+    const initialCircles = Array.from({ length: 20 }, () => Math.random() * 90); // Random values between 0% - 50%
     setCircles(initialCircles);
   }, []);
   return (
-    <main className="min-h-screen flex  items-center   overlfow-x-hidden overflow-y-visible relative z-1">
+    <main className="min-h-screen flex  items-center   overlfow-x-hidden overflow-y-visible relative ">
       <div className="absolute z-1 top-[20%] overlflow-hidden max-h-screen w-full h-full">
         <ParticleEffect />
       </div>
       <div className="relative inset-0 flex items-center justify-center min-h-screen overflow-hidden bg-center">
         {/* Center-aligned SVG */}
         <div className="relative w-[100vw] flex items-center overlflow-hidden justify-center">
-          <Grid className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+          <Image
+            src={Grid.src}
+            alt="Background grid"
+            width={5000}
+            height={5000}
+            sizes="100vh"
+            quality={100}
+            priority
+            className="object-cover h-[100vh] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{
+              transform: "translate3d(-50%, -50%, 0)",
+              willChange: "transform",
+            }}
+          />
         </div>
       </div>
       {/* <div className={`${styles.twinklingdots}`} /> */}
@@ -59,9 +73,9 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               Canada’s Capital Hackathon
             </span>
           </div>
-          <div className="relative md:top-[30%] top-[20%] left-[15%] w-full h-[50vh] z-[11] ">
+          <div className="relative md:top-[30%] top-[20%] left-[%] w-full h-[50vh] z-[11] ">
             <div
-              className={`md:w-[25vh] md:h-[15%] w-[50%] h-[15%] rounded-full p-[5px] bg-black  hover:scale-110 transition-transform duration-300 group ${styles.border}`}
+              className={`md:w-[25vh] md:h-[15%] w-[60%] h-[15%] rounded-full p-[5px] bg-black  hover:scale-110 transition-transform duration-300 group ${styles.border}`}
               onClick={() =>
                 (window.location.href = "https://2025.uottahack.ca/")
               }
@@ -86,34 +100,30 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                 >
                   See 2025
                   <span className="pl-[4%]">
-                    <Carret className="w-[0.8vw]" />
+                    <Carret className="w-[0.8vh]" />
                   </span>
                 </span>
 
-                {!isMobile ? (
-                  <>
-                    {circles.map((randomTop, index) => (
-                      <motion.span
-                        key={`${isParentHovered}-${index}`} // Use key to reinitialize animation
-                        className="absolute left-0 w-[3px] h-[3px]  bg-white   rounded-full"
-                        style={{
-                          top: `${randomTop}%`,
-                          filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
-                        }}
-                        initial={{ x: -20 }} // Start off-screen to the left
-                        animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
-                        transition={{
-                          duration: isParentHovered ? 1 : 4, // Faster when hovered
-                          repeat: Infinity,
-                          ease: "linear",
-                          delay: index * 0.6,
-                        }}
-                      ></motion.span>
-                    ))}
-                  </>
-                ) : (
-                  <></>
-                )}
+                <>
+                  {circles.map((randomTop, index) => (
+                    <motion.span
+                      key={`${isParentHovered}-${index}`} // Use key to reinitialize animation
+                      className="absolute left-0 w-[3px] h-[3px]  bg-white   rounded-full"
+                      style={{
+                        top: `${randomTop}%`,
+                        filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
+                      }}
+                      initial={{ x: -20 }} // Start off-screen to the left
+                      animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                      transition={{
+                        duration: isParentHovered ? 1 : 4, // Faster when hovered
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: index * 0.6,
+                      }}
+                    ></motion.span>
+                  ))}
+                </>
               </div>
             </div>
           </div>
@@ -121,13 +131,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       </div>
 
       <div className="absolute top-[5%] right-[5%] h-full w-auto p-[5%] flex items-start justify-end">
-        {/* Sun Component */}
         <div className="relative">
           <div className=" w-[70vw] md:w-[40vw] h-auto">
             <Sun />
           </div>
 
-          {/* Parliament Component */}
           <motion.div
             className="absolute top-[70%] left-[50%] w-[60vw] md:w-[30vw] h-auto"
             style={{
@@ -135,7 +143,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             }}
             initial={{ y: "-50%", x: "-50%" }} // Starting at the element's natural position
             animate={{
-              y: ["-45%", "-50%", "-45%"],
+              transform: [
+                "translate3d(-50%, -45%, 0)",
+                "translate3d(-50%, -50%, 0)",
+                "translate3d(-50%, -45%, 0)",
+              ],
             }}
             transition={{
               duration: 10, // Animation duration (seconds)
@@ -150,7 +162,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <motion.div
                 className="absolute -left-[80%] transform top-[10%] w-[15%] h-auto"
                 animate={{
-                  y: [0, -20, 0], // Moves up and down
+                  transform: [
+                    "translateY(0px)",
+                    "translateY(-20px)",
+                    "translateY(0px)",
+                  ],
                 }}
                 transition={{
                   duration: 4, // Time for one float cycle
@@ -167,7 +183,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <motion.div
                 className="absolute left-[65%] transform top-[10%] w-[20%] h-auto"
                 animate={{
-                  y: [0, -15, 0],
+                  transform: [
+                    "translateY(0px)",
+                    "translateY(-15px)",
+                    "translateY(0px)",
+                  ],
                 }}
                 transition={{
                   duration: 5,
@@ -184,7 +204,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <motion.div
                 className="absolute -left-[50%] transform top-[20%] w-[3%] h-auto"
                 animate={{
-                  y: [0, -10, 0],
+                  transform: [
+                    "translateY(0px)",
+                    "translateY(-10px)",
+                    "translateY(0px)",
+                  ],
                 }}
                 transition={{
                   duration: 3,
@@ -201,7 +225,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <motion.div
                 className="absolute left-[70%] transform -top-[50%] w-[15%] h-auto"
                 animate={{
-                  y: [0, -25, 0],
+                  transform: [
+                    "translateY(0px)",
+                    "translateY(-25px)",
+                    "translateY(0px)",
+                  ],
                 }}
                 transition={{
                   duration: 4.5,
@@ -219,7 +247,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <motion.div
                 className="absolute -left-[65%] transform -top-[10%] w-[8%] h-auto"
                 animate={{
-                  y: [0, -15, 0],
+                  transform: [
+                    "translateY(0px)",
+                    "translateY(-15px)",
+                    "translateY(0px)",
+                  ],
                 }}
                 transition={{
                   duration: 4,
@@ -236,7 +268,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <motion.div
                 className="absolute left-[70%] transform -top-[10%] w-[8%] h-auto"
                 animate={{
-                  y: [0, -12, 0],
+                  transform: [
+                    "translateY(0px)",
+                    "translateY(-12px)",
+                    "translateY(0px)",
+                  ],
                 }}
                 transition={{
                   duration: 3.5,
@@ -253,7 +289,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <motion.div
                 className="absolute left-[80%] transform -top-[20%] w-[5%] h-auto"
                 animate={{
-                  y: [0, -18, 0],
+                  transform: [
+                    "translateY(0px)",
+                    "translateY(-18px)",
+                    "translateY(0px)",
+                  ],
                 }}
                 transition={{
                   duration: 4.5,
@@ -270,7 +310,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <motion.div
                 className="absolute left-[30%] transform -top-[50%] w-[11%] h-auto"
                 animate={{
-                  y: [0, -20, 0],
+                  transform: [
+                    "translateY(0px)",
+                    "translateY(-20px)",
+                    "translateY(0px)",
+                  ],
                 }}
                 transition={{
                   duration: 5,
@@ -287,7 +331,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <motion.div
                 className="absolute left-[50%] transform top-[30%] w-[5%] h-auto"
                 animate={{
-                  y: [0, -8, 0],
+                  transform: [
+                    "translateY(0px)",
+                    "translateY(-8px)",
+                    "translateY(0px)",
+                  ],
                 }}
                 transition={{
                   duration: 3,
