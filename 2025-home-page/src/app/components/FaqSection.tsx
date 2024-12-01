@@ -3,7 +3,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Star from "@/app/assets/Vector.svg";
 import styles from "@/app/styles/faq.module.css";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 interface FaqSection {}
 
 const FaqSection: React.FC<FaqSection> = () => {
@@ -98,7 +99,7 @@ const FaqSection: React.FC<FaqSection> = () => {
           <div className="w-full flex justify-center pl-[10%]" id="faq">
             <div className="relaitve grid grid-cols-1 md:grid-cols-2 z-[10] w-full md:w-[75%] md:gap-[20%]   flex font-urbanist">
               {/* First Column */}
-              <div className="space-y-[5%]">
+              <div className="space-y-[5%]" data-aos="fade-right">
                 {column1.map((faq, index) => (
                   <div key={index} className={` pb-[5%] text-[#E6DAFF] `}>
                     {/* Question */}
@@ -141,7 +142,10 @@ const FaqSection: React.FC<FaqSection> = () => {
               </div>
 
               {/* Second Column */}
-              <div className="space-y-[5%] flex flex-col ">
+              <div
+                className="space-y-[5%] flex pt-[5%] md:pt-0 flex-col "
+                data-aos="fade-left"
+              >
                 {column2.map((faq, index) => (
                   <div
                     key={index}

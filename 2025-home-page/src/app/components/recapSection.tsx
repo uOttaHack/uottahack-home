@@ -10,12 +10,17 @@ import { motion } from "motion/react";
 import styles from "@/app/styles/recapsection.module.css";
 import Carret from "@/app/assets/carret.svg";
 import { useIsMobile } from "../hooks/useIsMobile";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const RecapSection: React.FC<RecapSection> = () => {
   const [circles, setCircles] = useState<number[]>([]); // Store random top positions
   const [isParentHovered, setIsParentHovered] = useState(false);
   const isMobile = useIsMobile();
-
+  useEffect(() => {
+    AOS.init({ duration: 700 });
+    AOS.refresh();
+    console.log("aos ");
+  }, []);
   useEffect(() => {
     // Generate random top positions for the circles
     const initialCircles = Array.from({ length: 20 }, () => Math.random() * 90); // Random values between 0% - 50%
@@ -36,7 +41,10 @@ const RecapSection: React.FC<RecapSection> = () => {
               </div>
             </div>
             <div className="flex flex-col w-full relative z-[2]   ">
-              <div className="video w-[100%] pl-[5%] pr-[5%] pt-[2%]   group h-auto relative">
+              <div
+                className="video w-[100%] pl-[5%] pr-[5%] pt-[2%]   group h-auto relative"
+                data-aos="zoom-in"
+              >
                 {/* Image Container */}
                 <div className="relative w-full overflow-hidden rounded-lg h-auto">
                   {/* Image */}
@@ -66,7 +74,10 @@ const RecapSection: React.FC<RecapSection> = () => {
                 </div>
               </div>
               <div className="w-full pt-[20%] flex-row min-h-[XXX] overflow-hidden">
-                <div className="relative  min-h-[XXX] overflow-hidden w-full  flex left-0  z-10 text-[#E6DAFF]  font-medium font-urbanist leading-[2] text-[2.5vh]">
+                <div
+                  className="relative  min-h-[XXX] overflow-hidden w-full  flex left-0  z-10 text-[#E6DAFF]  font-medium font-urbanist leading-[2] text-[1.5vh]"
+                  data-aos="fade-left"
+                >
                   <p
                     className="absolute p-[5%] blur-lg text-justify opacity-50 text-[#E6DAFF] z-[9]"
                     aria-hidden="true"
@@ -159,7 +170,10 @@ const RecapSection: React.FC<RecapSection> = () => {
           </div>
         </div>
         <div className="flex w-full relative z-[2]   ">
-          <div className="video w-[60%] pl-[5%] pr-[5%] pt-[2%]   group h-auto relative">
+          <div
+            className="video w-[60%] pl-[5%] pr-[5%] pt-[2%]   group h-auto relative "
+            data-aos="zoom-in"
+          >
             {/* Image Container */}
             <div
               className="relative w-full overflow-hidden rounded-lg h-auto"
@@ -194,7 +208,10 @@ const RecapSection: React.FC<RecapSection> = () => {
               <RockPlatform />
             </div>
           </div>
-          <div className="relative w-[40%] pt-[10%] pr-[5%] z-10 text-[#E6DAFF] pl-[1%]   font-medium font-urbanist leading-[2] text-[2vw]">
+          <div
+            className="relative w-[40%] pt-[10%] pr-[5%] z-10 text-[#E6DAFF] pl-[1%]   font-medium font-urbanist leading-[2] text-[2vw]"
+            data-aos="fade-left"
+          >
             {/* Blurred / Glow Layer */}
             <p
               className="absolute  blur-lg opacity-50 text-[#E6DAFF] z-[9]"

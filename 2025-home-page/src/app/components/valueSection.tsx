@@ -12,8 +12,10 @@ import Stem from "@/app/assets/valuesection/stem rock.svg";
 import Tabaret from "@/app/assets/valuesection/tabaret rock.svg";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useIsMobile } from "../hooks/useIsMobile";
+import AOS from "aos";
+import "aos/dist/aos.css";
 interface ValueSection {}
 const ValueSection: React.FC<ValueSection> = () => {
   const [firstStartup, isFirstStartup] = useState<boolean>(false);
@@ -24,6 +26,11 @@ const ValueSection: React.FC<ValueSection> = () => {
     isFirstStartup(true);
     console.log("test");
   };
+  useEffect(() => {
+    AOS.init({ duration: 700 });
+    AOS.refresh();
+    console.log("aos ");
+  }, []);
   if (isMobile === undefined) return null;
   return (
     <main className=" flex min-h-screen md:h-auto relative z-1">
@@ -81,7 +88,10 @@ const ValueSection: React.FC<ValueSection> = () => {
           <div className="  realitve z-[10] top-0 md:w-[20%] w-[50%] ">
             <OurValues className="realitve " />
           </div>
-          <div className="relative w-full  z-10 text-[#E6DAFF]    font-medium font-urbanist leading-[2] text-[2vh] md:text-[2vw]">
+          <div
+            className="relative w-full  z-10 text-[#E6DAFF]    font-medium font-urbanist leading-[2] text-[2vh] md:text-[2vw]"
+            data-aos="zoom-in"
+          >
             {/* Blurred / Glow Layer */}
             <p
               className="absolute  blur-lg opacity-50 text-[#E6DAFF] text-justify p-[5%] z-[9]"
@@ -107,6 +117,7 @@ const ValueSection: React.FC<ValueSection> = () => {
             key={`${isMobile} + 1`}
             initial={isMobile ? "visible" : "hidden"}
             whileHover="visible"
+            data-aos="zoom-in"
             className="md:w-[20%]  md:h-[28vw] w-[80%] p-[1%] h-[70vh]    rounded-xl backdrop-blur-2xl overflow-hidden relative group"
             style={{
               background:
@@ -164,6 +175,7 @@ const ValueSection: React.FC<ValueSection> = () => {
             key={`${isMobile} + 2`}
             initial={isMobile ? "visible" : "hidden"}
             whileHover="visible"
+            data-aos="zoom-in"
             className=" md:w-[20%]  md:h-[28vw] w-[80%] p-[1%] h-[70vh]  rounded-xl backdrop-blur-2xl overflow-hidden relative group"
             style={{
               background:
@@ -224,6 +236,7 @@ const ValueSection: React.FC<ValueSection> = () => {
             key={`${isMobile} + 3`}
             initial={isMobile ? "visible" : "hidden"}
             whileHover="visible"
+            data-aos="zoom-in"
             className="md:w-[20%]  md:h-[28vw] w-[80%] p-[1%] h-[70vh]  rounded-xl backdrop-blur-2xl overflow-hidden relative group"
             style={{
               background:

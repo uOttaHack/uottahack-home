@@ -10,7 +10,8 @@ import Carret from "@/app/assets/carret.svg";
 import { motion } from "motion/react";
 import { useIsMobile } from "../hooks/useIsMobile";
 interface OurStory {}
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const OurStory: React.FC<OurStory> = () => {
   const [circles, setCircles] = useState<number[]>([]); // Store random top positions
   const [isParentHovered, setIsParentHovered] = useState(false);
@@ -19,6 +20,11 @@ const OurStory: React.FC<OurStory> = () => {
     const initialCircles = Array.from({ length: 20 }, () => Math.random() * 90); // Random values between 0% - 50%
     setCircles(initialCircles);
   }, []);
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   function getGradientColor(index: number): string {
     const colors = [
       "#FFB389",
@@ -41,7 +47,11 @@ const OurStory: React.FC<OurStory> = () => {
     return (
       <main className=" flex min-h-screen our-story w-full relative z-1 ">
         <div className="relative h-full pt-[400%] md:pt-[90%] w-[100vw]">
-          <div className="relative  z-[1] left-[10%] w-[50%] " id="story">
+          <div
+            className="relative  z-[1] left-[10%] w-[50%] "
+            data-aos="fade-right"
+            id="story"
+          >
             <Ourstory />
           </div>
           <div className="absolute top-[138%] z-[1] -left-[20%] w-[70%]">
@@ -50,9 +60,13 @@ const OurStory: React.FC<OurStory> = () => {
           <div className="absolute top-[100%] right-0 z-[1] w-[70%]">
             <Blobs_right />
           </div>
-          <div className="absolute z-[10]">
+          <div className="absolute z-[10">
             <div className=" z-[10] flex flex-col h-full w-full">
-              <div className="w-full h-full pl-[10%] pr-[10%] ">
+              <div
+                className="w-full h-full pl-[10%] pr-[10%] "
+                data-aos="zoom-in"
+                data-aos-duration="700"
+              >
                 <div
                   className={`w-full h-[60vw]  pb-[3%] ${styles.window} rounded-xl`}
                 >
@@ -85,7 +99,7 @@ const OurStory: React.FC<OurStory> = () => {
                 </div>
               </div>
               <div className="w-[100%]  text-[#F2E1FF]  pt-10 font-inter font-medium leading-[2] text-[4vw] ">
-                <p className="p-[5%]">
+                <p className="p-[5%]" data-aos="fade-right">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -263,7 +277,11 @@ const OurStory: React.FC<OurStory> = () => {
         </div>
         <div className="absolute z-[10]">
           <div className=" z-[10] flex flex-row w-full">
-            <div className="w-[50%] pl-[10%] text-[#F2E1FF] pl-[1%] pt-10 font-inter font-medium leading-[2] text-[1.3vw] ">
+            <div
+              className="w-[50%] pl-[10%] text-[#F2E1FF] pl-[1%] pt-10 font-inter font-medium leading-[2] text-[1.3vw] "
+              data-aos="fade-right"
+              data-aos-duration="700"
+            >
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
@@ -327,6 +345,8 @@ const OurStory: React.FC<OurStory> = () => {
             <div className="w-full  pl-[10%] pr-[15%] ">
               <div
                 className={`w-full h-[30vw]  pb-[3%] p-[1%] ${styles.window} rounded-xl`}
+                data-aos="zoom-in"
+                data-aos-duration="700"
               >
                 <div className="items-center justify-end flex w-full p-[2%] gap-x-[2vw]">
                   {/* Box 1 */}
@@ -399,6 +419,8 @@ const OurStory: React.FC<OurStory> = () => {
             <div className="w-full  pl-[5%] pr-[10%] overflow-hidden">
               <div
                 className={`w-[100%] h-[30vw]  pb-[3%] p-[1%] ${styles.window2} rounded-xl`}
+                data-aos="zoom-in"
+                data-aos-duration="700"
               >
                 <div className="items-center justify-end flex w-full p-[2%] gap-x-[2vw]">
                   {/* Box 1 */}
@@ -464,7 +486,11 @@ const OurStory: React.FC<OurStory> = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[50%] mr-[15%] text-[#F2E1FF]  pt-[5%] font-inter font-medium text-[1.3vw] ">
+            <div
+              className="w-[50%] mr-[15%] text-[#F2E1FF]  pt-[5%] font-inter font-medium text-[1.3vw] "
+              data-aos="fade-left"
+              data-aos-duration="700"
+            >
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy

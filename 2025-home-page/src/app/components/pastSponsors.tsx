@@ -39,7 +39,8 @@ import CENGN from "@/app/assets/sponsor/cengn.svg";
 import Balsamiq from "@/app/assets/sponsor/balsamiq.svg";
 import Fitbit from "@/app/assets/sponsor/fitbit.svg";
 //importing images end
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 interface PastSponsor {}
 
 const PastSponsor: React.FC<PastSponsor> = () => {
@@ -72,7 +73,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
         </div>
         <div>
           <div className="relative z-[10] flex pt-[10%] space-y-[0.5%] justify-center items-center md:pl-[10%] md:pr-[10%] pl-[3%] pr-[3%]  w-full flex-col">
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="0"
+            >
               <div className="w-[50%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center   ">
                 <div className=" w-[50%] items-center h-full flex">
                   <Solace className="w-full h-full" />
@@ -86,7 +91,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="20"
+            >
               <div className="w-[30%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 <div className="w-[50%]  items-center flex h-full">
                   <Google className="w-full h-full" />
@@ -103,7 +112,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="40"
+            >
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
@@ -122,7 +135,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="60"
+            >
               <div className="w-[50%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
@@ -141,7 +158,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="80"
+            >
               <div className="w-2/3 h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 <div className="w-[50%]  items-center flex h-full">
                   <Noibu className="w-full h-full" />
@@ -158,7 +179,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div className="w-[30%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[40%]  items-center flex h-full">
@@ -178,7 +203,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="120"
+            >
               <div className="w-[15%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
@@ -198,7 +227,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="140"
+            >
               <div className="w-[50%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
@@ -218,7 +251,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="160"
+            >
               <div className="w-[35%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
@@ -238,7 +275,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%]  justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="180"
+            >
               <div className="w-[15%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm flex overflow-hidden justify-center">
                 <div className="w-[70%]  items-center flex h-full">
                   <Phreesia className="w-full h-full" />
@@ -255,7 +296,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="w-[50%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
@@ -275,7 +320,11 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex ">
+            <div
+              className="flex flex-row w-full h-[8vw] gap-x-[1%] justify-center items-center flex "
+              data-aos="fade-up"
+              data-aos-delay="220"
+            >
               <div className="w-[100%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
