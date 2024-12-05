@@ -1,0 +1,17 @@
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes borderRotate {
+  100% {
+    --border-angle: 1turn;
+  }
+}
+
+  
+
+.animatedBorder {
+  animation: borderRotate 8s linear infinite;
+}

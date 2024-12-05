@@ -7,7 +7,7 @@ import styles from "@/app/styles/ourstory.module.css";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Carret from "@/app/assets/carret.svg";
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 import { useIsMobile } from "../hooks/useIsMobile";
 interface OurStory {}
 import AOS from "aos";
@@ -40,6 +40,28 @@ const OurStory: React.FC<OurStory> = () => {
     const segment = Math.floor((index / 15) * colors.length);
     return colors[segment] || "#FFFFFF"; // Default to white if undefined
   }
+
+  const shakeAnimation: Variants = {
+    initial: {
+      transform: "translateX(0px)",
+    },
+    hover: {
+      transform: [
+        "translateX(0px)",
+        "translateX(-4px)",
+        "translateX(4px)",
+        "translateX(-4px)",
+        "translateX(4px)",
+        "translateX(0px)",
+      ],
+      transition: {
+        duration: 0.4,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "linear",
+      },
+    },
+  };
   const isMobile = useIsMobile();
 
   if (isMobile === undefined) return null;
@@ -100,11 +122,11 @@ const OurStory: React.FC<OurStory> = () => {
               </div>
               <div className="w-[100%]  text-[#F2E1FF]  pt-10 font-inter font-medium leading-[2] text-[4vw] ">
                 <p className="p-[5%]" data-aos="fade-right">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  Over the past 6 years, our hackathon event has brought the
+                  community together to connect students with each other, to
+                  employers & opportunities, and solve real-world challenges. We
+                  are excited to share some statistics that reflect this entire
+                  journey.
                 </p>
                 <div className="relative  mt-[5%] h w-full pl-[5%] h-[15vw] z-[11] ">
                   <div
@@ -147,7 +169,7 @@ const OurStory: React.FC<OurStory> = () => {
                             filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                           }}
                           initial={{ x: -20 }} // Start off-screen to the left
-                          animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                          animate={{ x: 320, scaleX: isParentHovered ? 10 : 1 }} // End off-screen to the right
                           transition={{
                             duration: isParentHovered ? 1 : 4, // Faster when hovered
                             repeat: Infinity,
@@ -283,10 +305,11 @@ const OurStory: React.FC<OurStory> = () => {
               data-aos-duration="700"
             >
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                Over the past 6 years, our hackathon event has brought the
+                community together to connect students with each other, to
+                employers & opportunities, and solve real-world challenges. We
+                are excited to share some statistics that reflect this entire
+                journey.
               </p>
               <div className="relative top-[10%] left-[0%] w-full h-full z-[11] ">
                 <div
@@ -329,7 +352,7 @@ const OurStory: React.FC<OurStory> = () => {
                           filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                         }}
                         initial={{ x: -20 }} // Start off-screen to the left
-                        animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                        animate={{ x: 320, scaleX: isParentHovered ? 10 : 1 }} // End off-screen to the right
                         transition={{
                           duration: isParentHovered ? 1 : 4, // Faster when hovered
                           repeat: Infinity,
@@ -370,8 +393,8 @@ const OurStory: React.FC<OurStory> = () => {
                     className="object-cover rounded-xl w-full h-full"
                     alt=""
                     loading="lazy"
-                    width={100}
-                    height={100}
+                    width={500}
+                    height={500}
                   />
                 </div>
               </div>
@@ -490,6 +513,7 @@ const OurStory: React.FC<OurStory> = () => {
               className="w-[50%] mr-[15%] text-[#F2E1FF]  pt-[5%] font-inter font-medium text-[1.3vw] "
               data-aos="fade-left"
               data-aos-duration="700"
+              id="events"
             >
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -498,11 +522,11 @@ const OurStory: React.FC<OurStory> = () => {
                 of type and scrambled it to make a type specimen book.
               </p>
               <div className="relative top-[10%] left-[0%] w-full h-full z-[11] ">
-                <div
+                <motion.div
+                  whileHover="hover"
+                  variants={shakeAnimation}
                   className={`w-[16vw] h-[4vw] rounded-full  bg-black  hover:scale-110 transition-transform duration-300 group `}
-                  onClick={() =>
-                    (window.location.href = "https://2025.uottahack.ca/")
-                  }
+                  onClick={() => (window.location.href = "/Events")}
                   onMouseEnter={() => {
                     console.log("Parent hovered");
                     setIsParentHovered(true);
@@ -532,15 +556,18 @@ const OurStory: React.FC<OurStory> = () => {
                     {circles.map((randomTop, index) => (
                       <motion.span
                         key={`${isParentHovered}-${index}`} // Use key to reinitialize animation
-                        className="absolute left-0 w-[3px] h-[3px]  bg-white   rounded-full"
+                        className="absolute left-0 w-[3px] h-[3px]  bg-white  rounded-full"
                         style={{
                           top: `${randomTop}%`,
                           filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                         }}
                         initial={{ x: -20 }} // Start off-screen to the left
-                        animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                        animate={{
+                          x: 320,
+                          scaleX: isParentHovered ? 10 : 1,
+                        }} // End off-screen to the right
                         transition={{
-                          duration: isParentHovered ? 1 : 4, // Faster when hovered
+                          duration: isParentHovered ? 0.5 : 4, // Faster when hovered
                           repeat: Infinity,
                           ease: "linear",
                           delay: index * 0.6,
@@ -548,7 +575,7 @@ const OurStory: React.FC<OurStory> = () => {
                       ></motion.span>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

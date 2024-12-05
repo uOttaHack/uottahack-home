@@ -138,7 +138,7 @@ const RecapSection: React.FC<RecapSection> = () => {
                           initial={{ x: -20 }} // Start off-screen to the left
                           animate={{
                             x: 320,
-                            scale: isParentHovered ? 1.3 : 1,
+                            scaleX: isParentHovered ? 10 : 1,
                           }} // End off-screen to the right
                           transition={{
                             duration: isParentHovered ? 1 : 4, // Faster when hovered
@@ -165,18 +165,16 @@ const RecapSection: React.FC<RecapSection> = () => {
           <Blobs />
         </div>
         <div className="realitve z-2 flex ">
-          <div className="  top-0 w-[40%] pl-[5%]">
+          <div className="  top-0 w-[40%] pl-[5%]" data-aos="fade-right ">
             <DiveInto className="realitve " />
           </div>
         </div>
         <div className="flex w-full relative z-[2]   ">
-          <div
-            className="video w-[60%] pl-[5%] pr-[5%] pt-[2%]   group h-auto relative "
-            data-aos="zoom-in"
-          >
+          <div className="video w-[60%] pl-[5%] pr-[5%] pt-[2%]   group h-auto relative ">
             {/* Image Container */}
             <div
-              className="relative w-full overflow-hidden rounded-lg h-auto"
+              className="relative w-full overflow-hidden rounded-lg h-auto "
+              data-aos="zoom-in"
               //   style={{
               //     boxShadow:
               //       "0 10px 15px -3px rgba(128, 128, 255, 0.8), 0 4px 6px -2px rgba(128, 128, 255, 0.5)",
@@ -187,7 +185,8 @@ const RecapSection: React.FC<RecapSection> = () => {
                 <Image
                   src={UottaHack6}
                   alt="Example Image"
-                  className="shadow-xl rounded-lg"
+                  className="shadow-xl rounded-lg "
+                  priority={true}
                 />
               </div>
 
@@ -209,12 +208,12 @@ const RecapSection: React.FC<RecapSection> = () => {
             </div>
           </div>
           <div
-            className="relative w-[40%] pt-[10%] pr-[5%] z-10 text-[#E6DAFF] pl-[1%]   font-medium font-urbanist leading-[2] text-[2vw]"
+            className="relative w-[40%] pt-[5%] pr-[5%] z-10 text-[#E6DAFF] pl-[1%]   font-medium font-urbanist leading-[2] text-[2vw]"
             data-aos="fade-left"
           >
             {/* Blurred / Glow Layer */}
             <p
-              className="absolute  blur-lg opacity-50 text-[#E6DAFF] z-[9]"
+              className="absolute pr-[5%] blur-lg opacity-50 text-[#E6DAFF] z-[9]"
               aria-hidden="true"
             >
               Over the past six years, our hackathon event has brought the
@@ -223,12 +222,12 @@ const RecapSection: React.FC<RecapSection> = () => {
             </p>
 
             {/* Sharp, Clear Layer */}
-            <p className="absolute z-[10]">
+            <p className="absolute  pr-[5%] z-[10]">
               Over the past six years, our hackathon event has brought the
               community together to connect students with each other, to
               employers & opportunities, and solve real-world challenges.
             </p>
-            <div className="relative top-[120%] left-[15%] w-full h-full z-[11] ">
+            <div className="relative top-[100%] left-[0%] w-full h-full z-[11] ">
               <div
                 className={`w-[18vw] h-[4vw] rounded-full bg-black  hover:scale-110 transition-transform duration-300 group `}
                 onClick={() =>
@@ -269,7 +268,7 @@ const RecapSection: React.FC<RecapSection> = () => {
                         filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                       }}
                       initial={{ x: -20 }} // Start off-screen to the left
-                      animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                      animate={{ x: 320, scaleX: isParentHovered ? 10 : 1 }} // End off-screen to the right
                       transition={{
                         duration: isParentHovered ? 1 : 4, // Faster when hovered
                         repeat: Infinity,

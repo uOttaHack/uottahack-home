@@ -27,7 +27,7 @@ const IntroSection: React.FC<IntroSection> = () => {
     AOS.refresh();
   }, []);
 
-  const isInView = useInView(achievementsRef, { amount: 0.5 });
+  const isInView = useInView(achievementsRef, { once: false, amount: 0.5 });
 
   // Use callback ref pattern to handle both refs
 
@@ -73,7 +73,9 @@ const IntroSection: React.FC<IntroSection> = () => {
                             // ref={ref}
                             className="w-[15%] absolute  right-[90%] top-[30%] "
                             initial={{ opacity: 0 }} // Start fully transparent
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            animate={
+                              isInView ? { opacity: 1, y: 0 } : { opacity: 0 }
+                            }
                             transition={{
                               duration: 2, // Duration of the fade-in
                               delay: 0, // Delay before the animation starts
@@ -84,7 +86,9 @@ const IntroSection: React.FC<IntroSection> = () => {
                           <motion.div
                             className="w-[25%] absolute  right-[70%] top-[-5%] "
                             initial={{ opacity: 0 }} // Start fully transparent
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            animate={
+                              isInView ? { opacity: 1, y: 0 } : { opacity: 0 }
+                            }
                             transition={{
                               duration: 2, // Duration of the fade-in
                               delay: 0.25, // Delay before the animation starts
@@ -95,7 +99,9 @@ const IntroSection: React.FC<IntroSection> = () => {
                           <motion.div
                             className="w-[35%] absolute  right-[25%] top-[-20%] "
                             initial={{ opacity: 0 }} // Start fully transparent
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            animate={
+                              isInView ? { opacity: 1, y: 0 } : { opacity: 0 }
+                            }
                             transition={{
                               duration: 2, // Duration of the fade-in
                               delay: 0.5, // Delay before the animation starts
@@ -106,7 +112,9 @@ const IntroSection: React.FC<IntroSection> = () => {
                           <motion.div
                             className="w-[20%] absolute  right-[0%] top-[10%] "
                             initial={{ opacity: 0 }} // Start fully transparent
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            animate={
+                              isInView ? { opacity: 1, y: 0 } : { opacity: 0 }
+                            }
                             transition={{
                               duration: 2, // Duration of the fade-in
                               delay: 0.75, // Delay before the animation starts
@@ -117,7 +125,9 @@ const IntroSection: React.FC<IntroSection> = () => {
                           <motion.div
                             className="w-[14%] absolute  right-[0%] top-[40%] "
                             initial={{ opacity: 0 }} // Start fully transparent
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            animate={
+                              isInView ? { opacity: 1, y: 0 } : { opacity: 0 }
+                            }
                             transition={{
                               duration: 2, // Duration of the fade-in
                               delay: 1, // Delay before the animation starts
@@ -164,7 +174,7 @@ const IntroSection: React.FC<IntroSection> = () => {
               <motion.div
                 className="w-[10%] absolute  right-[37%] top-[14%] "
                 initial={{ opacity: 0 }} // Start fully transparent
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
                 transition={{
                   duration: 2, // Duration of the fade-in
                   delay: 0, // Delay before the animation starts
@@ -175,7 +185,7 @@ const IntroSection: React.FC<IntroSection> = () => {
               <motion.div
                 className="w-[13%] absolute  right-[22%] top-[15%] "
                 initial={{ opacity: 0 }} // Start fully transparent
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
                 transition={{
                   duration: 2, // Duration of the fade-in
                   delay: 0.25, // Delay before the animation starts
@@ -186,7 +196,7 @@ const IntroSection: React.FC<IntroSection> = () => {
               <motion.div
                 className="w-[13%] absolute  right-[10%] top-[30%] "
                 initial={{ opacity: 0 }} // Start fully transparent
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
                 transition={{
                   duration: 2, // Duration of the fade-in
                   delay: 0.5, // Delay before the animation starts
@@ -197,7 +207,7 @@ const IntroSection: React.FC<IntroSection> = () => {
               <motion.div
                 className="w-[11%] absolute  right-[10%] top-[53%] "
                 initial={{ opacity: 0 }} // Start fully transparent
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
                 transition={{
                   duration: 2, // Duration of the fade-in
                   delay: 0.75, // Delay before the animation starts
@@ -208,7 +218,7 @@ const IntroSection: React.FC<IntroSection> = () => {
               <motion.div
                 className="w-[8%] absolute  right-[20%] top-[70%] "
                 initial={{ opacity: 0 }} // Start fully transparent
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
                 transition={{
                   duration: 2, // Duration of the fade-in
                   delay: 1, // Delay before the animation starts
@@ -230,11 +240,11 @@ const IntroSection: React.FC<IntroSection> = () => {
                     data-aos="fade-right"
                   >
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type specimen book.
+                      uOttaHack is Ottawa’s Premier Hackathon community since
+                      2017. It is organized by a student group directly with the
+                      University of Ottawa's Faculty of Engineering and the
+                      President and Vice-Chancellor's team to deliver Ottawa's
+                      largest annual technology event.
                     </p>
                     <motion.div
                       className="w-[40%] pt-[10%]"

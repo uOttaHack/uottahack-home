@@ -80,7 +80,10 @@ const FaqSection: React.FC<FaqSection> = () => {
         <div className="absolute top-[5%] z-[1] w-[100%]">
           <Waves />
         </div>
-        <div className="relative flex flex-col w-full justify-center items-center  text-3xl md:text-6xl">
+        <div
+          className="relative flex flex-col w-full justify-center items-center  text-3xl md:text-6xl"
+          id="faq"
+        >
           <div className="relative  flex w-full justify-center items-center mb-[10%] font-harabara font-black w-full">
             <span
               className={`${styles.gradienttext} text-6xl md:text-[4.5vw] `}
@@ -96,7 +99,7 @@ const FaqSection: React.FC<FaqSection> = () => {
               FAQ
             </span>
           </div>
-          <div className="w-full flex justify-center pl-[10%]" id="faq">
+          <div className="w-full flex justify-center pl-[10%]">
             <div className="relaitve grid grid-cols-1 md:grid-cols-2 z-[10] w-full md:w-[75%] md:gap-[20%]   flex font-urbanist">
               {/* First Column */}
               <div className="space-y-[5%]" data-aos="fade-right">
@@ -114,6 +117,14 @@ const FaqSection: React.FC<FaqSection> = () => {
                             : "scale-[1] "
                         } transition-transform duration-300 `}
                       >
+                        <div
+                          className="absolute top-[50%] left-[50%]"
+                          style={{
+                            boxShadow: `0 0 10px 2px rgba(51, 102, 255, 0.8), 
+            0 0 20px 5px rgba(51, 102, 255, 0.5), 
+            0 0 30px 10px rgba(51, 102, 255, 0.3)`,
+                          }}
+                        ></div>
                         <Star className="text-[#E6DAFF]" />
                       </span>
 
@@ -167,6 +178,14 @@ const FaqSection: React.FC<FaqSection> = () => {
                             : "scale-[1] "
                         } transition-transform duration-300 `}
                       >
+                        <div
+                          className="absolute top-[50%] left-[50%]"
+                          style={{
+                            boxShadow: `0 0 10px 2px rgba(51, 102, 255, 0.8), 
+            0 0 20px 5px rgba(51, 102, 255, 0.5), 
+            0 0 30px 10px rgba(51, 102, 255, 0.3)`,
+                          }}
+                        ></div>
                         <Star className="text-[#E6DAFF]" />
                       </span>
 

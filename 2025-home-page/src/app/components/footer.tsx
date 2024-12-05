@@ -15,7 +15,7 @@ const FooterSection: React.FC<FooterSection> = () => {
       <div className="pt-[10%] w-[100vw] ">
         <div className="w-full flex flex-col w-[100vw] justify-center items-center flex w-full ">
           <div className="w-[90%] h-[0.1vh]   bg-[#938D8D]"></div>
-          <div className="flex flex-col w-full md:pl-[10%] pt-[1%] pb-[2%]">
+          <div className="flex flex-col w-full md:pl-[10%] pt-[0.5%] pb-[1%]">
             <div className="flex md:flex-row flex-col justify-center w-full  items-center">
               <div className="relative  w-full flex flex-col  justify-center items-center md:justify-start md:items-start text-3xl md:text-6xl">
                 <div className="w-[70%] md:w-[50%]">
@@ -26,7 +26,7 @@ const FooterSection: React.FC<FooterSection> = () => {
                 </p>
               </div>
               <div className="w-full pt-[10%] pb-[10%]  flex justify-center md:p-0 ">
-                <div className="grid md:grid-cols-2 grid-cols-1 md:text-[0.7vw] w-1/2 justify-self-center flex underline gap-y-[10%] md:gap-y-0 underline-offset-4 md:grid-cols-2  ">
+                <div className="grid md:grid-cols-2 grid-cols-1 md:text-[0.7vw] w-1/2 justify-self-center flex underline gap-y-[10%] md:gap-y-[40%] underline-offset-4 md:grid-cols-2  ">
                   <a
                     href="https://mlh.io/privacy"
                     className="text-center md:text-start text-white "
@@ -75,36 +75,38 @@ const FooterSection: React.FC<FooterSection> = () => {
             </div>
           </div>
           <div className="w-[90%] h-[0.1vh]  flex bg-[#938D8D]"></div>
-          <div className="flex w-full justify-center items-center md:gap-x-[2%] gap-x-[5%] pt-[10%] md:pt-[2%] flex-row">
-            <div className="w-[5%] md:w-[2%]">
+          <div className="flex w-full justify-center items-center md:gap-x-[2%] gap-x-[5%] pt-[10%] md:pt-[1%] flex-row">
+            <div className="w-[5%] md:w-[1.5%]">
               <Linkedin />
             </div>
-            <div className="w-[5%] md:w-[2%]">
+            <div className="w-[5%] md:w-[1.5%]">
               <Instagram />
             </div>
-            <div className="w-[5%] md:w-[2%]">
+            <div className="w-[5%] md:w-[1.5%]">
               <Youtube />
             </div>
-            <div className="w-[5%] md:w-[2%]">
+            <div className="w-[5%] md:w-[1.5%]">
               <Tiktok />
             </div>
-            <div className="w-[5%] md:w-[2%]">
+            <div className="w-[5%] md:w-[1.5%]">
               <Discord />
             </div>
           </div>
-          <p className="text-[#00E0FF] pt-[1%] ">
+          <p className="text-[#00E0FF] pt-[0.5%] ">
             {" "}
             Copyright. All rights reserved.
           </p>
         </div>
-        <div className="flex flex-col w-full overlfow-hidden pt-[10%] md:pt-[2%] pb-[2%]">
+        <div className="flex flex-col w-full overlfow-hidden pt-[10%] md:pt-[1%] pb-[1%]">
           <div className="relative flex flex-col w-full justify-center items-center  text-3xl md:text-6xl">
             <div className="relative  flex w-full justify-center items-center  font-harabara font-black w-full">
-              <span className={`${styles.gradienttext} md:text-[1vw] text-sm`}>
+              <span
+                className={`${styles.gradienttext} md:text-[0.8vw] text-sm`}
+              >
                 Made with 🤍 by the uOttaHack Team
               </span>
               <span
-                className={`${styles.sharpWhiteText} md:text-[1vw] text-sm`}
+                className={`${styles.sharpWhiteText} md:text-[0.8vw] text-sm`}
               >
                 Made with 🤍 by the uOttaHack Team
               </span>

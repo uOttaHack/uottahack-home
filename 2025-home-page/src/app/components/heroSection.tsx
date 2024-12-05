@@ -3,7 +3,7 @@ import Sun from "@/app/assets/Retro sun.svg";
 import Parliament from "@/app/assets/parliment.svg";
 import { useState, useEffect } from "react";
 import UottaHack from "@/app/assets/words/uOttaHack.svg";
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 import Rock1 from "@/app/assets/Small_Rocks/rock1.svg";
 import Rock2 from "@/app/assets/Small_Rocks/rock2.svg";
 import Rock3 from "@/app/assets/Small_Rocks/rock3.svg";
@@ -30,6 +30,29 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
     const initialCircles = Array.from({ length: 20 }, () => Math.random() * 90); // Random values between 0% - 50%
     setCircles(initialCircles);
   }, []);
+
+  const shakeAnimation: Variants = {
+    initial: {
+      transform: "translateX(0px)",
+    },
+    hover: {
+      transform: [
+        "translateX(0px)",
+        "translateX(-4px)",
+        "translateX(4px)",
+        "translateX(-4px)",
+        "translateX(4px)",
+        "translateX(0px)",
+      ],
+
+      transition: {
+        duration: 0.4,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "linear",
+      },
+    },
+  };
   return (
     <main className="min-h-screen flex  items-center   overlfow-x-hidden overflow-y-visible relative ">
       <div className="absolute z-1 top-[20%] overlflow-hidden max-h-screen w-full h-full">
@@ -74,8 +97,10 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             </span>
           </div>
           <div className="relative md:top-[30%] top-[20%] left-[%] w-full h-[50vh] z-[11] ">
-            <div
-              className={`md:w-[25vh] md:h-[15%] w-[60%] h-[15%] rounded-full p-[5px] bg-black  hover:scale-110 transition-transform duration-300 group ${styles.border}`}
+            <motion.div
+              whileHover="hover"
+              variants={shakeAnimation}
+              className={`md:w-[25vh] md:h-[15%] w-[60%] h-[15%] rounded-full p-[5px] bg-black  group-hover:scale-400 transition-transform duration-300 group ${styles.border}`}
               onClick={() =>
                 (window.location.href = "https://2025.uottahack.ca/")
               }
@@ -114,9 +139,9 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                         filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                       }}
                       initial={{ x: -20 }} // Start off-screen to the left
-                      animate={{ x: 320, scale: isParentHovered ? 1.3 : 1 }} // End off-screen to the right
+                      animate={{ x: 320, scaleX: isParentHovered ? 10 : 1 }} // End off-screen to the right
                       transition={{
-                        duration: isParentHovered ? 1 : 4, // Faster when hovered
+                        duration: isParentHovered ? 0.5 : 4, // Faster when hovered
                         repeat: Infinity,
                         ease: "linear",
                         delay: index * 0.6,
@@ -125,7 +150,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                   ))}
                 </>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

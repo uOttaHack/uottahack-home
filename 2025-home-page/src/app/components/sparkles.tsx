@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import { motion } from "motion/react";
-import Sparkly from "@/app/assets/Vector.svg"; // Ensure SVG is imported correctly
+import Sparkly from "@/app/assets/Vector.svg";
 
 interface Sparkle {
   id: number;
@@ -21,7 +21,7 @@ export default function Sparkle() {
       x: Math.random() * 100, // Random x position (0-100vw)
       y: Math.random() * 100, // Random y position (0-100vh)
       delay: Math.random() * 2, // Random size (20px to 60px)
-      size: 40,
+      size: 50,
     }));
     setSparkle(newParticles); // Generate 20 sparkles
   }, []);
