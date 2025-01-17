@@ -1,6 +1,14 @@
 import Logo from "@/app/assets/logo.svg";
 import { useIsMobile } from "../hooks/useIsMobile";
 interface MainHeader {}
+import {
+  Link as ScrollLink,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+} from "react-scroll";
 
 const MainHeader: React.FC<MainHeader> = () => {
   const isMobile = useIsMobile();
@@ -21,17 +29,31 @@ const MainHeader: React.FC<MainHeader> = () => {
       {/* Centered Navigation Text */}
       {!isMobile ? (
         <div className="w-full flex justify-center font-inter text-xl items-center text-white font-bold gap-x-[5%]">
-          <div>About</div>
           <div>
-            <a href="/#sponsors">Sponsors</a>
+            <ScrollLink to="about" smooth={true} duration={1000}>
+              About
+            </ScrollLink>
           </div>
           <div>
-            <a href="/#faq">FAQ</a>
+            <ScrollLink to="sponsors" smooth={true} duration={1000}>
+              Sponsors
+            </ScrollLink>
           </div>
           <div>
-            <a href="/#events">Events</a>
+            <ScrollLink to="faq" smooth={true} duration={1000}>
+              FAQ
+            </ScrollLink>
           </div>
-          <div>Contact</div>
+          <div>
+            <ScrollLink to="events" smooth={true} duration={1000}>
+              Events
+            </ScrollLink>
+          </div>
+          <div>
+            <ScrollLink to="contact" smooth={true} duration={1000}>
+              Contact
+            </ScrollLink>
+          </div>
         </div>
       ) : (
         <></>

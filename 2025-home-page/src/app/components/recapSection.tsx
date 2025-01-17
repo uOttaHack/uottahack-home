@@ -6,7 +6,7 @@ import Image from "next/image";
 import RockPlatform from "@/app/assets/rock platform.svg";
 import { useState, useEffect } from "react";
 import { inherits } from "util";
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 import styles from "@/app/styles/recapsection.module.css";
 import Carret from "@/app/assets/carret.svg";
 import { useIsMobile } from "../hooks/useIsMobile";
@@ -26,6 +26,28 @@ const RecapSection: React.FC<RecapSection> = () => {
     const initialCircles = Array.from({ length: 20 }, () => Math.random() * 90); // Random values between 0% - 50%
     setCircles(initialCircles);
   }, []);
+
+  const shakeAnimation: Variants = {
+    initial: {
+      transform: "translateX(0px)",
+    },
+    hover: {
+      transform: [
+        "translateX(0px)",
+        "translateX(-4px)",
+        "translateX(4px)",
+        "translateX(-4px)",
+        "translateX(4px)",
+        "translateX(0px)",
+      ],
+      transition: {
+        duration: 0.4,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "linear",
+      },
+    },
+  };
   if (isMobile === undefined) return null;
   if (isMobile) {
     return (
@@ -130,7 +152,7 @@ const RecapSection: React.FC<RecapSection> = () => {
                       {circles.map((randomTop, index) => (
                         <motion.span
                           key={`${isParentHovered}-${index}`} // Use key to reinitialize animation
-                          className="absolute left-0 w-[3px] h-[3px]  bg-white   rounded-full"
+                          className="absolute left-0 w-[3px] h-[3px]  bg-white  rounded-full"
                           style={{
                             top: `${randomTop}%`,
                             filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
@@ -141,7 +163,7 @@ const RecapSection: React.FC<RecapSection> = () => {
                             scaleX: isParentHovered ? 10 : 1,
                           }} // End off-screen to the right
                           transition={{
-                            duration: isParentHovered ? 1 : 4, // Faster when hovered
+                            duration: isParentHovered ? 0.5 : 4, // Faster when hovered
                             repeat: Infinity,
                             ease: "linear",
                             delay: index * 0.6,
@@ -159,7 +181,7 @@ const RecapSection: React.FC<RecapSection> = () => {
     );
   }
   return (
-    <main className="h-auto flex min-h-screen md:h-auto relative z-1">
+    <main className="h-auto flex  md:h-auto relative z-1">
       <div className="relative h-full  w-[100vw]">
         <div className="absolute top-0 z-[1] w-[100%]">
           <Blobs />
@@ -228,8 +250,10 @@ const RecapSection: React.FC<RecapSection> = () => {
               employers & opportunities, and solve real-world challenges.
             </p>
             <div className="relative top-[100%] left-[0%] w-full h-full z-[11] ">
-              <div
-                className={`w-[18vw] h-[4vw] rounded-full bg-black  hover:scale-110 transition-transform duration-300 group `}
+              <motion.div
+                whileHover="hover"
+                variants={shakeAnimation}
+                className={`w-[16vw] h-[4vw] rounded-full  bg-black  hover:scale-110 transition-transform duration-300 group `}
                 onClick={() =>
                   (window.location.href = "https://2025.uottahack.ca/")
                 }
@@ -247,7 +271,7 @@ const RecapSection: React.FC<RecapSection> = () => {
                 >
                   {/* Centered Text */}
                   <span
-                    className="absolute inset-0 flex text-2xl pointer-events-none justify-center items-center z-10"
+                    className="absolute inset-0 flex text-[1.3vw] pointer-events-none justify-center items-center z-10"
                     style={{
                       filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                     }}
@@ -278,7 +302,7 @@ const RecapSection: React.FC<RecapSection> = () => {
                     ></motion.span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

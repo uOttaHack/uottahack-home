@@ -38,14 +38,14 @@ const ValueSection: React.FC<ValueSection> = () => {
   if (isMobile === undefined) return null;
   return (
     <main className=" flex min-h-screen md:h-auto relative z-1">
-      <div className="relative h-full pt-[30%] md:pt-[20%] w-[100vw]">
+      <div className="relative h-full pt-0 md:pt-[30%] w-[100vw]">
         <div className="absolute top-[70%] z-[1] w-[100%]">
           <Waves />
         </div>
 
         {!isMobile ? (
-          <div className="absolute top-[200%]  h-full  z-[1] w-[100%]">
-            <div className="absolute z-[1] w-[100%]">
+          <div className="absolute top-[190%]  h-full  z-[1] w-[100%]">
+            <div className="absolute  z-[1] w-[100%]">
               <Blobs />
             </div>
 
