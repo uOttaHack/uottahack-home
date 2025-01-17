@@ -12,6 +12,13 @@ import image7 from "@/app/assets/ourstory/image7.avif";
 import image8 from "@/app/assets/ourstory/image8.avif";
 import image9 from "@/app/assets/ourstory/image9.avif";
 
+import image1_events from "@/app/assets/ourstory/Events/image1.jpg";
+import image2_events from "@/app/assets/ourstory/Events/image2.jpg";
+import image3_events from "@/app/assets/ourstory/Events/image3.jpg";
+import image4_events from "@/app/assets/ourstory/Events/image4.jpg";
+import image5_events from "@/app/assets/ourstory/Events/image5.jpg";
+import image6_events from "@/app/assets/ourstory/Events/image6.jpg";
+
 import styles from "@/app/styles/ourstory.module.css";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -102,15 +109,12 @@ const OurStory: React.FC<OurStory> = () => {
   };
 
   const Eventimages = [
-    image1.src,
-    image2.src,
-    image3.src,
-    image4.src,
-    image5.src,
-    image6.src,
-    image7.src,
-    image8.src,
-    image9.src,
+    image1_events.src,
+    image2_events.src,
+    image3_events.src,
+    image4_events.src,
+    image5_events.src,
+    image6_events.src,
   ];
 
   const [currentIndex_Events, setCurrentIndex_Events] = useState(0);

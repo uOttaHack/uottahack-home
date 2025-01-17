@@ -54,10 +54,15 @@ const FaqSection: React.FC<FaqSection> = () => {
       answer:
         "Yes there is. The organizers care deeply about everyone's experience and ensuring they get to hack in a comfortable and safe environment. You can find it here.",
     },
-    { question: "I don’t live in Ottawa, can I still go?", answer: "" },
+    {
+      question: "I don’t live in Ottawa, can I still go?",
+      answer:
+        "uOttaHack will be providing partial reimbursement to most major cities in and surrounding Ontario! Accepted attendees will need to confirm ahead of time should reimbursement services be required, and will need to submit a project. Otherwise travelling to uOttaHack will be at the expense of the participant. This info will be sent to you if you are accepted!",
+    },
     {
       question: "Can I start working on a project before the event?",
-      answer: "",
+      answer:
+        "All projects must be started from scratch at the event, but you're free to start brainstorming ideas beforehand!",
     },
     {
       question: "How much will it cost me?",

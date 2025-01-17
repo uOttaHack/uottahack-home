@@ -37,6 +37,7 @@ import MarchNetwork from "@/app/assets/sponsor/march network.svg";
 import BankOfCanada from "@/app/assets/sponsor/bank_of_canada.svg";
 import CENGN from "@/app/assets/sponsor/cengn.svg";
 import Balsamiq from "@/app/assets/sponsor/balsamiq.svg";
+import Innovapost from "@/app/assets/sponsor/innovapost.svg";
 import Fitbit from "@/app/assets/sponsor/fitbit.svg";
 //importing images end
 import AOS from "aos";
@@ -83,7 +84,9 @@ const PastSponsor: React.FC<PastSponsor> = () => {
                   <Solace className="w-full h-full" />
                 </div>
               </div>
-              <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center"></div>
+              <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
+                <Innovapost className="w-full h-full" />
+              </div>
               <div className="w-[25%] h-full bg-[#8E8CB5]/60 backdrop-blur-sm  flex overflow-hidden justify-center">
                 {" "}
                 <div className="w-[50%]  items-center flex h-full">
