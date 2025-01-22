@@ -56,11 +56,11 @@ const IntroSection: React.FC<IntroSection> = () => {
                       data-aos="fade-right"
                     >
                       <p>
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
+                        uOttaHack is Ottawa’s Premier Hackathon community since
+                        2017. It is organized by a student group directly with
+                        the University of Ottawa's Faculty of Engineering and
+                        the President and Vice-Chancellor's team to deliver
+                        Ottawa's largest annual technology event.
                       </p>
                     </div>
                     <div className="w-full relative flex pt-[30%] justify-center ">

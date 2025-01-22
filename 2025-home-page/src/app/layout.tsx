@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   description: "Ottawa's longest running hackathon",
   openGraph: {
     type: "website",
-    title: "uOttaHack 7 - 2025",
+    title: "uOttaHack",
     description: ".",
     url: "https://uOttahack.com",
     images: [

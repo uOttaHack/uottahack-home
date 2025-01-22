@@ -30,27 +30,53 @@ const MainHeader: React.FC<MainHeader> = () => {
       {!isMobile ? (
         <div className="w-full flex justify-center font-inter text-xl items-center text-white font-bold gap-x-[5%]">
           <div>
-            <ScrollLink to="about" smooth={true} duration={1000}>
+            <ScrollLink
+              to="about"
+              className="cursor-pointer"
+              smooth={true}
+              duration={1000}
+            >
               About
             </ScrollLink>
           </div>
           <div>
-            <ScrollLink to="sponsors" smooth={true} duration={1000}>
+            <ScrollLink
+              to="sponsors"
+              className="cursor-pointer"
+              smooth={true}
+              duration={1000}
+            >
               Sponsors
             </ScrollLink>
           </div>
           <div>
-            <ScrollLink to="faq" smooth={true} duration={1000}>
+            <ScrollLink
+              to="faq"
+              className="cursor-pointer"
+              smooth={true}
+              duration={1000}
+            >
               FAQ
             </ScrollLink>
           </div>
           <div>
-            <ScrollLink to="events" smooth={true} duration={1000}>
+            <ScrollLink
+              to="events"
+              className="cursor-pointer"
+              smooth={true}
+              duration={1000}
+            >
               Events
             </ScrollLink>
           </div>
+
           <div>
-            <ScrollLink to="contact" smooth={true} duration={1000}>
+            <ScrollLink
+              to="contact"
+              className="cursor-pointer"
+              smooth={true}
+              duration={1000}
+            >
               Contact
             </ScrollLink>
           </div>

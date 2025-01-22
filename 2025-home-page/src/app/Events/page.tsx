@@ -30,16 +30,6 @@ const Panels = [
     date: "October 3rd",
     location: "@uOttawa CRX Building",
   },
-  {
-    id: 3,
-    title: "Intern Panel",
-    image: internpanel,
-
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
-    date: "October 3rd",
-    location: "@uOttawa CRX Building",
-  },
 ];
 export default function Events() {
   //have event list here
