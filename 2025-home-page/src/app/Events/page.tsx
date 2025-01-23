@@ -9,27 +9,41 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import Sparkle from "../components/sparkles";
 import internpanel from "@/app/assets/events/intern-panel.png";
+import nbc_event from "@/app/assets/events/Event_nbc.png";
+import uOttaStudy_event from "@/app/assets/events/Event_uottastudy.png";
 import SecondHeader from "../components/second_header";
 const Panels = [
   {
     id: 1,
-    title: "Intern Panel",
-    image: internpanel,
+    title: "uOttaHack x National Bank of Canada",
+    image: nbc_event,
     description:
-      "A panel of several students who share their experiences working internships at top tech companies.",
-    date: "October 3rd",
-    location: "@uOttawa CRX Building",
+      "Learn how to secure internships directly from recruiters at National Bank Financial Markets in this exclusive event hosted by uOttaHack. Gain insider tips and network with professionals!",
+    date: "Tuesday January 28, 2025",
+    time: "2:30PM - 4:00PM",
+    location: "Virtual",
   },
   {
     id: 2,
-    title: "Intern Panel",
-    image: internpanel,
+    title: "uOttaStudy",
+    image: uOttaStudy_event,
 
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
-    date: "October 3rd",
-    location: "@uOttawa CRX Building",
+      "Prepare for success with uOttaHack's uOttaStudy Exam Review Session! Join us for a collaborative and supportive environment to review key topics, clarify concepts, and get ready to ace your exams.",
+    date: "To be announced",
+    time: "To be announced",
+    location: "SITE",
   },
+  // {
+  //   id: 3,
+  //   title: "uOttaStudy",
+  //   image: internpanel,
+
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+  //   date: "October 3rd",
+  //   location: "@uOttawa CRX Building",
+  // },
 ];
 export default function Events() {
   //have event list here
@@ -45,10 +59,10 @@ export default function Events() {
           "radial-gradient(circle at 500% 200%, #DA60F8 13%, #0A0222 100%);",
       }}
     >
-      <div className="absolute z-[1] w-[100vw] md:h-[100vv] md:top-[50%] overflow-hidden">
-        <Blob className="md:w-[100vw] w-[400vw]"></Blob>
+      <div className="absolute z-[1] w-[100vw] md:h-[100vv] md:top-[30%] overflow-hidden">
+        <Blob className="md:w-[100vw] w-[400vw] overflow-hidden"></Blob>
       </div>
-      <div className="absolute z-[1] w-[100vw] md:h-[100vv] md:top-[50%] overflow-hidden">
+      <div className="absolute z-[1] w-[100vw] md:h-[100vv] md:top-[10%] overflow-hidden">
         <Sparkle></Sparkle>
       </div>
       <SecondHeader></SecondHeader>
@@ -88,14 +102,22 @@ export default function Events() {
                     {panel.description}
                   </p>
                   <div className="text-gray-300">
-                    {panel.date} {panel.location}
+                    <p>
+                      <strong>Date:</strong> {panel.date}
+                    </p>
+                    <p>
+                      <strong>Time:</strong> {panel.time}
+                    </p>
+                    <p>
+                      <strong>Location:</strong> {panel.location}
+                    </p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <footer className="  ">
+        <footer className=" overflow-hidden ">
           <FooterSection></FooterSection>
         </footer>
       </div>

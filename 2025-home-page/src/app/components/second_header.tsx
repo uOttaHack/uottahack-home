@@ -15,7 +15,7 @@ const SecondHeader: React.FC<SecondHeader> = () => {
     <main className="absolute md:bg-[#04081C] z-[100] w-full h-[8%] flex items-center overflow-hidden">
       {/* Logo on the Left */}
       <div className="absolute flex justify-center w-full  h-full  ">
-        <a className="flex justify-center md:w-[4vw]  w-[10vw]" href="/">
+        <a className="flex justify-center md:w-[3vw]  w-[10vw]" href="/">
           {" "}
           <Logo className="" />
         </a>
