@@ -71,23 +71,25 @@ const RecapSection: React.FC<RecapSection> = () => {
                 <div className="relative w-full overflow-hidden rounded-lg h-auto">
                   {/* Image */}
                   <div className="mx-auto w-[108%] rounded-lg h-auto">
-                    <Image
-                      src={UottaHack6}
-                      alt="Example Image"
-                      className="shadow-xl rounded-lg"
-                    />
+                    <iframe
+                      width="100%"
+                      height="200"
+                      src="https://www.youtube.com/embed/E1IYFInTCh8"
+                      title="uOttaHack 7 Recap"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    ></iframe>
                   </div>
 
                   {/* Context Card */}
-                  <div className="absolute pl-[5%] inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-start  opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                  <div className="absolute pl-[5%] inset-0 bg-black pointer-events-none bg-opacity-60 flex flex-col justify-center items-start  opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                     <p className="text-gray-200 text-2xl font-bold pb-[1%]">
                       Our Most Recent Event.
                     </p>
                     <h2 className="text-white text-7xl font-bold font-harabara">
-                      UottaHack 6
+                      UottaHack 7
                     </h2>
                     <p className="text-gray-200 text-sm">
-                      March 1-3 2024 @ University of Ottawa{" "}
+                      January 17-20 2025 @ University of Ottawa{" "}
                     </p>
                   </div>
                 </div>
@@ -121,7 +123,8 @@ const RecapSection: React.FC<RecapSection> = () => {
                   <div
                     className={`md:w-[18vw] md:h-[4vw] w-[50%] h-full rounded-full bg-black  hover:scale-110 transition-transform duration-300 group `}
                     onClick={() =>
-                      (window.location.href = "https://2025.uottahack.ca/")
+                      (window.location.href =
+                        "https://www.hammadkhalilproductions.com/-uOuttahack7")
                     }
                     onMouseEnter={() => {
                       console.log("Parent hovered");
@@ -142,7 +145,7 @@ const RecapSection: React.FC<RecapSection> = () => {
                           filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                         }}
                       >
-                        2024 Recap
+                        2025 Recap
                         <span className="pl-[4%]">
                           <Carret className="w-[4vw]" />
                         </span>
@@ -204,24 +207,25 @@ const RecapSection: React.FC<RecapSection> = () => {
             >
               {/* Image */}
               <div className="mx-auto w-[108%] rounded-lg h-auto">
-                <Image
-                  src={UottaHack6}
-                  alt="Example Image"
-                  className="shadow-xl rounded-lg "
-                  priority={true}
-                />
+                <iframe
+                  width="100%"
+                  height="500"
+                  src="https://www.youtube.com/embed/E1IYFInTCh8"
+                  title="uOttaHack 7 Recap"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
               </div>
 
               {/* Context Card */}
-              <div className="absolute pl-[5%] inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-start  opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+              <div className="absolute pl-[5%] inset-0 bg-black pointer-events-none bg-opacity-60 flex flex-col justify-center items-start  opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                 <p className="text-gray-200 text-2xl font-bold pb-[1%]">
                   Our Most Recent Event.
                 </p>
                 <h2 className="text-white text-7xl font-bold font-harabara">
-                  UottaHack 6
+                  UottaHack 7
                 </h2>
                 <p className="text-gray-200 text-sm">
-                  March 1-3 2024 @ University of Ottawa{" "}
+                  January 17-20 2025 @ University of Ottawa{" "}
                 </p>
               </div>
             </div>
@@ -255,7 +259,8 @@ const RecapSection: React.FC<RecapSection> = () => {
                 variants={shakeAnimation}
                 className={`w-[16vw] h-[4vw] rounded-full  bg-black  hover:scale-110 transition-transform duration-300 group `}
                 onClick={() =>
-                  (window.location.href = "https://2025.uottahack.ca/")
+                  (window.location.href =
+                    "https://www.hammadkhalilproductions.com/-uOuttahack7")
                 }
                 onMouseEnter={() => {
                   console.log("Parent hovered");
@@ -276,7 +281,7 @@ const RecapSection: React.FC<RecapSection> = () => {
                       filter: `drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))`,
                     }}
                   >
-                    2024 Recap
+                    2025 Recap
                     <span className="pl-[4%]">
                       <Carret className="w-[0.8vw]" />
                     </span>
