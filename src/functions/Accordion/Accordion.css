@@ -1,0 +1,58 @@
+.Accordion {
+  color: white;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.Accordion .panel {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.Accordion .active,
+.Accordion .panel:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.Accordion .popup {
+  font-family: ParagraphFont;
+  font-size: 20px;
+  padding: 0 18px;
+  border-style: solid;
+  border-width: 7px;
+  border-color: #eee;
+  border-radius: 3%;
+  color: black;
+  overflow: hidden;
+}
+
+.Accordion h3 {
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .Accordion .panel {
+    background-color: rgb(44, 44, 44);
+  }
+
+  .Accordion .active,
+  .Accordion .panel:hover {
+    background-color: #444;
+  }
+
+  .Accordion h3 {
+    color: white;
+  }
+  .Accordion .popup {
+    color: white;
+    border-color: rgb(44, 44, 44);
+  }
+}

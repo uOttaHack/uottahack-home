@@ -5,11 +5,22 @@
   justify-content: center;
   text-align: center;
   height: 75vh;
-  margin-bottom: 33vh;
+  margin-bottom: 25vh;
   z-index: 1;
   overflow: hidden;
 }
-
+@media (max-width: 768px) {
+  .Front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50vh;
+    margin-bottom: 21vh;
+    z-index: 1;
+  }
+}
 .Front::before {
   content: "";
   position: absolute;
@@ -27,17 +38,36 @@
   height: 100vh;
   width: 100vw;
 }
+@media (max-width: 768px) {
+  .Front::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    background-image: linear-gradient(
+        to right,
+        rgba(1, 1, 1, 0.3),
+        rgba(1, 1, 1, 0.3)
+      ),
+      url("../../images/blossomBG.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    height: 80vh;
+    width: 100vw;
+  }
+}
 
-.Hero {
+.Front .Hero {
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 15px;
+  position: absolute;
+  width: 100%;
 }
 
-.TextLogo {
+.Front .TextLogo {
   align-self: center;
   height: auto;
   width: 35vw;
@@ -45,95 +75,131 @@
   padding-top: 65px;
 }
 
-.HeroText {
+.Front .HeroText {
   width: 100%;
   text-align: center;
 }
 
-h1 {
+.Front .p1 {
+  font-family: BoldFont;
+  font-size: 35px;
+}
+
+.Front h1 {
   color: white;
 }
 
-h2 {
+.Front h2 {
   font-size: 40px;
   margin-top: 50px;
   color: rgb(0, 0, 0);
 }
 
-.date {
-  color: rgb(255, 255, 255);
+.Front .logbutton {
+  width: auto; /* Automatically adjust to the content */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center the container itself */
+  overflow: hidden; /* Prevent content overflow */
 }
 
-.btn {
-  background-color: #ffffff !important;
-  color: black;
-}
-
-.logobutton button {
+.Front .logbutton button {
   font-family: BoldFont;
-  font-size: 15px;
+  font-size: 1rem; /* Use relative units for scaling */
   font-weight: 100;
-  margin: 20px;
+  margin: 10px;
+  padding: 10px 15px;
   border: none;
   border-radius: 8px;
-  width: 175px;
-  height: 55px;
-  margin-top: 20px;
-  transition: 0.3s ease-in-out;
+  width: 90%; /* Scale button width on mobile */
+  max-width: 175px; /* Prevent the button from becoming too wide */
+  height: auto; /* Adjust height automatically */
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.411)) top/100% 800%;
+  transition: 0.3s ease-in-out;
+  text-align: center;
 }
-.logobutton button:hover {
+
+.Front .logbutton button:hover {
   background-position: bottom;
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .Front .logbutton {
+    width: 100%; /* Full width of parent container */
+    margin: 0 auto;
+  }
+
+  .Front .logbutton button {
+    width: 90%; /* Button takes up 90% of the container width */
+    max-width: 200px; /* Limit the button size */
+    font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    padding: 10px; /* Adjust padding for mobile screens */
+  }
+}
+
+.Front .date {
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 768px) {
+  .Front .date {
+    font-size: 2rem;
+  }
+}
+
+.Front .btn {
+  background-color: #ffffff !important;
+  color: black;
+}
+
 @media only screen and (max-width: 2560px) {
-  h1 {
+  .Front h1 {
     font-size: 1.4vw;
   }
 }
 
 @media only screen and (max-width: 1440px) {
-  h1 {
+  .Front h1 {
     font-size: 1.4vw;
   }
 }
 
 @media only screen and (max-width: 1080px) {
-  .TextLogo {
+  .Front .TextLogo {
     width: 50%;
   }
-  h1 {
+  .Front h1 {
     font-size: 2vw;
   }
 }
 
 @media only screen and (max-width: 850px) {
-  h1 {
+  .Front h1 {
     font-size: 3vw;
   }
-  .HeroText {
+  .Front .HeroText {
     width: 40%;
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 705px) {
-  .TextLogo {
+  .Front .TextLogo {
     align-self: center;
     height: auto;
     width: 70%;
   }
 
-  h1 {
+  .Front h1 {
     font-size: 3.8vw;
   }
-  .HeroText {
+  .Front .HeroText {
     width: 50%;
     text-align: center;
   }
 }
 
-.hbtn {
+.Front .hbtn {
   color: black;
 }

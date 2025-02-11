@@ -16,38 +16,40 @@
     transition: top 0.3s;
   }
 
-  .Navbar img {
+  .Navbar .Hamburger {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    margin-right: 3%;
+  }
+
+  .Navbar .thumbnail {
     margin-top: 26px;
     margin-left: 300px;
     height: auto;
     width: 42px;
+    border-radius: 50%;
   }
 
-  .Navbar img:hover {
+  .Navbar .thumbnail:hover {
     cursor: pointer;
   }
 
-  .PageTitle {
+  .Navbar .PageTitle {
     align-self: flex-start;
   }
 
-  .NavLinks {
-    display: flex;
-    flex-direction: row;
-    margin-right: 300px;
-    align-items: center;
-  }
-
-  .PageLinks {
+  .Navbar .PageLinks {
     margin-right: auto;
     height: auto;
     display: flex;
   }
 
-  .PageLinks a,
-  .NavLinks a {
+  .Navbar .PageLinks li,
+  .Navbar .PageLinks a {
     color: #ffffff;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 5px;
     text-decoration: none;
     padding: 6px;
@@ -56,18 +58,15 @@
     display: inline-block;
     position: relative;
     cursor: pointer;
+    font-family: Semifont;
   }
 
-  .NavLinks box-icon {
-    margin: 15px;
-  }
-
-  .MobileMenu {
+  .Navbar .MobileMenu {
     display: none;
   }
 
-  .PageLinks a:hover,
-  .NavLinks a:hover {
+  .Navbar .PageLinks li:hover,
+  .Navbar .PageLinks a:hover {
     transition: 0.3s ease-out;
     border-radius: 5px;
     background: #c7c7c764;
@@ -81,18 +80,32 @@
     right: 0;
   }
 
-  .Navbar img {
+  .Navbar .thumbnail {
     margin-left: 150px;
-  }
-
-  .NavLinks {
-    margin-right: 150px;
   }
 }
 
-@media only screen and (max-width: 1250px) {
-  .PageLinks {
+@media only screen and (max-width: 1200px) {
+  .Navbar .PageLinks {
     display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 75%;
+    right: 1%;
+    background-color: rgba(0, 0, 0, 0.855);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+  }
+
+  .Navbar .PageLinks.Open {
+    display: flex;
+  }
+
+  .Navbar .Hamburger {
+    display: block;
   }
 }
 
@@ -102,15 +115,11 @@
     right: 0;
   }
 
-  .Navbar img {
+  .Navbar .thumbnail {
     margin-left: 30px;
   }
 
-  .NavLinks {
-    margin-right: 30px;
-  }
-
-  .PageLinks {
+  .Navbar .PageLinks {
     display: none;
   }
 }
@@ -121,26 +130,22 @@
     right: 0;
   }
 
-  .PageLinks {
+  .Navbar .PageLinks {
     display: none;
-  }
-
-  .NavLinks {
-    display: flex;
-    flex-direction: row;
-    margin-right: 20px;
-    align-items: center;
   }
 }
 
-@media only screen and (max-width: 510px) {
-  .NavLinks {
-    display: none;
+@media (max-width: 768px) {
+  .Navbar a,
+  .Navbar li {
+    margin: 0;
+    font-size: large;
   }
 }
 
 @media only screen and (max-width: 321px) {
-  .MediaLinks a {
+  .Navbar a,
+  .Navbar li {
     margin: 1px;
   }
 }

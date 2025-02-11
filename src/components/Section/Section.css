@@ -5,5 +5,22 @@
   margin: 0 auto;
   position: relative;
   display: block;
-  margin-bottom: 150px;
+  margin-bottom: 115px;
+}
+
+.Section h2 {
+  color: black;
+}
+
+.Section h3 {
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .Section h2 {
+    color: white;
+  }
+  .Section h3 {
+    color: white;
+  }
 }

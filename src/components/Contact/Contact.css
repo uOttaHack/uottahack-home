@@ -1,25 +1,76 @@
-.buttons {
-  padding-top: 0px;
-}
-
-.ui.large.animated.button {
-  width: 300px;
-}
-
-.visible.content {
-  font-family: BoldFont;
-  text-align: center;
-}
-
-.hidden.content {
-  font-family: BoldFont;
-  text-align: center;
-}
-
 .Contact {
   max-width: 800px;
 }
 
-h3 {
-  margin-bottom: 15px;
+.Contact h3 {
+  margin-bottom: 25px;
+  color: black;
+}
+
+.Contact p {
+  color: black;
+}
+
+.Contact .scroll-button {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 300px;
+  height: 55px;
+
+  /* border-radius: 5px; */
+}
+
+.Contact .text,
+.Contact .text-hidden {
+  position: absolute;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.Contact .text {
+  position: relative;
+  left: 0;
+  opacity: 1;
+  /* transform:translateY(-10px) translateX(90px); */
+  width: fit-content;
+}
+
+.Contact .scroll-button:hover .text {
+  opacity: 0;
+}
+
+.Contact .text-hidden {
+  /* transform:translateY(-10px) translateX(20px); */
+  left: 100%;
+  opacity: 0;
+  margin-left: 7%;
+}
+
+.Contact .scroll-button:hover .text-hidden {
+  opacity: 1;
+  animation: scrollText 1s forwards;
+}
+
+@keyframes scrollText {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .Contact h3 {
+    color: white;
+  }
+  .Contact p {
+    color: rgb(210, 210, 210);
+  }
 }

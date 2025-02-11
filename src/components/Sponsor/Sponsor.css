@@ -1,3 +1,4 @@
+/* Existing Styles */
 .Sponsor {
   display: block;
   text-align: center;
@@ -39,15 +40,6 @@
   margin: 1rem 1rem;
 }
 
-/* .SponsorPage {
-  color: rgb(0, 0, 0);
-  font-size: x-large;
-  text-align: center;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-  padding: 10px 15px;
-  background-color: pink;
-} */
-
 .logobutton button {
   font-family: BoldFont;
   font-size: 15px;
@@ -65,6 +57,7 @@
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
 .logobutton button:hover {
   background-position: bottom;
   cursor: pointer;
@@ -82,3 +75,18 @@
 h1 {
   color: white;
 }
+
+@media (max-width: 768px) {
+  .Img {
+    max-width: 20rem; /* Reduce image height for smaller screens */
+    margin: 0.5rem 0.5rem;
+  }
+}
+
+/* THIS NEEDS TESTED */
+/* @media (max-width: 480px) {
+  .Img {
+    max-width: 15rem;
+    margin: 0rem;
+  }
+} */

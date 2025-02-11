@@ -2,3 +2,20 @@
   color: #0d0d0d;
   margin: 0 auto;
 }
+
+.About h3 {
+  color: black;
+}
+.About p {
+  color: black;
+  padding-bottom: 5%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .About h3 {
+    color: white;
+  }
+  .About p {
+    color: rgb(210, 210, 210);
+  }
+}

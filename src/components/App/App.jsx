@@ -1,15 +1,15 @@
-import React from "react";
 import "./App.css";
 import Navbar from "../Navbar/Navbar";
 import Front from "../Front/Front";
 import Page from "../Page/Page";
 import Footer from "../Footer/Footer";
-import { Outlet, ScrollRestoration } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router";
 
-/* This App is brought to you by the hecking_squad */ 
+/* This App is brought to you by the hecking_squad */
+/* Who is the squad? */
 
-export default function App() {
-  const [sections, _] = React.useState([
+function App() {
+  const sections = [
     {
       sectionName: "What is BlossomHack?",
       subtitle: "",
@@ -22,10 +22,10 @@ export default function App() {
       sectionName: "FAQ",
       subtitle: "",
     },
-    {
-      sectionName: "Sponsors",
-      subtitle: "",
-    },
+    // {
+    //   sectionName: "Sponsors",
+    //   subtitle: "",
+    // },
     {
       sectionName: "Our Team",
       subtitle: "",
@@ -42,24 +42,16 @@ export default function App() {
       sectionName: "Schedule",
       subtitle: "",
     },
-  ]);
+    {
+      sectionName: "Map",
+      subtitle: "",
+    },
+  ];
 
   return (
     <div className="App">
       <Navbar />
-      <a 
-      id="mlh-trust-badge" 
-      style={{display: "block", maxWidth: "130px", minWidth: "70px", position: "fixed", right: "50px", top: "-35px", width: "10%", zIndex: "10000"}} 
-      href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white" 
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img 
-        src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg" 
-        alt="Major League Hacking 2024 Hackathon Season" 
-        style={{width: "100%"}}
-      />
-    </a>
+
       <Front />
       <Page sections={sections} />
       <hr />
@@ -71,3 +63,4 @@ export default function App() {
     </div>
   );
 }
+export default App;

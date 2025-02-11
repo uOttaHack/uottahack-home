@@ -1,20 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Muli");
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
-/*
-UOTTHACC 2018 LOGO HEX COLORS:
-BLUE BORDER #3366cc
-BLUE TEXT #084259
-RED TEXT #8b181d
-
-uOttaHack 2019 Hex Colors:
-Teal #47B9A9
-Blue #086788
-Orange #FCA311
-
-
-*/
-
 @font-face {
   font-family: HeaderFont;
   src: url(../../fonts/Inter/Inter-Black.ttf);
@@ -40,24 +26,44 @@ Orange #FCA311
   padding: 0;
   font-family: "Poppins", sans-serif;
   font-family: ParagraphFont;
+  /* display: flex; */
 }
 
 h1 {
   font-family: BoldFont;
   font-size: 2em;
 }
-
+@media (max-width: 768px) {
+  h1 {
+    font-family: BoldFont;
+    font-size: 1.7em;
+  }
+}
 h2 {
   color: #0d0d0d;
   font-size: 3.25em;
   font-family: BoldFont;
   margin-bottom: 0;
 }
-
+@media (max-width: 768px) {
+  h2 {
+    font-size: 3em;
+    color: #0d0d0d;
+    font-family: BoldFont;
+    margin-bottom: 0;
+  }
+}
 h3 {
   color: #0d0d0d;
   font-size: 1.5em;
   font-family: BoldFont;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.3em;
+    font-family: BoldFont;
+    color: #0d0d0d;
+  }
 }
 
 h5 {
@@ -69,6 +75,12 @@ p {
   font-size: 1.5em;
   font-family: ParagraphFont;
 }
+@media (max-width: 768px) {
+  p {
+    font-size: 1.1em;
+    font-family: ParagraphFont;
+  }
+}
 
 hr {
   width: 75%;
@@ -78,3 +90,27 @@ hr {
   border: none;
   height: 1px;
 }
+
+/* #mlh-trust-badge {
+  display: block;
+  max-width: 130px;
+  min-width: 70px;
+  position: fixed;
+  right: 50px;
+  top: -35px;
+  width: 10%;
+  z-index: 10000;
+} */
+/* @media (max-width: 1250px) {
+  #mlh-trust-badge {
+    
+  }
+} */
+
+/* @media (max-width: 768px) {
+  #mlh-trust-badge {
+    max-width: 90px; 
+    right: 20px; 
+    top: -25px; 
+  }
+} */

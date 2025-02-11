@@ -1,19 +1,20 @@
-import React from "react";
 import "./Footer.css";
 import FooterLogo from "../../images/footerlogo.png";
 
-export default function footer() {
+export default function Footer() {
   return (
     <div className="Footer">
-      <div className="FooterBody">
-        <div className="FooterLogo">
+      <div className="Body">
+        <div className="Logo">
           <img src={FooterLogo} alt="Logo" />
         </div>
+
         <div className="LogoText">
-          <p>Ohio University's Biggest Hackathon</p>
+          <p>Ohio University&apos;s Biggest Hackathon</p>
         </div>
-        <div className="FooterContainer">
-          <div className="FooterLinks">
+
+        <div className="Container">
+          <div className="Links">
             <a href="https://mlh.io/privacy" target="_blank">
               Privacy Policy
             </a>

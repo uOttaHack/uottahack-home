@@ -1,10 +1,10 @@
-.Container {
+.Hosts {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.Img {
+.Hosts .Img {
   max-height: 10rem;
   width: auto;
   margin: 1rem 1rem;

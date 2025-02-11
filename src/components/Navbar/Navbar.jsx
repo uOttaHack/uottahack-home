@@ -1,86 +1,134 @@
-import React from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
-import { Link } from "react-scroll";
-import { Image } from "semantic-ui-react";
+import { Link, useLocation } from "react-router-dom";
+import thumbnail from "../../images/thumbnail.png";
 
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => {
-    images[item.replace("./", "")] = r(item);
-  });
-  return images;
-}
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false); // State to control dropdown menu
 
-const images = importAll(
-  require.context("../../images", false, /\.(png|jpe?g|svg)$/)
-);
+  // Toggles the dropdown menu
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  const componentRef = useRef(null);
 
-export default function navbar() {
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        componentRef.current &&
+        !componentRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    // Add the event listener for mouse click
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      // setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 1200);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ alignToTop: "true", behavior: "smooth" });
+  };
+
+  const location = useLocation();
+
+  const bannerStyle = {
+    display: "static",
+    maxWidth: isMobile ? "85px" : "130px",
+    minWidth: isMobile ? "45px" : "70px",
+    position: "fixed",
+    right: isMobile ? "70px" : "60px",
+    top: "-5px",
+    width: "10%",
+    zIndex: "1",
+  };
+
   return (
-    <div className="NavbarContainer">
+    <div className="NavbarContainer" ref={componentRef}>
       <div className="Navbar">
         <div className="PageTitle">
-          <Link
-            to="About"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-          >
-            <Image src={images["thumbnail.png"]} size="mini" circular />
-          </Link>
+          <div onClick={() => scrollToSection("About")}>
+            <img src={thumbnail} className="thumbnail" />
+          </div>
         </div>
-        <div className="PageLinks">
-          <Link
-            to="About"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-          >
-            About
-          </Link>
-          <Link
-            // to="Events"
-            to = "FAQ"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-          >
-            FAQ
-          </Link>
-          <Link
-            to="Sponsor"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-          >
-            Sponsors
-          </Link>
-          <Link
-            to="Contact"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-          >
-            Contact Us
-          </Link>
-          <a
-            href="http://hackp.ac/coc"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-          >
-            Code of Conduct
-          </a>
-          <a href="https://blossomhack-2024-20522.devpost.com/?ref_feature=challenge&ref_medium=discover" target="_blank">
-            Dev Post
-          </a>
+        {/* Hamburger Icon for Mobile */}
+        <div className="Hamburger" onClick={toggleMenu}>
+          ☰
         </div>
+
+        {location.pathname === "/" && (
+          <div className={`PageLinks ${isOpen ? "Open" : ""}`}>
+            <li onClick={() => scrollToSection("About")}>About</li>
+            <li onClick={() => scrollToSection("FAQ")}>FAQ</li>
+            <li onClick={() => scrollToSection("Sponsor")}>Sponsors</li>
+            <li onClick={() => scrollToSection("Contact")}>Contact Us</li>
+            <Link to="/sponsorship">Sponsorship Info</Link>
+            <a
+              href="http://hackp.ac/coc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Code of Conduct
+            </a>
+            <a
+              href="https://blossomhack-2025.devpost.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dev Post
+            </a>
+          </div>
+        )}
+        {location.pathname === "/sponsorship" && (
+          <div className={`PageLinks ${isOpen ? "Open" : ""}`}>
+            <Link to={`/`}>Home</Link>
+
+            <li onClick={() => scrollToSection("About")}>About</li>
+            <li onClick={() => scrollToSection("FAQ")}>FAQ</li>
+            <li onClick={() => scrollToSection("Sponsor")}>Sponsors</li>
+            <li onClick={() => scrollToSection("Contact")}>Contact Us</li>
+            <li onClick={() => scrollToSection("Schedule")}>Schedule</li>
+            <a
+              href="https://blossomhack-2025.devpost.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dev Post
+            </a>
+          </div>
+        )}
+        {/* <a
+          id="mlh-trust-badge"
+          style={bannerStyle}
+          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg"
+            alt="Major League Hacking 2025 Hackathon Season"
+            style={{ width: "100%" }}
+          />
+        </a> */}
       </div>
     </div>
   );

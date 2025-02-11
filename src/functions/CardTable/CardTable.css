@@ -1,0 +1,61 @@
+/* Add some padding inside the card container */
+.CardTable {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  align-content: center;
+  justify-content: center;
+}
+
+.CardTable .card,
+.CardTable .cardLink {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  text-align: center;
+  width: 275px;
+  height: 60px;
+  padding: 15px;
+  background-color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.CardTable .card:hover,
+.CardTable .cardLink:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.CardTable .header {
+  font-family: Semifont;
+  font-size: 1.5em;
+  color: rgb(0, 0, 0);
+}
+
+.CardTable .paragraph {
+  font-family: ParagraphFont;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+}
+
+.CardTable .cardLink:hover {
+  transform: translateY(-5px);
+}
+
+@media only screen and (max-width: 1250px) {
+  .CardTable {
+    grid-template-columns: auto;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .CardTable .card,
+  .CardTable .cardLink {
+    background-color: rgb(44, 44, 44);
+  }
+  .CardTable .header {
+    color: rgb(255, 255, 255);
+  }
+
+  .CardTable .paragraph {
+    color: white;
+  }
+}
